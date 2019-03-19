@@ -1,0 +1,22 @@
+body.dark {
+  background-color: #000;
+}
+.dark .headingTxtColor {
+  color: white;
+}
+.dark .blogTopicTxtColor {
+  color: #41c7ff;
+}
+.dark .descriptionTxtColor {
+  color: #cccccc;
+}
+.dark a.readMoreLink {
+  color: #cccccc;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 15px;
+}
+.dark hr {
+  color: #fff;
+  background: #fff;
+}

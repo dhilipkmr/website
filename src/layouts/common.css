@@ -1,0 +1,59 @@
+.margin20 {
+  margin: 20px;
+}
+.textcenter {
+  text-align: center;
+}
+.pad10 {
+  padding: 10px;
+}
+.inbl {
+  display: inline-block;
+}
+.fr {
+  float: right;
+}
+.white {
+  color: #fff;
+}
+.pad30 {
+  padding: 30px;
+}
+.marginR20 {
+  margin-right: 20px;
+}
+.mt50 {
+  margin-top: 50px;
+}
+
+.mw960 {
+  max-width: 960px;
+  min-width: 400px;
+  margin: auto;
+  padding: 10px;
+}
+
+
+
+.headingTxtColor {
+  color: #151617;
+}
+
+.blogTopicFont {
+  font-family: 'Baloo Chettan';
+}
+
+
+.blogHeading {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+.toggleBtnBgDark {
+  background-color: #5a5a5a;
+  color: #fff;
+}
+.toggleBtnBgLight {
+  background-color: #dcdcdc !important;
+  color: #5a5a5a;
+}

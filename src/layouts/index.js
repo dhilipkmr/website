@@ -4,7 +4,16 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 // import Menu from '../components/menu'
-import './index.css'
+import './index.css';
+import './darkmode.css';
+import './lightmode.css';
+import './common.css';
+
+if (localStorage.getItem('dkBlogTheme') && localStorage.getItem('dkBlogTheme') === 'dark') {
+  document.body.classList.add('dark');
+} else {
+  document.body.classList.add('light');
+}
 
 const Layout = ({ children, data }) => (
   <div>
@@ -20,14 +29,7 @@ const Layout = ({ children, data }) => (
     />
     <Header siteTitle={data.site.siteMetadata.title} />
     {/* <Menu /> */}
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <div className="mw960 mt50">
       {children()}
     </div>
   </div>

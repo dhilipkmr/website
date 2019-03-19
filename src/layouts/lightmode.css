@@ -1,0 +1,24 @@
+body.light {
+  background-color:#fff;
+}
+.light .headingTxtColor {
+  color: black;
+}
+.light .blogTopicTxtColor {
+  color: #055171;
+}
+.light .toggleBtn{
+  background-color: #5a5a5a;
+  padding: 5px 15px;
+  border-radius: 7px;
+}
+.light .descriptionTxtColor {
+  color: #636363;
+}
+
+.light a.readMoreLink {
+  color: #636363;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 15px;
+}
