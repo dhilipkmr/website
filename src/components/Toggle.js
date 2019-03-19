@@ -4,8 +4,7 @@ import './toggle.css'
 export default class Toggle extends React.Component {
   constructor(props) {
     super(props);
-    this.enableDarkmode = this.enableDarkmode.bind(this);
-    this.enableLightmode = this.enableLightmode.bind(this);
+    this.toggleMode = this.toggleMode.bind(this);
   }
   toggleMode(mode) {
     if (typeof window !== 'undefined') {
