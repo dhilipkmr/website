@@ -10,13 +10,13 @@ export default class Toggle extends React.Component {
   enableDarkmode() {
     document.body.classList.toggle('dark');
     document.body.classList.toggle('light');
-    localStorage.setItem('dkBlogTheme', 'dark');
+    window.localStorage.setItem('dkBlogTheme', 'dark');
   }
 
   enableLightmode() {
     document.body.classList.toggle('dark');
     document.body.classList.toggle('light');
-    localStorage.setItem("dkBlogTheme", "light");
+    window.localStorage.setItem("dkBlogTheme", "light");
   }
 
   render() {
