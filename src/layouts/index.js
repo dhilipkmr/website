@@ -9,7 +9,7 @@ import './darkmode.css';
 import './lightmode.css';
 import './common.css';
 
-if (window.localStorage.getItem('dkBlogTheme') && window.localStorage.getItem('dkBlogTheme') === 'dark') {
+if (typeof window !== 'undefined' && window.localStorage.getItem('dkBlogTheme') && window.localStorage.getItem('dkBlogTheme') === 'dark') {
   document.body.classList.add('dark');
 } else {
   document.body.classList.add('light');
