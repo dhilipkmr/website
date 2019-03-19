@@ -7,19 +7,11 @@ export default class Toggle extends React.Component {
     this.enableDarkmode = this.enableDarkmode.bind(this);
     this.enableLightmode = this.enableLightmode.bind(this);
   }
-  enableDarkmode() {
-    document.body.classList.toggle('dark');
-    document.body.classList.toggle('light');
+  toggleMode(mode) {
     if (typeof window !== 'undefined') {
-      window.localStorage.setItem('dkBlogTheme', 'dark');
-    }
-  }
-
-  enableLightmode() {
-    document.body.classList.toggle('dark');
-    document.body.classList.toggle('light');
-    if (typeof window !== 'undefined') {
-      window.localStorage.setItem('dkBlogTheme', 'light');
+      window.localStorage.setItem('dkBlogTheme', mode);
+      document.body.classList.toggle('dark');
+      document.body.classList.toggle('light');
     }
   }
 
@@ -27,8 +19,8 @@ export default class Toggle extends React.Component {
     return(
       <div className="mw960">
         <div className="toggleBtnWrap inbl fr marginR20">
-          <div className="inbl white toggleBtn toggleBtnBgDark" onClick={this.enableDarkmode}>Dark</div>
-          <div className="inbl white toggleBtn toggleBtnBgLight" onClick={this.enableLightmode}>Light</div>
+          <div className="inbl white toggleBtn toggleBtnBgDark" onClick={() => this.enableDarkmode('dark')}>Dark</div>
+          <div className="inbl white toggleBtn toggleBtnBgLight" onClick={() => this.enableLightmode('light')}>Light</div>
         </div>
       </div>
     );
