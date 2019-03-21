@@ -22,7 +22,7 @@ export default class Toggle extends React.Component {
   render() {
     return(
       <div>
-        <Helmet  meta={[{ name: 'theme', content: this.state.themeColor}]}/>
+        <Helmet  meta={[{ name: 'theme-color', content: this.state.themeColor}]}/>
         <div className="mw960">
           <div className="toggleBtnWrap inbl fr marginR20">
             <div className="inbl white toggleBtn toggleBtnBgDark hand noselect" onClick={() => this.toggleMode('dark')}>Dark</div>
