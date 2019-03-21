@@ -16,7 +16,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined' && window.l
 }
 
 const Layout = ({ children, data }) => (
-  <div>
+  <div className="mw960 lr05">
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -29,7 +29,7 @@ const Layout = ({ children, data }) => (
     />
     <Header siteTitle={data.site.siteMetadata.title} />
     {/* <Menu /> */}
-    <div className="mw960 mt50">
+    <div className="mw960">
       {children()}
     </div>
   </div>

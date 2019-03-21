@@ -53,8 +53,9 @@ dfn {
   font-style: italic;
 }
 h1 {
-  font-size: 2em;
+  font-size: 2.3em;
   margin: 0.67em 0;
+  text-decoration: none;
 }
 mark {
   background-color: #ff0;
@@ -96,6 +97,10 @@ hr {
   box-sizing: content-box;
   height: 0;
   overflow: visible;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 button,
 input,
@@ -192,7 +197,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: Google Sans, georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -200,17 +205,6 @@ body {
   -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-}
-img {
-  max-width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 
 ul {

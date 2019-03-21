@@ -2,16 +2,13 @@ body.light {
   background-color:#fff;
 }
 .light .headingTxtColor {
-  color: black;
+  color: #2d2d2d;
 }
 .light .blogTopicTxtColor {
-  color: #055171;
+  /* color: #055171; */
+  color: #296be4;
 }
-.light .toggleBtn{
-  background-color: #5a5a5a;
-  padding: 5px 15px;
-  border-radius: 7px;
-}
+
 .light .descriptionTxtColor {
   color: #636363;
 }
@@ -21,4 +18,15 @@ body.light {
   font-weight: bold;
   text-decoration: none;
   font-size: 15px;
+}
+.light .avatarInto {
+  color: #636363;
+}
+
+.light .toggleBtnBg {
+  background: #000;
+}
+
+.light .togglerBg{
+  background: #fff;
 }

@@ -7,6 +7,9 @@
 .pad10 {
   padding: 10px;
 }
+.pad20{
+  padding: 20px;
+}
 .inbl {
   display: inline-block;
 }
@@ -16,16 +19,45 @@
 .white {
   color: #fff;
 }
+.padT20 {
+  padding-top: 20px;
+}
+.padT15 {
+  padding-top: 15px;
+}
 .pad30 {
   padding: 30px;
 }
 .marginR20 {
   margin-right: 20px;
 }
+.marginB20 {
+  margin-bottom: 20px;
+}
+.marginB70 {
+  margin-bottom: 70px;
+}
+.marginR10 {
+  margin-right: 10px;
+}
 .mt50 {
   margin-top: 50px;
 }
-
+.width100{
+  width: 100%;
+}
+.margin10 {
+  margin: 10px;
+}
+.margin40 {
+  margin: 40px;
+}
+.lh2em{
+  line-height: 2em;
+}
+.mh30{
+  min-height: 30px;
+}
 .mw960 {
   max-width: 960px;
   min-width: 400px;
@@ -45,6 +77,28 @@
   cursor: pointer;
 }
 
+.posRel {
+  position: relative;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.posAbs {
+  position: absolute;
+}
+.mh100vh{
+  min-height: 100vh;
+}
+.mh90vh{
+  min-height: 90vh;
+}
+.lr05{
+  letter-spacing: 0.05rem;
+}
+/* index specifcs */
+.h120p {
+  height: 120px;
+}
 .headingTxtColor {
   color: #151617;
 }
@@ -53,18 +107,15 @@
   font-family: 'Baloo Chettan';
 }
 
-
 .blogHeading {
-  font-size: 24px;
+  font-size: 28px;
   line-height: 1.5;
   font-weight: bold;
 }
-.toggleBtnBgDark {
-  background-color: #5a5a5a;
-  color: #fff;
-}
-.toggleBtnBgLight {
-  background-color: #dcdcdc !important;
-  color: #5a5a5a;
+
+.toggleBtn {
+  height: 22px;
+  width: 50px;
+  border-radius: 15px;
 }
 
