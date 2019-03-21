@@ -21,7 +21,7 @@ export default class Toggle extends React.Component {
 
   render() {
     return(
-      <React.Fragment>
+      <div>
         <Helmet  meta={[{ name: 'theme', content: this.state.themeColor}]}/>
         <div className="mw960">
           <div className="toggleBtnWrap inbl fr marginR20">
@@ -29,7 +29,7 @@ export default class Toggle extends React.Component {
             <div className="inbl white toggleBtn toggleBtnBgLight hand noselect" onClick={() => this.toggleMode('light')}>Light</div>
           </div>
         </div>
-      </React.Fragment>
+      </div>
     );
   }
 }
