@@ -12,7 +12,7 @@ const Avatar = () => {
       </div>
       <div className="textcenter white padT20 avatarInto lh2em">
         <div>hi there...!</div>
-        <div>Front-End Developer @<a href="https://www.linkedin.com/company/goibibo/" target="_blank"><span>goibibo</span></a> | Js Lover</div>
+        <div>Front-End Developer @<a href="https://www.linkedin.com/company/goibibo/" target="_blank"><span>goibibo</span></a></div>
         <div> Accidental Blogger | Empath | Mr.Sings a Lot | Occsasional Traveller</div>
       </div>
     </div>
