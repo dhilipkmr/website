@@ -22,9 +22,9 @@ const Layout = ({ children, data }) => (
       meta={[
         {
           name: 'description',
-          content: 'This is a sample website for the Gatsby crash course',
+          content: 'A Personal blog on React, javascript, frontend development',
         },
-        { name: 'keywords', content: 'gatsby, react, tutorial' },
+        { name: 'keywords', content: 'gatsby, react, blog, dhilipkmr, casualblogger' },
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
