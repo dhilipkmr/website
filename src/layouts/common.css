@@ -1,5 +1,11 @@
+h1{
+  line-height: 1.2em;
+}
 .margin20 {
   margin: 20px;
+}
+.pad5{
+  padding: 5px;
 }
 .textcenter {
   text-align: center;
@@ -53,6 +59,9 @@
   margin-top: 50px !important;
   margin-bottom: 50px !important;
 }
+.mB25{
+  margin-bottom: 25px;
+}
 .width100{
   width: 100%;
 }
@@ -86,7 +95,10 @@
 .hand:hover {
   cursor: pointer;
 }
-
+.linkHand:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 .posRel {
   position: relative;
 }
@@ -99,8 +111,14 @@
 .mh100vh{
   min-height: 100vh;
 }
+.marginR10{
+  margin-right: 20px;
+}
 .mh90vh{
   min-height: 90vh;
+}
+.mh60vh{
+  min-height: 60vh;
 }
 .lr05{
   letter-spacing: 0.05rem;
@@ -110,6 +128,9 @@
 }
 .fs18 {
   font-size: 18px;
+}
+.ico13{
+  font-size: 13px;
 }
 /* index specifcs */
 .h120p {
@@ -143,6 +164,12 @@
 .fs45 {
   font-size: 45px;
 }
+.contactIconBg{
+  background: #fff;
+  border-radius: 28%;
+  height: 30px;
+  width: 40px;
+}
 .fadeInWrap {
   position: relative;
   overflow: hidden;
@@ -169,3 +196,64 @@
     height: 130px;
   }
 } */
+
+
+
+/**
+ * Based on copypasta from Remy Bach and Sarah Drasner
+ */
+code[class*='language-'],
+pre[class*='language-'] {
+  background: #000523;
+  color: white;
+  background: none;
+  font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
+  font-feature-settings: normal;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  margin-bottom: 0;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*='language-'] {
+  overflow: auto;
+  padding: 1.3125rem;
+}
+
+pre[class*='language-']::-moz-selection {
+  /* Firefox */
+  background: hsl(207, 4%, 16%);
+}
+
+pre[class*='language-']::selection {
+  /* Safari */
+  background: hsl(207, 4%, 16%);
+}
+
+/* Text Selection colour */
+pre[class*='language-']::-moz-selection,
+pre[class*='language-'] ::-moz-selection {
+  text-shadow: none;
+  background: hsla(0, 0%, 100%, 0.15);
+}
+
+pre[class*='language-']::selection,
+pre[class*='language-'] ::selection {
+  text-shadow: none;
+  background: hsla(0, 0%, 100%, 0.15);
+}
+
+

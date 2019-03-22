@@ -5,13 +5,13 @@ export default function Template({ data }) {
   const post = data.markdownRemark
 
   return (
-    <div>
+    <div className="blogText pad5 lh2em">
       <Link to="/">Go Back</Link>
       <hr />
       <h1>{post.frontmatter.title}</h1>
-      <h4>
-        Posted by {post.frontmatter.author} on {post.frontmatter.date}
-      </h4>
+      <div>
+        <i className="ico13">Published on {post.frontmatter.date}</i>
+      </div>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </div>
   )

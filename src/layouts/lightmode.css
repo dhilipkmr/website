@@ -31,3 +31,9 @@ body.light {
 .light .fadeInWord {
   color: #464646;
 }
+.themeColor {
+  color: #235bc1;
+}
+.light h2, .light h3 {
+  color: #235bc1 !important;
+}

@@ -1,8 +1,14 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Avatar from '../components/Avatar';
+import ContactMe from '../components/ContactMe';
 
 const BlogPage = ({ data }) => (
   <div>
+    <div className="mh60vh">
+      <Avatar/>
+      <ContactMe/>
+    </div>
     <div className="margin20 mt10 lh2em">
       {/* <h1 className="headingTxtColor">Recent Posts</h1> */}
       {data.allMarkdownRemark.edges.map(post => (

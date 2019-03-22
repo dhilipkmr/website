@@ -7,8 +7,16 @@
   left: 50%;
   top: 50%;
   border: 3px solid #235bc1;
+  animation: 1s opacityFade;
 }
-
+@keyframes opacityFade{
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
 /* Toggle */
 .toggler {
   height: 19px;

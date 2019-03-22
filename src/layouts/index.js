@@ -3,13 +3,11 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import favicon16 from '../assets/me16.png'
 import favicon32 from '../assets/me32.png'
-
 import Header from '../components/header'
-// import Menu from '../components/menu'
-import './index.css';
-import './darkmode.css';
-import './lightmode.css';
-import './common.css';
+import './index.css'
+import './darkmode.css'
+import './lightmode.css'
+import './common.css'
 
 if (typeof window !== 'undefined' && typeof document !== 'undefined' && window.localStorage.getItem('dkBlogTheme') && window.localStorage.getItem('dkBlogTheme') === 'dark') {
   document.body.classList.add('dark');
@@ -33,11 +31,11 @@ const Layout = ({ children, data }) => (
         { rel: 'icon', type: 'image/png', sizes: "32x32", href: `${favicon32}` }
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    {/* <Menu /> */}
-    <div className="mw960">
-      {children()}
+    <div className=" margin10">
+      {/* <Menu /> */}
+      <Header siteTitle={data.site.siteMetadata.title} />
     </div>
+    {children()}
   </div>
 )
 

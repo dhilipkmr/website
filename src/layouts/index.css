@@ -282,7 +282,7 @@ pre {
   margin-bottom: 1.45rem;
   font-size: 0.85rem;
   line-height: 1.42;
-  background: hsla(0, 0%, 0%, 0.04);
+  background: #000523;
   border-radius: 3px;
   overflow: auto;
   word-wrap: normal;

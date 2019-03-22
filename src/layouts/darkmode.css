@@ -30,3 +30,15 @@ body.dark {
 .dark .fadeInWord {
   color: #fff;
 }
+.dark .themeColor {
+    color: #5893ff;
+}
+.dark .blogText {
+  color: #dadada;
+}
+.dark h1 {
+  color: #fff !important;
+}
+.dark h2, .dark h3 {
+  color: #5893ff!important;
+}
