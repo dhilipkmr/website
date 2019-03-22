@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "my-personal-blog",
+  "name": "the-accidental-blogger",
   "builds": [
     {
       "src": "package.json",
