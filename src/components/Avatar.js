@@ -1,6 +1,7 @@
 import React from 'react';
 import { relative } from 'path';
-import './componentCss.css'
+import './componentCss.css';
+import FadeIn from './FadeIn';
 
 const Avatar = () => {
   return(
@@ -11,9 +12,9 @@ const Avatar = () => {
         </a>
       </div>
       <div className="textcenter white padT20 avatarInto lh2em">
-        <div>hi there...!</div>
-        <div>Front-End Developer @<a href="https://www.linkedin.com/company/goibibo/" target="_blank"><span>goibibo</span></a></div>
-        <div> Accidental Blogger | Empath | Mr.Sings a Lot | Occsasional Traveller</div>
+        <FadeIn className="padT10" style={{ animationDelay: '1s', lineHeight: '2em'}}>hi there...!</FadeIn>
+        <FadeIn className="padT10" style={{ animationDelay: '1.6s', lineHeight: '2em'}}>front-end developer @<a href="https://www.linkedin.com/company/goibibo/" target="_blank"><span>goibibo</span></a></FadeIn>
+        <FadeIn className="padT10" style={{ animationDelay: '2s', lineHeight: '2em'}}>accidental blogger | empath | mr.sings a lot | occsasional traveller</FadeIn>
       </div>
     </div>
   );

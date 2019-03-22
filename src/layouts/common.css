@@ -10,6 +10,9 @@
 .pad20{
   padding: 20px;
 }
+.padT15{
+  padding-top: 15px;
+}
 .inbl {
   display: inline-block;
 }
@@ -21,6 +24,9 @@
 }
 .padT20 {
   padding-top: 20px;
+}
+.padL20 {
+  padding-left: 20px;
 }
 .padT15 {
   padding-top: 15px;
@@ -42,6 +48,10 @@
 }
 .mt50 {
   margin-top: 50px;
+}
+.mTB50 {
+  margin-top: 50px !important;
+  margin-bottom: 50px !important;
 }
 .width100{
   width: 100%;
@@ -95,6 +105,12 @@
 .lr05{
   letter-spacing: 0.05rem;
 }
+.fs16{
+  font-size: 16px;
+}
+.fs18 {
+  font-size: 18px;
+}
 /* index specifcs */
 .h120p {
   height: 120px;
@@ -118,4 +134,38 @@
   width: 50px;
   border-radius: 15px;
 }
+.dn {
+  display: none;
+}
+.vh {
+  visibility: hidden;
+}
+.fs45 {
+  font-size: 45px;
+}
+.fadeInWrap {
+  position: relative;
+  overflow: hidden;
+}
+.fadeInWord {
+  /* transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1); */
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  animation: 0.8s transY0;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
+  line-height: 1.2;
+}
 
+@keyframes transY0 {
+  100% {
+   transform: translateY(0px);
+  }
+}
+/* @media screen and (max-width: 650px) {
+  .fadeInWrap {
+    height: 130px;
+  }
+} */

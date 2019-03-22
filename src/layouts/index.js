@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import favicon16 from '../assets/me16.png'
+import favicon32 from '../assets/me32.png'
 
 import Header from '../components/header'
 // import Menu from '../components/menu'
@@ -18,13 +20,17 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined' && window.l
 const Layout = ({ children, data }) => (
   <div className="mw960 lr05">
     <Helmet
-      title={data.site.siteMetadata.title}
+      title="Dhilip's Blog"
       meta={[
         {
           name: 'description',
           content: 'A Personal blog on React, javascript, frontend development',
         },
         { name: 'keywords', content: 'gatsby, react, blog, dhilipkmr, casualblogger' },
+      ]}
+      link={[
+        { rel: 'icon', type: 'image/png', sizes: "16x16", href: `${favicon16}` },
+        { rel: 'icon', type: 'image/png', sizes: "32x32", href: `${favicon32}` }
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />

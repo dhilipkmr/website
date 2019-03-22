@@ -6,7 +6,7 @@ body.light {
 }
 .light .blogTopicTxtColor {
   /* color: #055171; */
-  color: #296be4;
+  color: #235bc1;
 }
 
 .light .descriptionTxtColor {
@@ -15,9 +15,7 @@ body.light {
 
 .light a.readMoreLink {
   color: #636363;
-  font-weight: bold;
   text-decoration: none;
-  font-size: 15px;
 }
 .light .avatarInto {
   color: #636363;
@@ -29,4 +27,7 @@ body.light {
 
 .light .togglerBg{
   background: #fff;
+}
+.light .fadeInWord {
+  color: #464646;
 }

@@ -13,9 +13,7 @@ body.dark {
 }
 .dark a.readMoreLink {
   color: #cccccc;
-  font-weight: bold;
   text-decoration: none;
-  font-size: 15px;
 }
 .dark hr {
   color: #fff;
@@ -28,4 +26,7 @@ body.dark {
 
 .dark .togglerBg{
   background: #000;
+}
+.dark .fadeInWord {
+  color: #fff;
 }
