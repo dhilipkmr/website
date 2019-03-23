@@ -20,17 +20,23 @@ const WEB_URL = 'https://dhilipkmr.surge.sh';
 
 
 const ContactMe = ({theme}) => {
-  let GIT_IMG = githubIcon;
-  let LINKEDIN_IMG = linkedinIcon;
-  let MEDIUM_IMG = mediumIcon;
-  let TWITTER_IMG = twitterIcon;
-  let WEB_IMG = websiteIcon;
+  let GIT_IMG;
+  let  LINKEDIN_IMG;
+  let MEDIUM_IMG;
+  let TWITTER_IMG;
+  let WEB_IMG;
   if (theme && (theme === 'dark' || document.body.classList.contains('dark'))) {
     GIT_IMG = githubIconDark;
     LINKEDIN_IMG = linkedinIconDark;
     MEDIUM_IMG = mediumIconDark;
     TWITTER_IMG = twitterIconDark;
     WEB_IMG = websiteIconDark;
+  } else {
+    GIT_IMG = githubIcon;
+    LINKEDIN_IMG = linkedinIcon;
+    MEDIUM_IMG = mediumIcon;
+    TWITTER_IMG = twitterIcon;
+    WEB_IMG = websiteIcon;
   }
   return(
     <FadeIn wrapHeight={45} style={{ animationDelay: '1.1s'}}>
