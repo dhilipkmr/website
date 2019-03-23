@@ -53,7 +53,7 @@ class BlogPageHome extends React.Component{
             <Avatar/>
             <ContactMe theme={this.state.theme}/>
           </div>
-          <div className="margin20 mt10 lh2em">
+          <div className="margin20 lh2em mt50">
             {data.allMarkdownRemark.edges.map(post => (
               <div key={post.node.id} className="marginB70">
                 <header><Link to={post.node.frontmatter.path} className="blogHeading blogTopicTxtColor">{post.node.frontmatter.title}</Link></header>

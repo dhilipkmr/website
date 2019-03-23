@@ -20,6 +20,9 @@ body.dark {
 .fb{
   font-weight: bold;
 }
+.fadeInOpacity {
+  
+}
 .op0{
   opacity: 0;
 }
@@ -133,6 +136,9 @@ body.dark {
 .mt10 {
   margin-top: 10px;
 }
+.mt50 {
+  margin-top: 50px;
+}
 .posAbs {
   position: absolute;
 }
@@ -236,8 +242,8 @@ body.dark {
 .vh {
   visibility: hidden;
 }
-.fs45 {
-  font-size: 45px;
+.fs40 {
+  font-size: 40px;
 }
 .blogText a {
   color: #0066ff;
@@ -339,6 +345,7 @@ pre[class*='language-'] {
   color: var(--inlineCode-text);
   padding: 0.15em 0.2em 0.05em;
   white-space: normal;
+  font-size: 14px;
 }
 
 /* Code blocks */
