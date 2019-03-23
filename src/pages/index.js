@@ -19,6 +19,7 @@ class BlogPageHome extends React.Component{
     if (!this.state && typeof(window) !== 'undefined') {
       const themeName = window.localStorage.getItem('dkBlogTheme');
       if (!themeName || (themeName !== 'light' && themeName !=='dark')) {
+        console.log('log1 set light');
         window.localStorage.setItem('dkBlogTheme', 'light');
         document.body.classList.add('light');
         return 'light'
@@ -28,17 +29,20 @@ class BlogPageHome extends React.Component{
     }
     /* All other calls to themer */
     if (this.state) {
+      console.log('log2 set');
       const oldTheme = this.state.theme;
       const newTheme = (oldTheme === 'dark') ? 'light' : 'dark';
       if (oldTheme && typeof(window) !== 'undefined') {
+        console.log('log3 set');
         const {body} = document;
         body.classList.add(newTheme);
         body.classList.remove(oldTheme);
         this.setState({ theme: newTheme});
         window.localStorage.setItem('dkBlogTheme', newTheme);
         return newTheme;
-      } 
+      }
     }
+    console.log('log4 set');
   }
 
   render() {
