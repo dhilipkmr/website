@@ -22,12 +22,12 @@ export default class FadeIn extends React.Component {
     let transformStyle = {};
     if (wrapHeight) {
       transformStyle = {
-        transform: `translateY(${wrapHeight}px)`
+        top: `${wrapHeight}px`
       }
     }
     return (
-      <div ref="wrap" className={'fadeInWrap ' + (hasStyleInfo ? '' :'vh')} style={{ height: wrapHeight ? (wrapHeight + 'px') : 'auto'}}>
-        <div ref="fadeInWord" className={'fadeInWord ' + compClass} style={{...transformStyle, ...style}}>
+      <div ref="wrap" className={'fadeInWrap ' + (hasStyleInfo ? '' :' op0')}>
+        <div ref="fadeInWord" className={'fadeInWord ' + compClass + (hasStyleInfo ? ' keyFrameAnimator' : '')} style={{...transformStyle, ...style}}>
           {children}
         </div>
       </div>

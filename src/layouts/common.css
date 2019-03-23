@@ -1,6 +1,9 @@
 h1{
   line-height: 1.2em;
 }
+.op0{
+  opacity: 0;
+}
 .margin20 {
   margin: 20px;
 }
@@ -176,19 +179,21 @@ h1{
 }
 .fadeInWord {
   /* transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1); */
-  position: absolute;
+  position: relative;
   text-align: center;
   width: 100%;
-  left: 0;
-  animation: 0.8s transY0;
-  animation-fill-mode: forwards;
-  animation-delay: 0.2s;
+  top: 0;
   line-height: 1.2;
 }
+.keyFrameAnimator {
+  animation: 0.8s animateTop0;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
+}
 
-@keyframes transY0 {
+@keyframes animateTop0 {
   100% {
-   transform: translateY(0px);
+   top: 0px;
   }
 }
 /* @media screen and (max-width: 650px) {
