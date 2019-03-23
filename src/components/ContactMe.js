@@ -39,9 +39,7 @@ const ContactMe = ({theme}) => {
     WEB_IMG = websiteIcon;
   }
   return(
-    <div>
-    {theme === 'dark' ?
-    <FadeIn wrapHeight={45} style={{ animationDelay: '1.1s'}}>
+    <FadeIn key={theme} wrapHeight={45} style={{ animationDelay: '1.1s'}}>
     <div className="textcenter padT10">
       <div className=" marginR30 inbl">
         <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer"><img title="Github" src={theme === 'dark' ? githubIconDark: githubIcon} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className="scaleOnHover" alt="github"/></a>
@@ -59,7 +57,7 @@ const ContactMe = ({theme}) => {
         <a href={WEB_URL} target="_blank" rel="noopener noreferrer"><img title="Website" src={WEB_IMG} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className="scaleOnHover" alt="website"/></a>
       </div>
     </div>
-    </FadeIn> : null}</div>
+    </FadeIn>
   );
 }
 export default ContactMe;
