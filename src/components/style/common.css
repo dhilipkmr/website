@@ -179,7 +179,7 @@ body.dark {
   transition: all 0.2s linear;
 }
 .scaleOnHover:hover{
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
 .ellipsis2{
   overflow: hidden!important;
