@@ -27,15 +27,17 @@ class BlogPageHome extends React.Component{
       return themeName;
     }
     /* All other calls to themer */
-    const oldTheme = this.state.theme;
-    const newTheme = (oldTheme === 'dark') ? 'light' : 'dark';
-    if (oldTheme && typeof(window) !== 'undefined') {
-      const {body} = document;
-      body.classList.add(newTheme);
-      body.classList.remove(oldTheme);
-      this.setState({ theme: newTheme});
-      window.localStorage.setItem('dkBlogTheme', newTheme);
-      return newTheme;
+    if (this.state) {
+      const oldTheme = this.state.theme;
+      const newTheme = (oldTheme === 'dark') ? 'light' : 'dark';
+      if (oldTheme && typeof(window) !== 'undefined') {
+        const {body} = document;
+        body.classList.add(newTheme);
+        body.classList.remove(oldTheme);
+        this.setState({ theme: newTheme});
+        window.localStorage.setItem('dkBlogTheme', newTheme);
+        return newTheme;
+      } 
     }
   }
 
