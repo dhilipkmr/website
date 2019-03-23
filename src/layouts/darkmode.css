@@ -31,7 +31,7 @@ body.dark {
   color: #fff;
 }
 .dark .themeColor {
-    color: #5893ff;
+    color: #5893ff !important;
 }
 .dark .blogText {
   color: #dadada;

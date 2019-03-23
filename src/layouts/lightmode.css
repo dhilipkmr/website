@@ -32,7 +32,7 @@ body.light {
   color: #464646;
 }
 .themeColor {
-  color: #235bc1;
+  color: #235bc1 !important;
 }
 .light h2, .light h3 {
   color: #235bc1 !important;

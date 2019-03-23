@@ -2,18 +2,21 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Avatar from '../components/Avatar';
 import ContactMe from '../components/ContactMe';
+import Header from '../components/header';
 
-const BlogPage = ({ data }) => (
+const BlogPageHome = ({ data }) => (
   <div>
+    <div className=" margin10">
+      <Header />
+    </div>
     <div className="mh60vh">
       <Avatar/>
       <ContactMe/>
     </div>
     <div className="margin20 mt10 lh2em">
-      {/* <h1 className="headingTxtColor">Recent Posts</h1> */}
       {data.allMarkdownRemark.edges.map(post => (
         <div key={post.node.id} className="marginB70">
-          <header className="blogHeading blogTopicTxtColor">{post.node.frontmatter.title}</header>
+          <header><Link to={post.node.frontmatter.path} className="blogHeading blogTopicTxtColor">{post.node.frontmatter.title}</Link></header>
           <div className="descriptionTxtColor">
             <span className="inbl fs16">{post.node.frontmatter.date}{' '}</span>
             <span className="inbl padL20 fs16">{' ' + ' ~ ' + post.node.frontmatter.timeToRead + ' min read'}</span>
@@ -46,4 +49,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default BlogPage
+export default BlogPageHome;

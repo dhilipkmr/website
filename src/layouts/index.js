@@ -31,10 +31,6 @@ const Layout = ({ children, data }) => (
         { rel: 'icon', type: 'image/png', sizes: "32x32", href: `${favicon32}` }
       ]}
     />
-    <div className=" margin10">
-      {/* <Menu /> */}
-      <Header siteTitle={data.site.siteMetadata.title} />
-    </div>
     {children()}
   </div>
 )
