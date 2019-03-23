@@ -4,8 +4,8 @@ export default class FadeIn extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      wrapHeight: props.wrapHeight ? props.wrapHeight: '',
-      hasStyleInfo: props.wrapHeight ? true : false 
+      wrapHeight: '',
+      hasStyleInfo: false
     };
   }
 
