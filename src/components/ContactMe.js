@@ -42,7 +42,7 @@ const ContactMe = ({theme}) => {
     <FadeIn wrapHeight={45} style={{ animationDelay: '1.1s'}}>
     <div className="textcenter padT10">
       <div className=" marginR30 inbl">
-        <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer"><img title="Github" src={GIT_IMG} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className="scaleOnHover" alt="github"/></a>
+        <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer"><img title="Github" src={theme === 'dark' ? githubIconDark: githubIcon} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className="scaleOnHover" alt="github"/></a>
       </div>
       <div className=" marginR30 inbl">
         <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer"><img title="LinkedIn" style={{ 'marginBottom': '2px'}}src={LINKEDIN_IMG} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className="scaleOnHover" alt="linkedin"/></a>
