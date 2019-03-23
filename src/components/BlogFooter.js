@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import {Link, graphql} from 'gatsby';
+import React from 'react';
+import {Link} from 'gatsby';
 
 export default function BlogFooter(props) {
   const {posts} = props;

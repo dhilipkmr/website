@@ -2,7 +2,7 @@ import React from 'react';
 import Toggle from './Toggle';
 import FadeIn from './FadeIn';
 
-const Header = () => {
+const Header = ({theme, themer}) => {
   return (
     <div>
       <div className="">
@@ -10,7 +10,7 @@ const Header = () => {
           <FadeIn className="fs45 inbl" style={{ lineHeight: '1.7em'}}>A Series of</FadeIn>
           <FadeIn className="fs45 inbl" style={{ animationDelay: '0.5s', lineHeight: '1.7em'}}>Accidental Blogs</FadeIn>
         </div>
-        <Toggle/>
+        <Toggle theme={theme} themer={themer}/>
       </div>
     </div>
   )

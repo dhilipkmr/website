@@ -4,16 +4,19 @@ export default class FadeIn extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      wrapHeight: props.wrapHeight ? props.wrapHeight: ''
+      wrapHeight: props.wrapHeight ? props.wrapHeight: '',
+      hasStyleInfo: props.wrapHeight ? true : false 
     };
   }
 
   componentDidMount() {
-    const wrapHeight = this.refs.fadeInWord.getBoundingClientRect().height;
-    this.setState({
-      hasStyleInfo: true,
-      wrapHeight: wrapHeight
-    });
+    if (!this.state.hasStyleInfo) {
+      const wrapHeight = this.refs.fadeInWord.getBoundingClientRect().height;
+      this.setState({
+        hasStyleInfo: true,
+        wrapHeight: wrapHeight
+      });
+    }
   }
 
   render() {
