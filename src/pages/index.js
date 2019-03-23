@@ -21,7 +21,7 @@ const BlogPageHome = ({ data }) => (
             <header><Link to={post.node.frontmatter.path} className="blogHeading blogTopicTxtColor">{post.node.frontmatter.title}</Link></header>
             <div className="descriptionTxtColor">
               <span className="inbl fs16">{post.node.frontmatter.date}{' '}</span>
-              <span className="inbl padL20 fs16">{' ' + ' ~ ' + post.node.frontmatter.timeToRead + ' min read'}</span>
+              <span className="inbl padL20 fs16">{'  ~ ' + post.node.frontmatter.timeToRead + ' min read'}</span>
             </div>
             <div className="descriptionTxtColor padT15">{post.node.frontmatter.description}</div>
             <div className="padT15"><Link to={post.node.frontmatter.path} className="readMoreLink fs16">Read More</Link></div>

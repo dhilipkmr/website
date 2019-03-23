@@ -2,13 +2,12 @@ import React from 'react'
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet';
-import favicon16 from '../assets/me16.png'
-import favicon32 from '../assets/me32.png'
-import Header from '../components/header'
-import './style/index.css'
-import './style/darkmode.css'
-import './style/lightmode.css'
-import './style/common.css'
+import favicon16 from '../assets/me16.png';
+import favicon32 from '../assets/me32.png';
+import './style/index.css';
+import './style/darkmode.css';
+import './style/lightmode.css';
+import './style/common.css';
 
 if (typeof window !== 'undefined' && typeof document !== 'undefined' && window.localStorage.getItem('dkBlogTheme') && window.localStorage.getItem('dkBlogTheme') === 'dark') {
   document.body.classList.add('dark');

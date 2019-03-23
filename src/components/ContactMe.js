@@ -19,19 +19,19 @@ const ContactMe = () => {
     <FadeIn wrapHeight={40} style={{ animationDelay: '1.1s'}}>
     <div className="textcenter">
       <div className="contactIconBg marginR10 inbl">
-        <a href={GITHUB_URL} target="_blank"><img src={githubIcon} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className=""/></a>
+        <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer"><img src={githubIcon} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className="" alt="github"/></a>
       </div>
       <div className="contactIconBg marginR10 inbl">
-        <a href={LINKEDIN_URL} target="_blank"><img src={linkedinIcon} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className=""/></a>
+        <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer"><img src={linkedinIcon} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className="" alt="linkedin"/></a>
       </div>
       <div className="contactIconBg marginR10 inbl">
-        <a href={MEDIUM_URL} target="_blank"><img src={mediumIcon} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className=""/></a>
+        <a href={MEDIUM_URL} target="_blank" rel="noopener noreferrer"><img src={mediumIcon} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className="" alt="medium"/></a>
       </div>
       <div className="contactIconBg marginR10 inbl">
-        <a href={TWITTER_URL} target="_blank"><img src={twitterIcon} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className=""/></a>
+        <a href={TWITTER_URL} target="_blank" rel="noopener noreferrer"><img src={twitterIcon} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className="" alt="twitter"/></a>
       </div>
       <div className="contactIconBg marginR10 inbl">
-        <a href={WEB_URL} target="_blank"><img src={websiteIcon} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className=""/></a>
+        <a href={WEB_URL} target="_blank" rel="noopener noreferrer"><img src={websiteIcon} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className="" alt="website"/></a>
       </div>
     </div>
     </FadeIn>
