@@ -34,21 +34,21 @@ const ContactMe = ({theme}) => {
   }
   return(
     <FadeIn wrapHeight={45} style={{ animationDelay: '1.1s'}}>
-    <div className="textcenter">
+    <div className="textcenter padT10">
       <div className=" marginR30 inbl">
-        <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer"><img src={GIT_IMG} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className="" alt="github"/></a>
+        <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer"><img src={GIT_IMG} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className="scaleOnHover" alt="github"/></a>
       </div>
       <div className=" marginR30 inbl">
-        <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer"><img style={{ 'marginBottom': '2px'}}src={LINKEDIN_IMG} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className="" alt="linkedin"/></a>
+        <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer"><img style={{ 'marginBottom': '2px'}}src={LINKEDIN_IMG} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className="scaleOnHover" alt="linkedin"/></a>
       </div>
       <div className=" marginR30 inbl">
-        <a href={MEDIUM_URL} target="_blank" rel="noopener noreferrer"><img src={MEDIUM_IMG} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className="" alt="medium"/></a>
+        <a href={MEDIUM_URL} target="_blank" rel="noopener noreferrer"><img src={MEDIUM_IMG} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className="scaleOnHover" alt="medium"/></a>
       </div>
       <div className=" marginR30 inbl">
-        <a href={TWITTER_URL} target="_blank" rel="noopener noreferrer"><img src={TWITTER_IMG} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className="" alt="twitter"/></a>
+        <a href={TWITTER_URL} target="_blank" rel="noopener noreferrer"><img src={TWITTER_IMG} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className="scaleOnHover" alt="twitter"/></a>
       </div>
       <div className=" marginR30 inbl">
-        <a href={WEB_URL} target="_blank" rel="noopener noreferrer"><img src={WEB_IMG} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className="" alt="website"/></a>
+        <a href={WEB_URL} target="_blank" rel="noopener noreferrer"><img src={WEB_IMG} type="text/png" width={IMG_WIDTH} height={IMG_HEIGHT} className="scaleOnHover" alt="website"/></a>
       </div>
     </div>
     </FadeIn>

@@ -169,6 +169,12 @@ body.dark {
 .padT10{
   padding-top: 10px;
 }
+.scaleOnHover{
+  transition: all 0.2s linear;
+}
+.scaleOnHover:hover{
+  transform: scale(1.1);
+}
 .ellipsis2{
   overflow: hidden!important;
   display: -webkit-box;
