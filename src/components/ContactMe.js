@@ -25,7 +25,7 @@ const ContactMe = ({theme}) => {
   let MEDIUM_IMG = mediumIcon;
   let TWITTER_IMG = twitterIcon;
   let WEB_IMG = websiteIcon;
-  if (theme && theme === 'dark') {
+  if (theme && (theme === 'dark' || document.body.classList.contains('dark'))) {
     GIT_IMG = githubIconDark;
     LINKEDIN_IMG = linkedinIconDark;
     MEDIUM_IMG = mediumIconDark;

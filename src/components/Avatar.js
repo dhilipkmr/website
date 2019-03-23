@@ -5,7 +5,7 @@ const LINKEDIN_URL = 'https://www.linkedin.com/in/dhilipkmr';
 const GI_LINKEDIN_URL = 'https://www.linkedin.com/company/goibibo/';
 const Avatar = () => {
   return (
-    <div className="margin40">
+    <div className="margin30">
       <div className="posRel h120p">
         <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
           <img alt="profileImg" className="posAbs avatarImg " src="https://pbs.twimg.com/profile_images/1108510685510524929/FDY-SGHa_400x400.jpg"/>
