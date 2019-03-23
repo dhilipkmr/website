@@ -1,12 +1,12 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { graphql, Link } from 'gatsby';
 import Toggle from '../components/Toggle';
 
 export default function Template({ data }) {
   const post = data.markdownRemark
 
   return (
-    <div className="blogText pad5 lh2em">
+    <div className="blogText pad5 lh2em mw960 lr05">
       <Link to="/" className="backHomeHeader top38 themeColor"><span className="backIcon">{'<'}</span>Dhilip's Blogs</Link>
       <Toggle/>
       <div className="marginB20">

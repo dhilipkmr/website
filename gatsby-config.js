@@ -1,28 +1,52 @@
 module.exports = {
   siteMetadata: {
-    title: 'A Series of Accidental Blogs'
+    title: `A Series of Accidental Blogs`,
+    description: `A website to host all my Blogs`,
+    author: `Dhilip`,
   },
+  pathPrefix: '/',
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-catch-links',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
+        name: `pages`,
         path: `${__dirname}/src/pages`,
-        name: 'pages',
+      }
+    },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `A Series of Accidental Blog`,
+        short_name: `Dhilip's Blog`,
+        start_url: `/`,
+        display: `minimal-ui`,
       },
     },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-        {
-          resolve: "gatsby-remark-external-links",
-          options: {
-            target: "_target",
-            rel: "nofollow"
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              inlineCodeMarker: '÷',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+            }
           }
-        }
         ]
       }
     }
