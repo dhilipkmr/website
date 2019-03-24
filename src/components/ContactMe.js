@@ -18,7 +18,7 @@ const ContactMe = ({theme}) => {
         const ICON = contactItem[1];
         const title = contactItem[2];
         return (
-          <div className=" marginR30 inbl scaleOnHover">
+          <div className=" marginR30 inbl scaleOnHover ico25">
             <a href={url} title={title} target="_blank" rel="noopener noreferrer">
             {ICON}
             </a>

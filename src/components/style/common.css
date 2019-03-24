@@ -175,11 +175,14 @@ body.dark {
 .padT10{
   padding-top: 10px;
 }
+.ico25{
+  font-size: 25px;
+}
 .scaleOnHover{
   transition: all 0.2s linear;
 }
 .scaleOnHover:hover{
-  transform: scale(1.5);
+  transform: scale(1.1);
 }
 .ellipsis2{
   overflow: hidden!important;
