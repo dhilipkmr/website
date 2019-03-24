@@ -7,7 +7,7 @@ timeToRead: "2"
 description: "An Introduction to Creating Google Chrome Extension and getting started with communicating between content and background js"
 ---
 <img src="cover_2.png"/>
-
+<br/>
 ##Prerequisites:
 * Basic Javascript Knowledge
 * Chrome Browser
