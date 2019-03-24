@@ -21,6 +21,8 @@
 .toggleFader {
   opacity: 0;
   animation: 1s opacityFade forwards;
+  position: relative;
+  bottom: 75px;
 }
 .toggler {
   height: 18px;
@@ -34,4 +36,10 @@
 
 .moveRight {
   left: 55%;
+}
+
+@media screen and (max-width: 570px) {
+  .toggleFader {
+    bottom: 0px !important;
+  }
 }
