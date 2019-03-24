@@ -71,8 +71,9 @@ body.dark {
 .marginR20 {
   margin-right: 20px;
 }
-.marginR30 {
-  margin-right: 30px;
+.marginLR15 {
+  margin-right: 15px;
+  margin-left: 15px;
 }
 .marginB20 {
   margin-bottom: 20px;
@@ -348,7 +349,7 @@ pre[class*='language-'] {
   color: var(--inlineCode-text);
   padding: 0.15em 0.2em 0.05em;
   white-space: normal;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 /* Code blocks */
