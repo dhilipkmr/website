@@ -162,7 +162,7 @@ background.js on sending the response as the message to content.js we identify t
 We remove the existing popup if there is any[line 14–16]. Also on scroll [line 34]. Identify them through the parent class name or id of your callout element.[Try implementing this as an exercise]
 Pass response to`getInnerComponentHTML` which will put required HTML templates as strings along with placing response data in the appropriate place. Then load the element to the DOM by appending it to the body directly and making it **fixed and give top and bottom same as the place where the cursor was placed at the time of making API call.**
 
-**NOTE: We make it fixed and append directly to the body. Helps in avoiding overlay.**
+> ***NOTE:*** *We make it fixed and append directly to the body. Helps in avoiding overlay.*
 
 * `findRefinedXandYcoordinates()` helps in calculating new coordinate if the movie name is displayed at corners. (Can be done by reducing x or y’s coordinate by the width of your popup).
 

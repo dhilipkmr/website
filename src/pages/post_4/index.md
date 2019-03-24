@@ -137,7 +137,7 @@ This optimization helps to avoid expensive calculations on every render.
 
 `useMemo` checks from its second argument if a or b’s value has been changed. Values that are cached previously are used otherwise So if its values do not change then there is no rerun of the logic inside the function.
 
-**Important Note: Only use React hooks specific API in the top-level of your component and not inside return or inside any other function[only on the root level].**
+> ***Note:*** *Only use React hooks specific API in the top-level of your component and not inside return or inside any other function[only on the root level].*
 
 ![](https://media.giphy.com/media/F9hQLAVhWnL56/giphy.gif)
 

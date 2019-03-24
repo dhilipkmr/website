@@ -83,13 +83,13 @@ function buttonClicked(tab) {
   chrome.tabs.sendMessage(tab.id, msg);
 };
 ```
-> **Note**:`background scripts` don't have access to the DOM, so you have to ask`content_scripts` for help.
+> ***Note***: *`background scripts` don't have access to the DOM, so you have to ask`content_scripts` for help.*
 
 We do not want our`content.js` script to be active in all tabs where the user navigates to. So, we will wait for the user to indicate that he wants our extension to be active. We do that by listening to click event in`background.js`. Whenever the user clicks on the Extension we send a message to`content.js` saying that the user has clicked it.
 
 Click listener here takes a`callback(buttonClicked)` with an argument`(tab)` which gives current tab’s properties. We send back **message** to`content.js` through`sendMessage` API [line 8] and pass tab’s id and message. Message has type which helps to identify the **type** of message.
 
-**Remember:`content.js`** don't have access to browser clicks or tab clicks but the DOM.
+> ***Remember:*** *`content.js` don't have access to browser clicks or tab clicks but the DOM.*
 
 ###Step 3: Listen to the user action (HOVER) through content.js
 

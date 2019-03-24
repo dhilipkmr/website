@@ -129,7 +129,7 @@ render() {
 * [line 6]`rippleContainer` child is appended to the ripple div with 2 events`mousedown`(start the ripple effect) and`mouseup`(trigger a timeout to remove the`span`).
 * [Line 7] It is the function call to **rendering spans(what we call Ripple :P)**
 
-*NOTE: For every new Click on the element a new span child will get appended to the*`rippleContainer` *so it is necessary to clean up the span to reduce DOM's size.*
+>  ***NOTE:*** *For every new Click on the element a new span child will get appended to the`rippleContainer` so it is necessary to clean up the span to reduce DOM's size.*
 
 * On Assigning the css styles to the`rippleContainer` it **overlaps** its parent element completely.So any click will first reach handlers of div with`rippleContainer` class followed by its parent.
 

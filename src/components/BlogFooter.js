@@ -10,11 +10,13 @@ export default function BlogFooter(props) {
           posts.map((post) => {
             const {title, date, description, timeToRead, path} = post.node.frontmatter;
             return(
-              <div className="cardWrap" key={path}>
-                <Link to={path} className="cardHeader ellipsis2 fb">{title}</Link>
-                <div className="cardHeadingSub ico12">{date + ' ~ ' + timeToRead + ' min read'}</div>
-                <div className="cardDescription ico14 padT10 ellipsis2 padB10">{description}</div>
-              </div>
+              <Link to={path} className="noLinkEffect">
+                <div className="cardWrap" key={path}>
+                  <div className="cardHeader ellipsis2 fb">{title}</div>
+                  <div className="cardHeadingSub ico12 descriptionTxtColor">{date + ' ~ ' + timeToRead + ' min read'}</div>
+                  <div className="cardDescription ico14 padT10 ellipsis2 padB10 descriptionTxtColor">{description}</div>
+                </div>
+              </Link>
             )
           })
         }
