@@ -10,7 +10,7 @@ const Header = ({theme, themer}) => {
           <FadeIn className="fs40 inbl" style={{ lineHeight: '1.7em'}}>A Series of</FadeIn>
           <FadeIn className="fs40 inbl" style={{ animationDelay: '0.5s', lineHeight: '1.7em'}}>Accidental Blogs</FadeIn>
         </div>
-        <Toggle theme={theme} themer={themer}/>
+        <Toggle theme={theme} themer={themer} move/>
       </div>
     </div>
   )

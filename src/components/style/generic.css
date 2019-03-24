@@ -1,0 +1,181 @@
+h1 {
+  line-height: 1.2em;
+}
+.fb{
+  font-weight: bold;
+}
+.op0{
+  opacity: 0;
+}
+.margin20 {
+  margin: 20px;
+}
+.marginB20{
+  margin-bottom: 20px;
+}
+.pad5{
+  padding: 5px;
+}
+.textcenter {
+  text-align: center;
+}
+.pad10 {
+  padding: 10px;
+}
+.pad20{
+  padding: 20px;
+}
+.padT15{
+  padding-top: 15px;
+}
+.inbl {
+  display: inline-block;
+}
+.fr {
+  float: right;
+}
+.white {
+  color: #fff;
+}
+.padT20 {
+  padding-top: 20px;
+}
+.padL20 {
+  padding-left: 20px;
+}
+.padT15 {
+  padding-top: 15px;
+}
+.pad30 {
+  padding: 30px;
+}
+.marginR20 {
+  margin-right: 20px;
+}
+.marginLR15 {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.marginB20 {
+  margin-bottom: 20px;
+}
+.marginB70 {
+  margin-bottom: 70px;
+}
+.marginR10 {
+  margin-right: 10px;
+}
+.mt50 {
+  margin-top: 50px;
+}
+.mTB50 {
+  margin-top: 50px !important;
+  margin-bottom: 50px !important;
+}
+.mB25{
+  margin-bottom: 25px;
+}
+.width100{
+  width: 100%;
+}
+.margin10 {
+  margin: 10px;
+}
+.margin30 {
+  margin: 30px;
+}
+.lh2em{
+  line-height: 2em;
+}
+.mh30{
+  min-height: 30px;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+.hand:hover {
+  cursor: pointer;
+}
+.posRel {
+  position: relative;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mt50 {
+  margin-top: 50px;
+}
+.posAbs {
+  position: absolute;
+}
+.mh100vh{
+  min-height: 100vh;
+}
+.marginR10{
+  margin-right: 20px;
+}
+.mh90vh{
+  min-height: 90vh;
+}
+.mh60vh{
+  min-height: 60vh;
+}
+.lr05{
+  letter-spacing: 0.05rem;
+}
+.fs16{
+  font-size: 16px;
+}
+.ico12{
+  font-size: 12px;
+}
+.ico13{
+  font-size: 13px;
+}
+.ico14{
+  font-size: 14px;
+}
+.fs18 {
+  font-size: 18px;
+}
+.padT10{
+  padding-top: 10px;
+}
+.ico25{
+  font-size: 25px;
+}
+.h120p {
+  height: 120px;
+}
+.dn {
+  display: none;
+}
+.vh {
+  visibility: hidden;
+}
+.fs40 {
+  font-size: 40px;
+}
+.top38{
+  top: 38px;
+}
+.noLinkEffect {
+  text-decoration: none;
+}
+.opAnimator {
+  opacity: 0;
+  animation: opacityFade 1s forwards;
+}
+@keyframes opacityFade{
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}

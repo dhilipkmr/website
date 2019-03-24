@@ -1,6 +1,3 @@
-h1 {
-  line-height: 1.2em;
-}
 body.light {
   --headingTxtColor: #2d2d2d;
   --footerCardShadow: #e2e2e2;
@@ -19,181 +16,71 @@ body.dark {
   --inlineCode-bg: hsl(222, 14%, 25%);
   --inlineCode-text: #e6e6e6;
 }
-.fb{
-  font-weight: bold;
+
+blockquote {
+  padding-left: 1.45rem;
+  margin-right: 1.45rem;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.45rem;
+  border-left: 4px solid var(--headingTxtColor);
 }
 
-.op0{
-  opacity: 0;
-}
-.margin20 {
-  margin: 20px;
-}
-.marginB20{
-  margin-bottom: 20px;
-}
-.pad5{
-  padding: 5px;
-}
-.textcenter {
-  text-align: center;
-}
-.pad10 {
-  padding: 10px;
-}
-.pad20{
-  padding: 20px;
-}
-.padT15{
-  padding-top: 15px;
-}
-.inbl {
-  display: inline-block;
-}
-.fr {
-  float: right;
-}
-.white {
-  color: #fff;
-}
-.padT20 {
-  padding-top: 20px;
-}
-.padL20 {
-  padding-left: 20px;
-}
-.padT15 {
-  padding-top: 15px;
-}
-.pad30 {
-  padding: 30px;
-}
-.marginR20 {
-  margin-right: 20px;
-}
-.marginLR15 {
-  margin-right: 15px;
-  margin-left: 15px;
-}
-.marginB20 {
-  margin-bottom: 20px;
-}
-.marginB70 {
-  margin-bottom: 70px;
-}
-.marginR10 {
-  margin-right: 10px;
-}
-.mt50 {
-  margin-top: 50px;
-}
-.mTB50 {
-  margin-top: 50px !important;
-  margin-bottom: 50px !important;
-}
-.mB25{
-  margin-bottom: 25px;
-}
-.width100{
-  width: 100%;
-}
-.margin10 {
-  margin: 10px;
-}
-.margin30 {
-  margin: 30px;
-}
-.lh2em{
-  line-height: 2em;
-}
-.mh30{
-  min-height: 30px;
-}
 .mw960 {
   max-width: 960px;
   /* min-width: 400px; */
   margin: auto;
   padding: 10px;
 }
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none;
-}
 
-.hand:hover {
-  cursor: pointer;
-}
 .linkHand:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-.posRel {
-  position: relative;
+/*  ========================= Avatar Component Start=======================  */
+.avatarImg {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  left: 50%;
+  top: 50%;
+  border: 3px solid #235bc1;
+  animation: 1s opacityFade;
 }
-.mt10 {
-  margin-top: 10px;
+@keyframes opacityFade{
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
 }
-.mt50 {
-  margin-top: 50px;
-}
-.posAbs {
-  position: absolute;
-}
-.mh100vh{
-  min-height: 100vh;
-}
-.marginR10{
-  margin-right: 20px;
-}
-.mh90vh{
-  min-height: 90vh;
-}
-.mh60vh{
-  min-height: 60vh;
-}
-.lr05{
-  letter-spacing: 0.05rem;
-}
-.fs16{
-  font-size: 16px;
-}
-.ico12{
-  font-size: 12px;
-}
-.ico13{
-  font-size: 13px;
-}
-.ico14{
-  font-size: 14px;
-}
-.fs18 {
-  font-size: 18px;
-}
-.padT10{
-  padding-top: 10px;
-}
-.ico25{
-  font-size: 25px;
-}
+/*  ========================= Avatar Component End =======================  */
+
+/*  ========================= Contact me Component Start=======================  */
 .scaleOnHover{
   transition: all 0.2s linear;
 }
 .scaleOnHover:hover{
   transform: scale(1.1);
 }
+.contactIconBg{
+  background: #fff;
+  border-radius: 28%;
+  height: 30px;
+  width: 40px;
+}
+/*  =========================  Contact me Component End =========================  */
+
+/*  =========================  Footer Component Start   =========================  */
 .ellipsis2{
   overflow: hidden!important;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2!important;
-}
-/* index specifcs */
-.h120p {
-  height: 120px;
 }
 .cardWrap{
   display: block;
@@ -215,40 +102,57 @@ body.dark {
 }
 .cardHeader {
   color: var(--themeColor) !important;
-  /* height: 72px; */
 }
 .blogFooter{
   background: var(--footerBg);
   padding: 20px;
 }
-.headingTxtColor {
-  color: #151617;
-}
+/* =========================  Footer Component End =========================  */
 
-.blogTopicFont {
-  font-family: 'Baloo Chettan';
-}
-
+/* HomePage component Start*/
 .blogHeading {
   font-size: 28px;
   line-height: 1.5;
   font-weight: bold;
 }
+/* =========================  HomePage component End=========================  */
 
+/* =========================  Toggle Component start=========================  */
 .toggleBtn {
   height: 23px;
   width: 50px;
   border-radius: 15px;
 }
-.dn {
-  display: none;
+.toggleFader {
+  opacity: 0;
+  animation: 1s opacityFade forwards;
 }
-.vh {
-  visibility: hidden;
+.moveUp75 {
+  position: relative;
+  bottom: 75px;
 }
-.fs40 {
-  font-size: 40px;
+.toggler {
+  height: 18px;
+  width: 20px;
+  left: 3px;
+  top: 2px;
+  position: absolute;
+  border-radius: 10px;
+  transition: all 100ms linear;
 }
+
+.moveRight {
+  left: 55%;
+}
+
+@media screen and (max-width: 570px) {
+  .moveUp75 {
+    bottom: 0px !important;
+  }
+}
+/* =========================  Toggle Component end =========================   */
+
+/* =========================  Blog post Component Start=========================  */
 .blogText a {
   color: #0066ff;
 }
@@ -262,16 +166,12 @@ body.dark {
   font-size: 30px;
   padding-right: 10px;
 }
-.top38{
-  top: 38px;
-}
 .blogText img{
   display: block;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
 }
-
 .backHomeHeader {
   font-size: 24px;
   position: relative;
@@ -279,12 +179,12 @@ body.dark {
 a.backHomeHeader:hover{
   text-decoration: none;
 }
-.contactIconBg{
-  background: #fff;
-  border-radius: 28%;
-  height: 30px;
-  width: 40px;
+.blogText a.noLinkEffect:hover {
+  text-decoration: none;
 }
+/*  =========================  Blog post Component End =========================  */
+
+/* Fade In Component Start */
 .fadeInWrap {
   position: relative;
   overflow: hidden;
@@ -308,16 +208,10 @@ a.backHomeHeader:hover{
    top: 0px;
   }
 }
-/* @media screen and (max-width: 650px) {
-  .fadeInWrap {
-    height: 130px;
-  }
-} */
-
-
+/* =========================  Fade In Component End =========================  */
 
 /**
- * Based on copypasta from Remy Bach and Sarah Drasner
+ * Based on Remy Bach and Sarah Drasner IDE css
  */
 code[class*='language-'],
 pre[class*='language-'] {
@@ -341,17 +235,6 @@ pre[class*='language-'] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-}
-
-blockquote {
-  padding-left: 1.45rem;
-  margin-right: 1.45rem;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  border-left: 4px solid var(--headingTxtColor);
 }
 
 :not(pre) > code[class*='language-'] {
@@ -489,10 +372,4 @@ pre[data-line] {
 .gatsby-highlight pre[class*='language-'] {
   float: left;
   min-width: 100%;
-}
-.noLinkEffect {
-  text-decoration: none;
-}
-.blogText a.noLinkEffect:hover {
-  text-decoration: none;
 }

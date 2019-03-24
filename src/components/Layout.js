@@ -8,6 +8,7 @@ import './style/index.css';
 import './style/darkmode.css';
 import './style/lightmode.css';
 import './style/common.css';
+import './style/generic.css';
 
 if (typeof window !== 'undefined' && typeof document !== 'undefined' && window.localStorage.getItem('dkBlogTheme') && window.localStorage.getItem('dkBlogTheme') === 'dark') {
   document.body.classList.add('dark');

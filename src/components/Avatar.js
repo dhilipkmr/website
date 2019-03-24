@@ -1,5 +1,4 @@
 import React from 'react';
-import './componentCss.css';
 import FadeIn from './FadeIn';
 const LINKEDIN_URL = 'https://www.linkedin.com/in/dhilipkmr';
 const GI_LINKEDIN_URL = 'https://www.linkedin.com/company/goibibo/';

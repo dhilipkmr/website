@@ -1,9 +1,6 @@
 body.dark {
   background-color: #1f1f1f;
 }
-.dark .headingTxtColor {
-  color: white;
-}
 .dark .blogTopicTxtColor {
   /* color: #41c7ff; */
   color: #5893ff;
