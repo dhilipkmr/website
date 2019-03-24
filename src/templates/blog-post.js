@@ -76,7 +76,7 @@ export const postQuery = graphql`
         date
       }
     }
-    allMarkdownRemark(filter: {frontmatter:{ path: { ne: $path } }}){
+    allMarkdownRemark(limit:3, filter: {frontmatter:{ path: { ne: $path } }}){
       edges{
         node{
           frontmatter {
