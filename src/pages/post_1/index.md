@@ -8,6 +8,7 @@ description: "Creating an Independent Component that produces Ripple Effect usin
 ---
 <img src="cover_1.png"/>
 <br/>
+
 **Ripple effect** is becoming an interesting topic in recent days. Although there are libraries like [material-ui](https://material-ui.com/) which helps in achieving this behaviour, it is important for us to understand how we can achieve this on our own without depending on External libraries.
 
 ## What is Ripple Effect?

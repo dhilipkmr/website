@@ -8,6 +8,7 @@ description: "Understanding the basics of React Hooks and how we can map it to R
 ---
 <img src="cover_4.png"/>
 <br/>
+
 ##What is React Hooks?
 **React Hooks** is a new way to build your React Components. React Hooks are nothing but just a functional component. And these components have **extra features and capabilities** which belonged exclusively for class-based components so far. React Hooks makes it possible to **take stateful logic out of our component to reuse it in another component** which was difficult in class-based components, that introduced complex **render props** and **higher order component** design patterns.
 

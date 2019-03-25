@@ -17,7 +17,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined' && window.l
 }
 
 const Layout = ({ children, data }) => (
-  <div className="mw960 lr05">
+  <div className="lr05">
     <Helmet
       title="Dhilip's Blog"
       meta={[

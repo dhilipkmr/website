@@ -8,6 +8,7 @@ description: "Creating an IMDB details Call out on Hover over movie names and lo
 ---
 <img src="cover_3.png"/>
 <br/>
+
 Please read Part-I [here](/imdb-extension-part-1) for continuity.
 ###Step 4: Initiating listener in the DOM through content.js
 ```js

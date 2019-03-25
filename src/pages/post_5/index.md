@@ -3,7 +3,7 @@ path: "/creating-cyclic-carousel"
 date: "Mar 24, 2019"
 title: "Creating a Cyclic Carousel"
 author: "Dhilip kumar"
-timeToRead: "5"
+timeToRead: "6"
 description: "Implementing a standalone Cyclic Carousel with the help of React Hooks"
 ---
 <img src="cover_5.png"/>
@@ -224,7 +224,7 @@ useEffect(() => {
 * `constructVisibleItemsProps()` : This constructs all CSS properties to the elements in visibility.We need to do it whenever the image at center changes.
 * [line 19]: Need to change the ref for the current image, so while accessing it inside interval it will have the latest value.
 
-> * ***NOTE:*** *Variable binding with async methods like timeout, interval behaves differently in Hooks. It always is bound with values that the component has at the time of initiating setTimeout/setInterval. But this does not hold true for refs. That is why we use refs to get the current image while we are inside the timer.*
+> ***NOTE:*** *Variable binding with async methods like timeout, interval behaves differently in Hooks. It always is bound with values that the component has at the time of initiating setTimeout/setInterval. But this does not hold true for refs. That is why we use refs to get the current image while we are inside the timer.*
 
 ##Effect 3:
 An interval is set to iterate through images automatically for the given interval(`timeForNext`) if the`autoNext` property is enabled.

@@ -8,6 +8,7 @@ description: "An Introduction to Creating Google Chrome Extension and getting st
 ---
 <img src="cover_2.png"/>
 <br/>
+
 ##Prerequisites:
 * Basic Javascript Knowledge
 * Chrome Browser

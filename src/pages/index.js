@@ -49,7 +49,7 @@ class BlogPageHome extends React.Component{
     const {data} = this.props;
     return (
       <Layout>
-        <div>
+        <div className="mw960">
           <div className=" margin10">
             <Header theme={this.state.theme} themer={this.themer}/>
           </div>
