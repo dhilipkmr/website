@@ -48,7 +48,7 @@ blockquote {
   left: 50%;
   top: 50%;
   border: 3px solid #235bc1;
-  animation: 1s opacityFade;
+  animation: 1.3s opacityFade;
 }
 @keyframes opacityFade{
   0% {
@@ -198,7 +198,7 @@ a.backHomeHeader:hover{
   line-height: 1.2;
 }
 .keyFrameAnimator {
-  animation: 0.8s animateTop0;
+  animation: 0.5s animateTop0;
   animation-fill-mode: forwards;
   animation-delay: 0.2s;
 }

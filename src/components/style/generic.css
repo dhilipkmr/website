@@ -59,11 +59,17 @@ h1 {
 .marginB20 {
   margin-bottom: 20px;
 }
+.mB10{
+  margin-bottom: 10px;
+}
 .marginB70 {
   margin-bottom: 70px;
 }
 .marginR10 {
   margin-right: 10px;
+}
+.oh {
+  overflow: hidden;
 }
 .mt50 {
   margin-top: 50px;
@@ -146,6 +152,12 @@ h1 {
 .padT10{
   padding-top: 10px;
 }
+.padB10{
+  padding-bottom: 10px;
+}
+.marginT20{
+  margin-top: 20px;
+}
 .ico25{
   font-size: 25px;
 }
@@ -154,6 +166,9 @@ h1 {
 }
 .dn {
   display: none;
+}
+.inline {
+  display: inline;
 }
 .vh {
   visibility: hidden;
