@@ -1,6 +1,7 @@
 ---
 path: "/ripple-effect"
-date: "Jan 23, 2019"
+# date: "Jan 23, 2019"
+date: "2019-01-23"
 title: "Ripple Effect"
 author: "Dhilip kumar"
 timeToRead: "5"

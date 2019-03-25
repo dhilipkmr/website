@@ -2,7 +2,7 @@
 title: "Let's implement our own Array.map() method"
 description: "Implementing our own Array.map() in Javascript"
 path: "/array-map"
-date: "Mar 26, 2019"
+date: "2019-03-26"
 author: "Dhilip kumar"
 timeToRead: "2"
 ---

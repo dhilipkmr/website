@@ -1,6 +1,6 @@
 ---
 path: "/creating-cyclic-carousel"
-date: "Mar 24, 2019"
+date: "2019-03-24"
 title: "Creating a Cyclic Carousel"
 author: "Dhilip kumar"
 timeToRead: "6"

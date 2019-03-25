@@ -76,7 +76,7 @@ export const postQuery = graphql`
         path
         title
         author
-        date
+        date(formatString: "MMM DD, YYYY")
       }
     }
     allMarkdownRemark(limit:3, filter: {frontmatter:{ path: { ne: $path } }}){
@@ -84,7 +84,7 @@ export const postQuery = graphql`
         node{
           frontmatter {
             title
-            date
+            date(formatString: "MMM DD, YYYY")
             description
             timeToRead
             path
