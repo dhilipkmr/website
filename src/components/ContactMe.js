@@ -11,8 +11,8 @@ CONTACT_DETAILS.push(['https://dhilipkmr.surge.sh',         <FaGlobe/>,       'W
 
 const ContactMe = ({theme}) => {
   return(
-    <div className="width100 textcenter oh">
-      <FadeIn wrapHeight={45} style={{ animationDelay: '1.2s'}}>
+    <div className="width100 textcenter oh ">
+      <FadeIn style={{ animationDelay: '1.2s'}}>
         <div className="textcenter padT10">
           {CONTACT_DETAILS.map((contactItem) => {
             const url = contactItem[0];
