@@ -1,6 +1,6 @@
 ---
-title: "Let's implement our own Array.map() method"
-description: "Implementing our own Array.map() in Javascript"
+title: "Implementing our own Array.map()"
+description: "Understanding how Array.map() works and we implement our version of map"
 path: "/array-map"
 date: "2019-03-26"
 author: "Dhilip kumar"
@@ -41,7 +41,7 @@ Thus, whatever that is returned by map during each iteration, will get stored in
 
 > Note: If nothing is returned from the function then`undefined` gets stored in the output array.And this array's length will be same as that of the array on which map is done.
 
-If we did not return anything in out previous example then,
+If we did not return anything in our previous example then,
 
 ![](map2.png)
 
