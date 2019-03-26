@@ -26,9 +26,10 @@ export default class FadeIn extends React.Component {
         top: `${wrapHeight}px`
       }
     }
+    const classForFadeinWord = compClass + (hasStyleInfo ? '' :' op0 ') + (hasStyleInfo ? ' keyFrameAnimator' : '');
     return (
       <div ref="wrap" className={'padT10 textcenter inline oh fadeInWrap ' + (hasStyleInfo ? '' :' op0')}>
-        <div ref="fadeInWord" className={'fadeInWord ' + compClass + (hasStyleInfo ? ' keyFrameAnimator' : '')} style={{...transformStyle, ...style}}>
+        <div ref="fadeInWord" className={'fadeInWord ' + classForFadeinWord } style={{...transformStyle, ...style}}>
           {children}
         </div>
       </div>
