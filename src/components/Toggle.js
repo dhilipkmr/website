@@ -17,7 +17,7 @@ export default class Toggle extends React.Component {
               <div className="inbl white toggleBtnBg toggleBtn" onClick={themer}>
                 {/* <img src={this.getImage()} type="image/png" style={{ 'paddingLeft': '26px', height: '20px', paddingTop: '2px'}}/> */}
               </div>
-              <div ref="toggler" className={'toggler togglerBg ' + (theme === 'light' ? 'moveRight' : '')}></div>
+              <div ref="toggler" className={'toggler togglerBg ' + (theme === 'dark' ? '' : 'moveRight')}></div>
             </div>
           </div>
         </div>

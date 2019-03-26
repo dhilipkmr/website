@@ -10,13 +10,11 @@ export default class FadeIn extends React.Component {
   }
 
   componentDidMount() {
-    if (!this.state.hasStyleInfo) {
-      const wrapHeight = this.refs.fadeInWord.getBoundingClientRect().height + 10;
-      this.setState({
-        hasStyleInfo: true,
-        wrapHeight: wrapHeight
-      });
-    }
+    const wrapHeight = this.refs.fadeInWord.getBoundingClientRect().height + 10;
+    this.setState({
+      hasStyleInfo: true,
+      wrapHeight: wrapHeight
+    });
   }
 
   render() {
@@ -30,9 +28,9 @@ export default class FadeIn extends React.Component {
     }
     return (
       <div ref="wrap" className={'padT10 textcenter inline oh fadeInWrap ' + (hasStyleInfo ? '' :' op0')}>
-        <span ref="fadeInWord" className={'fadeInWord ' + compClass + (hasStyleInfo ? ' keyFrameAnimator' : '')} style={{...transformStyle, ...style}}>
+        <div ref="fadeInWord" className={'fadeInWord ' + compClass + (hasStyleInfo ? ' keyFrameAnimator' : '')} style={{...transformStyle, ...style}}>
           {children}
-        </span>
+        </div>
       </div>
     );
   }

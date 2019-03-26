@@ -9,40 +9,39 @@ class BlogPageHome extends React.Component{
   constructor(props) {
     super(props);
     this.themer = this.themer.bind(this);
+    this.getPrevTheme = this.getPrevTheme.bind(this);
     this.state = {
-      theme: this.themer()
+      theme: null
     }
   }
 
-  themer() {
-    /*  During initialization */
-    if (!this.state && typeof(window) !== 'undefined') {
+  componentDidMount() {
+    const theme = this.getPrevTheme();
+    this.setState({ theme });
+  }
+
+  getPrevTheme() {
+    if (typeof(window) !== 'undefined') {
       const themeName = window.localStorage.getItem('dkBlogTheme');
       if (!themeName || (themeName !== 'light' && themeName !=='dark')) {
-        console.log('log1 set light');
         window.localStorage.setItem('dkBlogTheme', 'light');
-        document.body.classList.add('light');
+        document.body.className = 'light';
         return 'light'
       }
-      document.body.classList.add(themeName);
+      document.body.className = themeName;
       return themeName;
     }
+  }
+  
+  themer() {
     /* All other calls to themer */
-    if (this.state) {
-      console.log('log2 set');
-      const oldTheme = this.state.theme;
-      const newTheme = (oldTheme === 'dark') ? 'light' : 'dark';
-      if (oldTheme && typeof(window) !== 'undefined') {
-        console.log('log3 set');
-        const {body} = document;
-        body.classList.add(newTheme);
-        body.classList.remove(oldTheme);
-        this.setState({ theme: newTheme});
-        window.localStorage.setItem('dkBlogTheme', newTheme);
-        return newTheme;
-      }
+    const oldTheme = this.state.theme;
+    const newTheme = (oldTheme === 'dark') ? 'light' : 'dark';
+    if (typeof(window) !== 'undefined') {
+      this.setState({ theme: newTheme});
+      document.body.className = newTheme;
+      window.localStorage.setItem('dkBlogTheme', newTheme);
     }
-    console.log('log4 set');
   }
 
   render() {

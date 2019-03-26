@@ -11,7 +11,7 @@ timeToRead: "2"
 
 If you know how`Array.map()` works you can jump [here](#map_implementation) directly.
 
-##What is Array.map in javascript?
+##What is Array.map() in javascript?
     A map is a built-in function of Arrays in javascript which helps us iterate over each individual elements of the array and returns a brand new array.
 
 

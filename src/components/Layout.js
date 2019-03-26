@@ -10,12 +10,6 @@ import './style/lightmode.css';
 import './style/common.css';
 import './style/generic.css';
 
-if (typeof window !== 'undefined' && typeof document !== 'undefined' && window.localStorage.getItem('dkBlogTheme') && window.localStorage.getItem('dkBlogTheme') === 'dark') {
-  document.body.classList.add('dark');
-} else if (typeof document !== 'undefined') {
-  document.body.classList.add('light');
-}
-
 const Layout = ({ children, data }) => (
   <div className="lr05">
     <Helmet

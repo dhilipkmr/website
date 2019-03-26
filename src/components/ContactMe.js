@@ -11,22 +11,20 @@ CONTACT_DETAILS.push(['https://dhilipkmr.surge.sh',         <FaGlobe/>,       'W
 
 const ContactMe = ({theme}) => {
   return(
-    <div className="width100 textcenter oh ">
+    <div className="width100 textcenter padT10 oh ">
       <FadeIn style={{ animationDelay: '1.2s'}}>
-        <div className="textcenter padT10">
-          {CONTACT_DETAILS.map((contactItem) => {
-            const url = contactItem[0];
-            const ICON = contactItem[1];
-            const title = contactItem[2];
-            return (
-              <div key={title} className=" marginLR15 inbl scaleOnHover ico25">
-                <a href={url} title={title} target="_blank" rel="noopener noreferrer">
+        {CONTACT_DETAILS.map((contactItem) => {
+          const url = contactItem[0];
+          const ICON = contactItem[1];
+          const title = contactItem[2];
+          return (
+            <div key={title} className=" marginLR15 inbl scaleOnHover ico25">
+              <a href={url} title={title} target="_blank" rel="noopener noreferrer">
                 {ICON}
-                </a>
-              </div>
-            )
-          })}
-        </div>
+              </a>
+            </div>
+          )
+        })}
       </FadeIn>
     </div>
   );
