@@ -67,7 +67,7 @@ blockquote {
   transition: all 0.2s linear;
 }
 .scaleOnHover:hover{
-  transform: scale(1.1);
+  transform: scale(1.3);
 }
 .contactIconBg{
   background: #fff;

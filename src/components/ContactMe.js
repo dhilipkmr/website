@@ -6,7 +6,7 @@ let CONTACT_DETAILS = [];
 CONTACT_DETAILS.push(['https://github.com/dhilipkmr',       <FaGithub/>,      'Github']);             // GITHUB_URL
 CONTACT_DETAILS.push(['https://linkedin.com/in/dhilipkmr/', <FaLinkedinIn/>,  'LinkedIn']);           // LINKEDIN_URL
 CONTACT_DETAILS.push(['https://medium.com/@dhilipkmr',      <FaMedium/>,      'Medium']);             // MEDIUM_URL
-CONTACT_DETAILS.push(['https://twitter.com/dhilipkmr_r',    <FaTwitter/>,     'Twitter']);            // TWITTER_URL
+CONTACT_DETAILS.push(['https://twitter.com/dhilipkmr_',    <FaTwitter/>,     'Twitter']);            // TWITTER_URL
 CONTACT_DETAILS.push(['https://dhilipkmr.surge.sh',         <FaGlobe/>,       'Website']);            // WEB_URL
 
 const ContactMe = ({theme}) => {
