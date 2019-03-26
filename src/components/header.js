@@ -1,6 +1,7 @@
 import React from 'react';
 import Toggle from './Toggle';
 import FadeIn from './FadeIn';
+import PropTypes from 'prop-types';
 
 const Header = ({theme, themer}) => {
   return (
@@ -18,5 +19,10 @@ const Header = ({theme, themer}) => {
     </div>
   )
 }
+
+Header.propTypes = {
+  theme: PropTypes.string,
+  themer: PropTypes.func
+};
 
 export default Header;

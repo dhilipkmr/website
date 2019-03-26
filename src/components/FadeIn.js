@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class FadeIn extends React.Component {
+class FadeIn extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -36,3 +37,10 @@ export default class FadeIn extends React.Component {
     );
   }
 }
+
+FadeIn.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object
+};
+
+export default FadeIn;

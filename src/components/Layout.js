@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 import { graphql } from 'gatsby';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import favicon16 from '../assets/me16.png';
 import favicon32 from '../assets/me32.png';
@@ -32,7 +32,7 @@ const Layout = ({ children, data }) => (
 
 
 Layout.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.object,
 };
 
 export default Layout

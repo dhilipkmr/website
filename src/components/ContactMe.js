@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import FadeIn from './FadeIn';
 import { FaTwitter, FaMedium, FaGithub, FaLinkedinIn, FaGlobe } from 'react-icons/fa';
 
@@ -29,4 +30,9 @@ const ContactMe = ({theme}) => {
     </div>
   );
 }
+
+ContactMe.propTypes = {
+  theme: PropTypes.string
+};
+
 export default ContactMe;

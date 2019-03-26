@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Link} from 'gatsby';
 
-export default function BlogFooter(props) {
+const BlogFooter = (props) => {
   const {posts} = props;
   return (
     <div className="blogFooter">
@@ -10,7 +11,7 @@ export default function BlogFooter(props) {
           posts.map((post) => {
             const {title, date, description, timeToRead, path} = post.node.frontmatter;
             return(
-              <Link to={path} className="noLinkEffect">
+              <Link to={path} className="noLinkEffect" key={path}>
                 <div className="cardWrap" key={path}>
                   <div className="cardHeader ellipsis2 fb">{title}</div>
                   <div className="cardHeadingSub ico12 descriptionTxtColor">{date + ' ~ ' + timeToRead + ' min read'}</div>
@@ -24,3 +25,9 @@ export default function BlogFooter(props) {
     </div>
   );
 }
+
+BlogFooter.propTypes = {
+  posts: PropTypes.array
+};
+
+export default BlogFooter;

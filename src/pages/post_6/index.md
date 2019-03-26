@@ -61,7 +61,7 @@ Array.prototype.mymap = function(){
 Now we will be able to run`[1,2,3].mymap();` which will return`undefined`.
 
 ###Step 2:
-* `map` is called with function as an argument inside it. (eg:`[1,2].map(function(val, index, arr){})`). So, our`mymap` function should accept a function as an argument.
+* `map` is called with function as an argument inside it (i.e) `[1,2].map(function(val, index, arr){ })` so, our`mymap` function should accept a function as an argument.
 * The function in the argument should be called for each value in the array with 3 arguments:
     * The current element
     * Current element's index

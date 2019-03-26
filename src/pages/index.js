@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Avatar from '../components/Avatar';
 import ContactMe from '../components/ContactMe';
@@ -58,7 +59,7 @@ class BlogPageHome extends React.Component{
           </div>
           <div className="margin20 lh2em mt50">
             {data.allMarkdownRemark.edges.map(post => (
-              <Link to={post.node.frontmatter.path}>
+              <Link to={post.node.frontmatter.path} key={post.node.frontmatter.path}>
                 <div key={post.node.id} className="marginB70">
                   <header className="blogHeading blogTopicTxtColor">{post.node.frontmatter.title}</header>
                   <div className="descriptionTxtColor">
@@ -76,6 +77,13 @@ class BlogPageHome extends React.Component{
     );
   }
 }
+
+BlogPageHome.propTypes = {
+  data: PropTypes.object,
+};
+
+export default BlogPageHome;
+
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(
@@ -96,6 +104,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
-
-export default BlogPageHome;
+`;
