@@ -5,8 +5,6 @@ import Helmet from 'react-helmet';
 import favicon16 from '../assets/me16.png';
 import favicon32 from '../assets/me32.png';
 import './style/index.css';
-import './style/darkmode.css';
-import './style/lightmode.css';
 import './style/common.css';
 import './style/generic.css';
 

@@ -6,7 +6,10 @@ body, body.light {
   --themeColor: #235bc1;
   --inlineCode-bg: rgba(255, 229, 100, 0.2);
   --inlineCode-text: #1a1a1a;
+  --description: #636363;
+  --blogText: #dadada;
   transition: all 0.2s linear;
+  background-color: var(--themeBg);
 }
 body.dark {
   --headingTxtColor: #ffffff;
@@ -16,7 +19,10 @@ body.dark {
   --themeColor: #5893ff;
   --inlineCode-bg: hsl(222, 14%, 25%);
   --inlineCode-text: #e6e6e6;
+  --description: #cccccc;
+  --blogText: #dadada;
   transition: all 0.2s linear;
+  background-color: var(--themeBg);
 }
 
 blockquote {
@@ -29,7 +35,13 @@ blockquote {
   margin-bottom: 1.45rem;
   border-left: 4px solid var(--headingTxtColor);
 }
+h1 {
+  color: var(--headingTxtColor);
+}
 
+h2, h3, .themeColor {
+  color: var(--themeColor) !important;
+}
 .mw960 {
   max-width: 960px;
   /* min-width: 400px; */
@@ -42,6 +54,9 @@ blockquote {
   text-decoration: underline;
 }
 /*  ========================= Avatar Component Start=======================  */
+.avatarInto {
+  color: var(--description);
+}
 .avatarImg {
   height: 120px;
   width: 120px;
@@ -111,15 +126,25 @@ blockquote {
 }
 /* =========================  Footer Component End =========================  */
 
-/* HomePage component Start*/
+/* ======================== HomePage component Start =======================  */
 .blogHeading {
   font-size: 28px;
   line-height: 1.5;
   font-weight: bold;
 }
+a.readMoreLink, .descriptionTxtColor {
+  color: var(--description);
+  text-decoration: none;
+}
 /* =========================  HomePage component End=========================  */
 
 /* =========================  Toggle Component start=========================  */
+.toggleBtnBg {
+  background: var(--headingTxtColor);
+}
+.togglerBg {
+  background: var(--themeBg);
+}
 .toggleBtn {
   height: 23px;
   width: 50px;
@@ -155,7 +180,12 @@ blockquote {
 /* =========================  Toggle Component end =========================   */
 
 /* =========================  Blog post Component Start=========================  */
-
+.blogTopicTxtColor {
+  color: var(--themeColor);
+}
+.blogText {
+  color: var(--blogText);
+}
 .blogText a {
   color: #0066ff;
 }
@@ -187,7 +217,11 @@ a.backHomeHeader:hover{
 }
 /*  =========================  Blog post Component End =========================  */
 
-/* Fade In Component Start */
+/*  =========================  Fade In Component Start =========================  */
+.fadeInWord {
+  color: var(--headingTxtColor);
+}
+
 .fadeInWrap {
   position: relative;
   overflow: hidden;
