@@ -22,16 +22,7 @@ class BlogPageHome extends React.Component{
   }
 
   getPrevTheme() {
-    if (typeof(window) !== 'undefined') {
-      const themeName = window.localStorage.getItem('dkBlogTheme');
-      if (!themeName || (themeName !== 'light' && themeName !=='dark')) {
-        window.localStorage.setItem('dkBlogTheme', 'light');
-        document.body.className = 'light';
-        return 'light'
-      }
-      document.body.className = themeName;
-      return themeName;
-    }
+    return window.__dkBlogTheme;
   }
   
   themer() {
@@ -41,6 +32,7 @@ class BlogPageHome extends React.Component{
     if (typeof(window) !== 'undefined') {
       this.setState({ theme: newTheme});
       document.body.className = newTheme;
+      window.__dkBlogTheme = newTheme;
       window.localStorage.setItem('dkBlogTheme', newTheme);
     }
   }
