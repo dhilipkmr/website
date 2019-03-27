@@ -10,8 +10,8 @@ const Toggle = ({theme, themer, move}) => {
       <Helmet  meta={[{ name: 'theme-color', content: (theme === 'dark' ? '#1f1f1f': '#296be4')}]}/>
       <div className="mw960">
         <div className="width100 mh30">
-          <div className={'toggleBtnWrap inbl fr marginR10 posRel toggleFader hand '+ (move ? 'moveUp75': '') } style={{ animationDelay: move ? '1s' : '0'}}>
-            <div className="inbl white toggleBtnBg toggleBtn " onClick={themer}>
+          <div className={'toggleBtnWrap inbl fr marginR10 posRel toggleFader hand noselect '+ (move ? 'moveUp75': '') } style={{ animationDelay: move ? '1s' : '0', height: '23px'}}>
+            <div className="inbl white toggleBtnBg toggleBtn" onClick={themer}>
               {/* <img src={this.getImage()} type="image/png" style={{ 'paddingLeft': '26px', height: '20px', paddingTop: '2px'}}/> */}
             </div>
             <div className={'toggler togglerBg ' + (theme === 'dark' ? '' : 'moveRight')}></div>
