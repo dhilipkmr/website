@@ -26,6 +26,19 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `The Accidental Blogger`,
+        short_name: `The Accidental Blogger`,
+        start_url: `/`,
+        background_color: `#1f1f1f`,
+        theme_color: `#235bc1`,
+        display: `minimal-ui`,
+        icon: `src/assets/profilePic.png`,
+        theme_color_in_head: false,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
