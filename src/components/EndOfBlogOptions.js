@@ -23,7 +23,7 @@ const Avatar = (props) => {
       <div className="rightAlign">
         <div>
           <FaShare className="marginR10" onClick={() => shareBlog(props)}/>
-          <a className="marginR10 white" href={'whatsapp://send?text=<%=' +  window.location.origin + props.data.path + ' %>'}><FaWhatsapp/></a>
+          <a className="marginR10 white" href={'whatsapp://send?text=<%=' + (typeof(window !== 'undefined') ? (window.location.origin + props.data.path) : '') + ' %>'}><FaWhatsapp/></a>
           <FaTwitter/>
         </div>
       </div>
