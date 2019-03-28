@@ -96,6 +96,12 @@ h1 {
 .mh30{
   min-height: 30px;
 }
+.leftAlign {
+  text-align: left;
+}
+.rightAlign {
+  text-align: right;
+}
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */

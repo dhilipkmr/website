@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import Toggle from '../components/Toggle';
 import BlogFooter from '../components/BlogFooter';
+import EndOfBlogOptions from '../components/EndOfBlogOptions';
 
 export default class Template extends React.Component {
   constructor(props) {
@@ -43,6 +44,10 @@ export default class Template extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
     const otherPosts = this.props.data.allMarkdownRemark.edges;
+    const blogEndData = {
+      title: post.frontmatter.title,
+      path: post.frontmatter.path
+    };
     const {theme} = this.state;
     return (
       <Layout>
@@ -60,6 +65,7 @@ export default class Template extends React.Component {
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
               </div>
           </div>
+          <EndOfBlogOptions data={blogEndData}/>
           <BlogFooter posts={otherPosts}/>
           {/* <div className="marginB20">
             <Link to="/" className="backHomeHeader marginB20 themeColor"><span className="backIcon">{'<'}</span>Dhilip's Blogs</Link>
