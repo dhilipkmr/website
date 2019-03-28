@@ -1,4 +1,5 @@
 import React from 'react';
+import {FaShare, FaWhatsapp, FaTwitter} from 'react-icons/fa';
 // import FadeIn from './FadeIn';
 // import profilePic from '../assets/profilePic.png';
 
@@ -22,7 +23,11 @@ const Avatar = (props) => {
   return (
     <div className="margin30">
       <div className="rightAlign">
-        <div onClick={() => shareBlog(props)}>share</div>
+        <div>
+          <FaShare className="marginR10" onClick={() => shareBlog(props)}/>
+          <a className="marginR10 white" href={'whatsapp://send?text=<%=' +  window.location.origin + props.data.path + ' %>'}><FaWhatsapp/></a>
+          <FaTwitter/>
+        </div>
       </div>
       {/* <div className="posRel h120p leftAlign">
         <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
