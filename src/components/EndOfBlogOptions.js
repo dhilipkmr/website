@@ -25,7 +25,7 @@ const Avatar = (props) => {
         <div>
           <FaShare className="marginR20 hand" onClick={() => shareBlog(props)}/>
           <a className="marginR20 white hand" href={'whatsapp://send?text=<%=https://the-accidental-blogger.netlify.com' + props.data.path + ' %>'}><IoLogoWhatsapp className="themeColor"/></a>
-          <FaTwitter className="marginR20 hand"/>
+          <a target="_blank" href={'http://twitter.com/share?text=' + props.data.title + '&url=https://the-accidental-blogger.netlify.com' + props.data.path + '&hashtags=javacript'}><FaTwitter className="marginR20 hand"/></a>
         </div>
       </div>
       {/* <div className="posRel h120p leftAlign">
