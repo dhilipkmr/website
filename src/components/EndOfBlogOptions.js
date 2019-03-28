@@ -1,5 +1,6 @@
 import React from 'react';
-import {FaShare, FaWhatsapp, FaTwitter} from 'react-icons/fa';
+import {FaShare, FaTwitter} from 'react-icons/fa';
+import {IoLogoWhatsapp} from 'react-icons/io';
 // import FadeIn from './FadeIn';
 // import profilePic from '../assets/profilePic.png';
 
@@ -19,12 +20,12 @@ const shareBlog = (props) => {
 }
 const Avatar = (props) => {
   return (
-    <div className="margin30">
-      <div className="rightAlign">
+    <div className="mw960 pad10 ">
+      <div className="rightAlign ico24 themeColor">
         <div>
-          <FaShare className="marginR10" onClick={() => shareBlog(props)}/>
-          <a className="marginR10 white" href={'whatsapp://send?text=<%=' + (typeof(window !== 'undefined') ? (window.location.origin + props.data.path) : '') + ' %>'}><FaWhatsapp/></a>
-          <FaTwitter/>
+          <FaShare className="marginR20 hand" onClick={() => shareBlog(props)}/>
+          <a className="marginR20 white hand" href={'whatsapp://send?text=<%=' + (typeof(window) !== 'undefined' ? (window.location.origin + props.data.path) : '') + ' %>'}><IoLogoWhatsapp className="themeColor"/></a>
+          <FaTwitter className="marginR20 hand"/>
         </div>
       </div>
       {/* <div className="posRel h120p leftAlign">

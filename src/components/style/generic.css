@@ -102,6 +102,9 @@ h1 {
 .rightAlign {
   text-align: right;
 }
+.ico24{
+  font-size: 24px;
+}
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
