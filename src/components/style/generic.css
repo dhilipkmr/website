@@ -52,6 +52,16 @@ h1 {
 .marginR20 {
   margin-right: 20px;
 }
+.marginLR20 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.marginL10 {
+  margin-left: 10px;
+}
+.marginL15 {
+  margin-left: 15px !important;
+}
 .marginLR15 {
   margin-right: 15px;
   margin-left: 15px;

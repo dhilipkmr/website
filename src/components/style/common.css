@@ -410,3 +410,9 @@ pre[data-line] {
   float: left;
   min-width: 100%;
 }
+
+/* ============================ footerAvatar ============================= */
+.footerAvatar {
+  border-radius: 50%;
+  border: 3px solid var(--themeColor)
+}
