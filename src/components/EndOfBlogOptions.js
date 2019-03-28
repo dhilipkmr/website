@@ -7,19 +7,17 @@ import {FaShare, FaWhatsapp, FaTwitter} from 'react-icons/fa';
 // const GI_LINKEDIN_URL = 'https://www.linkedin.com/company/goibibo/';
 
 const shareBlog = (props) => {
-  console.log(props);
   const { title, path } = props.data;
   if (navigator.share) {
     navigator.share({
         title,
-        url: window.location.origin + path
+        url: typeof(window !== 'undefined') ? window.location.origin + path : ''
     })
     .then(() => console.log('Successful share'))
     .catch((error) => console.log('Error sharing', error));
   }
 }
 const Avatar = (props) => {
-  console.log('pp', props);
   return (
     <div className="margin30">
       <div className="rightAlign">
