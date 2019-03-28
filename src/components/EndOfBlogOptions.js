@@ -24,7 +24,7 @@ const Avatar = (props) => {
       <div className="rightAlign ico24 themeColor">
         <div>
           <FaShare className="marginR20 hand" onClick={() => shareBlog(props)}/>
-          <a className="marginR20 white hand" href={'whatsapp://send?text=<%=' + (typeof(window) !== 'undefined' ? (window.location.origin + props.data.path) : '') + ' %>'}><IoLogoWhatsapp className="themeColor"/></a>
+          <a className="marginR20 white hand" href={'whatsapp://send?text=<%=https://the-accidental-blogger.netlify.com' + props.data.path + ' %>'}><IoLogoWhatsapp className="themeColor"/></a>
           <FaTwitter className="marginR20 hand"/>
         </div>
       </div>
