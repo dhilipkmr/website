@@ -27,7 +27,7 @@ body.dark {
 
 blockquote {
   padding-left: 1.45rem;
-  margin-right: 1.45rem;
+  margin-inline-start: 25px;
   margin-top: 0;
   padding-bottom: 0;
   padding-right: 0;
@@ -128,9 +128,12 @@ h2, h3, .themeColor {
 
 /* ======================== HomePage component Start =======================  */
 .blogHeading {
-  font-size: 28px;
+  font-size: 25px;
   line-height: 1.5;
   font-weight: bold;
+}
+.blogDesc {
+  font-size: 18px;
 }
 a.readMoreLink, .descriptionTxtColor {
   color: var(--description);
@@ -156,7 +159,7 @@ a.readMoreLink, .descriptionTxtColor {
 }
 .moveUp75 {
   position: relative;
-  bottom: 75px;
+  bottom: 60px;
 }
 .toggler {
   height: 18px;
@@ -415,4 +418,50 @@ pre[data-line] {
 .footerAvatar {
   border-radius: 50%;
   border: 3px solid var(--themeColor)
+}
+
+/* layoutheader */
+.layoutHeaderwrap {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  background: var(--themeBg);
+  z-index: 1;
+  transition: all 0.2s linear;
+}
+.loaderTransition {
+  height: 1px;
+  width: 0;
+  border: 2px solid var(--themeColor);
+  animation: loader 0.7s forwards;
+}
+@keyframes loader{
+  99% {
+    border: 2px solid var(--themeColor);
+  }
+  100%{
+    width: 100%;
+    border: 2px solid var(--themeBg);
+    /* border: 0px; */
+  }
+}
+
+/* portfolio */
+.projectContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* flex-direction: row-reverse; */
+}
+.projectCard {
+  overflow: hidden;
+  width: 290px;
+  /* height: 200px; */
+  font-size: 16px;
+  box-shadow: 0px 6px 6px #d2cfcf;
+  margin: 10px;
+  padding: 20px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  border-radius: 5px;
 }

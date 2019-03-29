@@ -10,6 +10,12 @@ h1 {
 .margin20 {
   margin: 20px;
 }
+.marginR30 {
+  margin-right: 30px;
+}
+.marginR5p{
+  margin-right: 5%;
+}
 .marginB20{
   margin-bottom: 20px;
 }
@@ -150,6 +156,13 @@ h1 {
 .mh60vh{
   min-height: 60vh;
 }
+.mh80vh{
+  min-height: 80vh;
+}
+.mh100{
+  height: 100%;
+  overflow: hidden;
+}
 .lr05{
   letter-spacing: 0.05rem;
 }
@@ -180,8 +193,23 @@ h1 {
 .ico25{
   font-size: 25px;
 }
+.fg {
+  font-family: 'Georgia, sans serif';
+}
 .h120p {
   height: 120px;
+}
+.h145p {
+  height: 22vh;
+}
+.posSticky {
+  position: sticky;
+}
+.ico25 {
+  font-size: 25px;
+}
+.ico20 {
+  font-size: 20px;
 }
 .dn {
   display: none;
@@ -194,6 +222,9 @@ h1 {
 }
 .fs40 {
   font-size: 40px;
+}
+.fs35 { 
+  font-size: 35px;
 }
 .top38{
   top: 38px;
@@ -211,5 +242,17 @@ h1 {
   }
   100% {
     opacity: 1
+  }
+}
+
+.moveInAnimate {
+  position: relative;
+  top: 50px;
+  animation: moveIn 0.5s forwards;
+}
+@keyframes moveIn{
+  100% {
+    top: 0;
+    opacity: 1;
   }
 }

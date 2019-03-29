@@ -52,18 +52,16 @@ export default class Template extends React.Component {
     return (
       <Layout>
         <div className="blogText lh2em lr05">
-          <div className="mw960 pad10 ">
-            <Link to="/" className="backHomeHeader top38 themeColor fb opAnimator"><span className="backIcon">{'<'}</span>Dhilip's Blogs</Link>
-              <Toggle theme={theme} themer={this.themer} />
-              <div className="marginB20">
-                <h1 className="opAnimator">{post.frontmatter.title}</h1>
-              </div>
-              <div  className="marginB20">
-                <i className="ico13 descriptionTxtColor">Published on {post.frontmatter.date}</i>
-              </div>
-              <div className="descriptionTxtColor">
-                <div dangerouslySetInnerHTML={{ __html: post.html }} />
-              </div>
+          <div className="mw960 pad20 ">
+            <div className="marginB20">
+              <h1 className="opAnimator">{post.frontmatter.title}</h1>
+            </div>
+            <div  className="marginB20">
+              <i className="ico13 descriptionTxtColor">Published on {post.frontmatter.date}</i>
+            </div>
+            <div className="descriptionTxtColor">
+              <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            </div>
           </div>
           <EndOfBlogOptions data={blogEndData}/>
           <BlogFooter posts={otherPosts}/>
