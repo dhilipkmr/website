@@ -562,3 +562,50 @@ pre[data-line] {
 .themeColorBackground {
   background: #235bc1;
 }
+/* menucontainer */
+.menuContainer {
+  background: #000;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  opacity: 01;
+  top: 0;
+  z-index: 2;
+  animation: fillSide 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+.menuFont {
+  font-size: 47px;
+}
+.menuHeadingContainer {
+  height: 200px;
+  top: 200px;
+  color: white;
+  position: absolute;
+  opacity: 1;
+  line-height: 2em;
+}
+.themeHover:hover {
+  color: var(--themeColor);
+}
+.widthOptimize {
+  width: 65%;
+}
+@media all and (max-width: 500px) {
+  .menuFont {
+    font-size: 40px !important;
+  }
+  .menuContainer .transCenter {
+    top: 30%;
+  }
+  .widthOptimize {
+    width: 65%;
+  }
+}
+.closeBtn{
+  position: fixed;
+  top: 15px;
+  right: 0px;
+  left: 15px;
+  bottom: 0;
+  color: white;
+}
