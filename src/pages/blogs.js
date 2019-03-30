@@ -64,7 +64,7 @@ class Blogs extends React.Component{
     return (
       <Layout className="mh100" theme={this.state.theme} themer={this.themer}>
         <div>
-          <div className="mh90vh">
+          <div className="mh90vh marginT15">
             <div className="inbl mh90vh"></div>
             <div className="inbl posRel width60 skillDesc fillUpFromZero mw100" style={{'animationDelay': '0.2s'}}>
               {post && <div className=" posAbs themeBg blogcounter">{this.getNumber(post.postNum)}</div>}

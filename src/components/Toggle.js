@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-// import moon from '../assets/moon.png';
-// import sun from '../assets/sun.png';
+import moon from '../assets/moon.png';
+import sun from '../assets/sun.png';
+import {FaMoon, FaSun} from 'react-icons/fa';
 
 const Toggle = ({theme, themer, move}) => {
   return(
@@ -10,12 +11,8 @@ const Toggle = ({theme, themer, move}) => {
       <Helmet  meta={[{ name: 'theme-color', content: (theme === 'dark' ? '#1f1f1f': '#296be4')}]}/>
       <div className="">
         <div className="">
-          <div className={'toggleBtnWrap inbl fr  posRel toggleFader hand noselect marginR5p '} style={{ height: '23px'}}>
-            <div className="inbl white toggleBtnBg toggleBtn" onClick={themer}>
-              {/* <img src={this.getImage()} type="image/png" style={{ 'paddingLeft': '26px', height: '20px', paddingTop: '2px'}}/> */}
-            </div>
-            <div className={'toggler togglerBg ' + (theme === 'dark' ? '' : 'moveRight')}></div>
-          </div>
+          {(theme !== 'dark') && <FaMoon className="hand " onClick={themer} src={sun}></FaMoon>}
+          {(theme === 'dark') && <FaSun className="hand  " onClick={themer} src={moon}></FaSun>}
         </div>
       </div>
     </div>

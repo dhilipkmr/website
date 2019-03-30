@@ -28,7 +28,7 @@ class LayoutHeader extends React.Component{
       <div className={className}>
         <div ref="headerContainer">
           <div className="loaderTransition"></div>
-          <div className="layoutHeaderwrap marginR5p marginB20 op0 opAnimator fadeInWord posSticky" style={{ 'animationDelay': '0s'}}>
+          <div className="layoutHeaderwrap marginR5p op0 opAnimator fadeInWord posSticky" style={{ 'animationDelay': '0s'}}>
             <Link className={'inbl marginR5p ' + (currPath === '/' ? 'fb' : '')} to="/"><div className="">Home</div></Link>
             <Link className={'inbl marginR5p ' + (currPath === '/blogs' ? 'fb' : '')} to="/blogs"><div className="">Blogs</div></Link>
             <Link className={'inbl marginR5p ' + (currPath === '/portfolio' ? 'fb' : '')} to='/portfolio'><div className="">Portfolio</div></Link>

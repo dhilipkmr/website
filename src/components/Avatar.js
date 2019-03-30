@@ -8,7 +8,7 @@ const GI_LINKEDIN_URL = 'https://www.linkedin.com/company/goibibo/';
 const Avatar = () => {
   return (
     <div className="margin30">
-      <div className="posRel h145p">
+      <div className="posRel h145p op0 opAnimator " style={{ animationDelay: '0.6s'}}>
         <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
           <img alt="profileImg" className="posAbs avatarImg " width="400" height="400" src={profilePic}/>
         </a>

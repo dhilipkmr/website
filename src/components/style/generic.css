@@ -255,6 +255,9 @@ h1 {
 .noLinkEffect {
   text-decoration: none;
 }
+.marginT15 {
+  margin-top: 15px !important;
+}
 .opAnimator {
   opacity: 0;
   animation: opacityFade 1s forwards;
