@@ -20,7 +20,9 @@ class BlogPageHome extends React.Component{
   componentDidMount() {
     const theme = this.getPrevTheme();
     this.setState({ theme });
-    setTimeout(()=>{ this.setState({show: true})}, 650);
+    setTimeout(()=>{
+      this.setState({show: true})
+    }, 900);
   }
 
   getPrevTheme() {
@@ -43,21 +45,23 @@ class BlogPageHome extends React.Component{
     const {data} = this.props;
     return (
       <Layout theme={this.state.theme} themer={this.themer}>
-        {!this.state.show && <div ref="ff">
+        <div className="pad10">
+          <div className="mB25 padT10 width100 textcenter oh">
+            <FadeIn className="fs35 padT20 inline lh2em">My Journey as </FadeIn>
+            <FadeIn className="fs35 padT20 inline " style={{ 'animationDelay': '0.5s'}}>{ 'a Front-end Engineer'}</FadeIn>
+          </div>
+        </div>
+        {!this.state.show && <div className="mw960 ">
           <div className="sideFill"></div>
           <div className="sideFill" style={{ animationDelay: '0.2s'}}></div>
           <div className="sideFill" style={{ animationDelay: '0.4s'}}></div>
         </div>}
-        {this.state.show && <div className="themeColorBackground">
-          <div className="mw960" ref="content">
-            <div className="mB25 padT10 width100 textcenter oh">
-              <FadeIn className="fs35 white padT20 inline ">My Journey as </FadeIn>
-              <FadeIn className="fs35 white padT20 inline " style={{ 'animationDelay': '0.5s'}}>{ 'a Front-end Engineer'}</FadeIn>
-            </div>
-            <div className="op0 opAnimator" style={{ 'animationDelay': '1s'}}>
+        {this.state.show && <div className="mw960 pad10">
+          <div className="themeColorBackground pad10" ref="content">
+            <div className="op0 opAnimator" style={{ animationDelay: '0.3s'}}>
               {Object.keys(portfolioDetails).map((projectType) => (
                 <div>
-                  <div className="white fb">{projectType}</div>
+                  <div className="white ico25 pad10 fb">{projectType}</div>
                   <div className="projectContainer">
                     {portfolioDetails[projectType].map((project) => (
                       <div className="projectCard">

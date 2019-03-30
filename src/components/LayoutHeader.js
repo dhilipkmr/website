@@ -44,7 +44,7 @@ class LayoutHeader extends React.Component{
           <div className="loaderTransition"></div>
           <div className="" style={{display: 'flex', alignContent: 'space-between'}}>
             <div style={{padding: '20px'}}>
-              <TiThMenu className="hand fl marginR20 fadeInWord fs18" onClick={this.showMenu}/>
+              <TiThMenu className="hand fl marginR20 fadeInWord" onClick={this.showMenu}/>
             </div>
             <div className="layoutHeaderwrap marginR5p op0 opAnimator fadeInWord posSticky" style={{ 'animationDelay': '0s'}}>
               <Link className={'inbl marginR5p ' + (currPath === '/' ? 'fb' : '')} to="/"><div className="">Home</div></Link>
