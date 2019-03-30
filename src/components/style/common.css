@@ -8,6 +8,7 @@ body, body.light {
   --inlineCode-text: #1a1a1a;
   --description: #636363;
   --blogText: #dadada;
+  --selBlogHeader: #f7f7f7;
   transition: all 0.2s linear;
   background-color: var(--themeBg);
 }
@@ -21,6 +22,7 @@ body.dark {
   --inlineCode-text: #e6e6e6;
   --description: #cccccc;
   --blogText: #dadada;
+  --selBlogHeader: #383838;
   transition: all 0.2s linear;
   background-color: var(--themeBg);
 }
@@ -456,16 +458,25 @@ pre[data-line] {
   /* flex-direction: row-reverse; */
 }
 .projectCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--themeBg);
   overflow: hidden;
   width: 290px;
-  /* height: 200px; */
   font-size: 16px;
-  box-shadow: 0px 6px 6px #d2cfcf;
+  box-shadow: 0px 6px 6px #00318a;
   margin: 10px;
   padding: 20px;
   margin-bottom: 50px;
   margin-top: 50px;
   border-radius: 5px;
+  color: var(--headingTxtColor);
+}
+.txtOverflow {
+  max-height: 130px;
+  max-height: 160px;
+  overflow: scroll;
 }
 
 /* about me */
@@ -481,6 +492,12 @@ pre[data-line] {
 .mv {
   display: none !important;
 }
+.selPostHeader {
+  border-radius: 30px;
+  background-color: var(--selBlogHeader);
+  font-weight: bold;
+  padding-top: 5px;
+}
 @media all and (max-width: 650px) {
   .mw100 {
     width: 100% !important;
@@ -488,8 +505,11 @@ pre[data-line] {
   .mh {
     display: none !important;
   }
-  .mh100vh {
-    min-height: 50vh !important;
+  .mh90vh {
+    min-height: auto !important;
+  }
+  .maxh90vh {
+    max-height: 90%;
   }
   .mv {
     display: block !important;
@@ -505,6 +525,10 @@ pre[data-line] {
   .mw90 {
     width: 90% !important;
   }
+  .blogcounter {
+    top: 20px !important;
+    right: 20px !important;
+  }
 }
 @keyframes fillUp50vh {
   100% {
@@ -514,4 +538,24 @@ pre[data-line] {
 .mh40scroll {
   max-height: 40vh;
   overflow: scroll;
+}
+.blogcounter {
+  top: 40px;
+  right: 50px;
+  color: #95a3bd;
+  font-size: 40px;
+}
+.sideFill {
+  background: #235bc1;
+  width: 0;
+  height: 30vh;
+  animation: fillSide 0.4s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+@keyframes fillSide {
+  100% {
+    width: 100%;
+  }
+} 
+.themeColorBackground {
+  background: #235bc1;
 }

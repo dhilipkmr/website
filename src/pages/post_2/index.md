@@ -7,6 +7,7 @@ author: "Dhilip kumar"
 timeToRead: "2"
 smallTitle: "Imdb Extension 1"
 description: "An Introduction to Creating Google Chrome Extension and getting started with communicating between content and background js"
+postNum: "2"
 ---
 <img src="cover_2.png"/>
 <br/>

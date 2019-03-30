@@ -33,9 +33,9 @@ class LayoutHeader extends React.Component{
             <Link className={'inbl marginR5p ' + (currPath === '/blogs' ? 'fb' : '')} to="/blogs"><div className="">Blogs</div></Link>
             <Link className={'inbl marginR5p ' + (currPath === '/portfolio' ? 'fb' : '')} to='/portfolio'><div className="">Portfolio</div></Link>
             <Link className={'inbl marginR5p ' + (currPath === '/aboutme' ? 'fb' : '')} to='/aboutme'><div className="">About Me</div></Link>
+            <Toggle theme={theme} themer={themer}/>
           </div>
         </div>
-        {/* <Toggle theme={theme} themer={themer}/> */}
         {children}
       </div>
     );

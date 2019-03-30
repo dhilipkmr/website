@@ -6,6 +6,7 @@ author: "Dhilip kumar"
 timeToRead: "6"
 smallTitle: "Creating a Cyclic Carousel"
 description: "Implementing a standalone Cyclic Carousel with the help of React Hooks"
+postNum: "5"
 ---
 <img src="cover_5.png"/>
 <br/>

@@ -6,6 +6,7 @@ author: "Dhilip kumar"
 timeToRead: "5"
 smallTitle: "Introduction to Hooks"
 description: "Understanding the basics of React Hooks and how we can map it to React Lifecycle methods by Building a Timer"
+postNum: "4"
 ---
 <img src="cover_4.png"/>
 <br/>

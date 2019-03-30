@@ -6,6 +6,7 @@ date: "2019-03-26"
 author: "Dhilip kumar"
 smallTitle: "Custom Array.map()"
 timeToRead: "2"
+postNum: "6"
 ---
 <img src="./cover_6.png">
 <br/>

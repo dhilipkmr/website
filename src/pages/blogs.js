@@ -49,6 +49,14 @@ class Blogs extends React.Component{
       post: content
     });
   }
+
+  getNumber(num) {
+    if (parseInt(num) < 10) {
+      return '0' + num ;
+    }
+    return num;
+  }
+
   render() {
     const {data} = this.props;
     const {selectedId = '', post} = this.state;
@@ -56,25 +64,25 @@ class Blogs extends React.Component{
     return (
       <Layout className="mh100" theme={this.state.theme} themer={this.themer}>
         <div>
-          <div className="mh100vh">
-            <div className="inbl mh100vh"></div>
+          <div className="mh90vh">
+            <div className="inbl mh90vh"></div>
             <div className="inbl posRel width60 skillDesc fillUpFromZero mw100" style={{'animationDelay': '0.2s'}}>
-              {/* <TiThMenu className=" posAbs themeBg mv" style={{"top":"20px", "left": "20px"}}/> */}
+              {post && <div className=" posAbs themeBg blogcounter">{this.getNumber(post.postNum)}</div>}
               <div className="posAbs transCenter mw90" style={{ 'maxWidth': '100%'}}>
                 {post &&
-                  <Link className="" to={post.path}>
-                    <div className="themeBg padB10 fb fs35 lh2em textcenter " style={{ textAlign: 'left', textTransform: 'uppercase'}}>{post.title}</div>
-                    <div className="themeBg padT10 padB10" style={{fontSize: '13px'}}>{post.description}</div>
+                  <Link className=" " to={post.path}>
+                    <div className="op0 opAnimator white padB10 fb fs35 lh2em textcenter " style={{ textAlign: 'left', textTransform: 'uppercase', animationDelay: '0.3s'}}>{post.title}</div>
+                    <div className=" op0 opAnimator white padT10 padB10" style={{fontSize: '13px', animationDelay: '0.3s'}}>{post.description}</div>
                     <div style={{ display: 'flex', justifyContent: 'space-between'}}>
-                      <div className="themeBg padL10" style={{fontSize: '13px'}}>{post.timeToRead + ' min read'}</div>
-                      <div className="themeBg inbl padR10" style={{fontSize: '13px'}}>Read more</div>
+                      <div className=" op0 opAnimator white padL10" style={{fontSize: '13px', animationDelay: '0.3s'}}>{post.timeToRead + ' min read'}</div>
+                      <div className="op0 opAnimator white inbl padR10" style={{fontSize: '13px', animationDelay: '0.3s'}}>Read more</div>
                     </div>
                   </Link>
                 }
               </div>
             </div>
             <div className="inbl posRel width40 fillUpFromZero mw100" style={{'animationDelay': '0s'}}>
-              <div className="posAbs transCenter lh2em " style={{ 'width': '100%', 'margin': '10px'}}>
+              <div className="posAbs transCenter lh2em " style={{ 'width': '90%', 'margin': '10px auto'}}>
                 <div className="posRel mh40scroll">
                   {
                     data.allMarkdownRemark.edges.map((post, index) => {
@@ -83,7 +91,7 @@ class Blogs extends React.Component{
                         this.setState({ post: frontmatter, selectedId: id });
                       }
                       return (
-                        <div className={'themeColor padB10 hand textright padR20p  ' + ((selectedId === id) ? 'fb' : '')} onClick={() => {this.loadDetails(id, index + 1, frontmatter)}}>{frontmatter.smallTitle}</div>
+                        <div className={'descriptionTxtColor padB10 hand textright padR20p  ' + ((selectedId === id) ? ' selPostHeader' : '')} onClick={() => {this.loadDetails(id, index + 1, frontmatter)}}>{frontmatter.smallTitle}</div>
                       )
                     })
                   }
@@ -119,6 +127,7 @@ export const pageQuery = graphql`
             timeToRead
             description
             smallTitle
+            postNum
           }
         }
       }

@@ -6,6 +6,7 @@ author: "Dhilip kumar"
 timeToRead: "3"
 smallTitle: "Imdb Extension - Part 2"
 description: "Creating an IMDB details Call out on Hover over movie names and loading the content into it"
+postNum: "3"
 ---
 <img src="cover_3.png"/>
 <br/>

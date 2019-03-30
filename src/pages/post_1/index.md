@@ -7,6 +7,7 @@ author: "Dhilip kumar"
 timeToRead: "5"
 smallTitle: "Ripple Effect"
 description: "Creating an Independent Component that produces Ripple Effect using React"
+postNum: "1"
 ---
 <img src="cover_1.png"/>
 <br/>
