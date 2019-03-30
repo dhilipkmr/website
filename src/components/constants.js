@@ -57,19 +57,23 @@ export const ABOUTME = {
     'period'                : '2006-2012',
     'project'               : 'Library Management System'
     }
-  ],
-  'Technical Skills': [
-    ['React', '85%'],
-    ['Redux', '80%'],
-    ['Javascript', '90%'],
-    ['JQuery', '90%'],
-    ['Backbone', '80%'],
-    ['NodeJS', '60%'],
-    ['HTML', '85%'],
-    ['CSS', '75%'],
-    ['Bootstrap', '70%'],
-    ['ExpressJS', '60%'],
-    ['Progressive Web Apps', '70%'],
-    ['Gatsby', '80%']
   ]
 };
+
+export const technicalSkills1 = [
+  ['React', '85%'],
+  ['Redux', '80%'],
+  ['Javascript', '90%'],
+  ['JQuery', '90%'],
+  ['Backbone', '80%'],
+  ['NodeJS', '60%']
+]
+
+export const technicalSkills2 = [
+  ['HTML', '85%'],
+  ['CSS', '75%'],
+  ['Bootstrap', '70%'],
+  ['ExpressJS', '60%'],
+  ['Progressive Web Apps', '70%'],
+  ['Gatsby', '80%']
+];

@@ -11,8 +11,8 @@ const Toggle = ({theme, themer, move}) => {
       <Helmet  meta={[{ name: 'theme-color', content: (theme === 'dark' ? '#1f1f1f': '#296be4')}]}/>
       <div className="">
         <div className="">
-          {(theme !== 'dark') && <FaMoon className="hand " onClick={themer} src={sun}></FaMoon>}
-          {(theme === 'dark') && <FaSun className="hand  " onClick={themer} src={moon}></FaSun>}
+          {(theme !== 'dark') && <FaMoon className="hand ico25 " onClick={themer} src={sun}></FaMoon>}
+          {(theme === 'dark') && <FaSun className="hand  ico25 " onClick={themer} src={moon}></FaSun>}
         </div>
       </div>
     </div>

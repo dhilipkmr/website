@@ -12,8 +12,10 @@ body, body.light {
   --selBlogHeader: #f7f7f7;
   transition: all 0.2s linear;
   background-color: var(--themeBg);
+  --theme: #235bc1;
 }
 body.dark {
+  --theme: #235bc1;
   --headingTxtColor: #ffffff;
   --footerCardShadow: #3e3e3e;
   --footerBg: #323232;
@@ -522,7 +524,7 @@ pre[data-line] {
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     animation: fillUp50vh 1s forwards !important;
   }
-  .fs35 {
+  .header .fs35 {
     font-size: 25px !important;
   }
   .mw90 {
@@ -605,7 +607,7 @@ pre[data-line] {
     display: none !important;
   }
   .marginR5p {
-    padding-right: 10%;
+    /* padding-right: 10%; */
     word-wrap: none;
     white-space: nowrap;
   }
@@ -631,4 +633,47 @@ pre[data-line] {
   left: 15px;
   bottom: 0;
   color: white;
+}
+
+/* skills */
+.skillCard {
+  color: white;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  background-color: var(--theme);
+  width: 70%;
+  margin: 20px auto;
+  padding: 25px;
+  justify-content: space-between;
+}
+.widthhalf {
+  width: 48%;
+}
+.whiteborder {
+  border: 2px solid white;
+}
+.blueborder {
+  border: 2px solid #5e95f9;
+}
+.zeroWidthAnimation{
+  width: 0;
+  transition: width 1s ease;
+}
+@media all and (max-width: 800px){
+  .skillCard {
+    flex-direction: column;
+  }
+  .widthhalf {
+    width: 100%;
+  }
+  .skillCard {
+    width: 90%;
+  }
+}
+@media all and (max-width: 600px){
+  .skillCard {
+    width: 100%;
+  }
 }

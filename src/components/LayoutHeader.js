@@ -30,7 +30,7 @@ class LayoutHeader extends React.Component{
             <div className="menuContainer">
               <div><MdClose className="themeHover hand menuFont lh2em closeBtn" onClick={()=>{ this.setState({ showMenu: false})}}/></div>
               <div className="transCenter menuHeadingContainer widthOptimize textcenter">
-                <Link to='/'><div className={'themeHover hand menuFont fb lh2em ' + (currPath === '/' ? 'themeColor' : '')} >Home</div></Link>
+                <Link to='/'><div className={'themeHover hand menuFont fb lh2em ' + (currPath === '/' ? 'themeColor' : '')}>Home</div></Link>
                 <Link to='/blogs'><div className={'themeHover hand menuFont fb lh2em ' + (currPath === '/blogs' ? 'themeColor' : '')}>Blogs</div></Link>
                 <Link to='/portfolio'><div className={'themeHover hand menuFont fb lh2em ' + (currPath === '/portfolio' ? 'themeColor' : '')}>Portfolio</div></Link>
                 <Link to='/skills'><div className={'themeHover hand menuFont fb lh2em ' + (currPath === '/skills' ? 'themeColor' : '')}>Skills</div></Link>
@@ -47,7 +47,7 @@ class LayoutHeader extends React.Component{
           <div className="loaderTransition"></div>
           <div className="" style={{display: 'flex', alignContent: 'space-between'}}>
             <div style={{padding: '20px'}}>
-              <TiThMenu className="hand fl marginR20 fadeInWord" onClick={this.showMenu}/>
+              <TiThMenu className="hand fl marginR20 fadeInWord ico25" onClick={this.showMenu}/>
             </div>
             <div className="layoutHeaderwrap marginR5p op0 opAnimator fadeInWord posSticky" style={{ 'animationDelay': '0s'}}>
               <Link className={'inbl marginR5p hideless500w ' + (currPath === '/' ? 'fb' : '')} to="/"><div className="">Home</div></Link>
