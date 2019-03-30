@@ -13,14 +13,34 @@ h1 {
 .marginR30 {
   margin-right: 30px;
 }
+.padR10 {
+  padding-right: 10px;
+}
 .marginR5p{
   margin-right: 5%;
+}
+.transCenter {
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
 }
 .marginB20{
   margin-bottom: 20px;
 }
 .pad5{
   padding: 5px;
+}
+.padR20p{
+  padding-right: 20%;
+}
+.padL20p{
+  padding-left: 20%;
+}
+.textleft {
+  text-align: left;
+}
+.textright {
+  text-align: right;
 }
 .textcenter {
   text-align: center;
@@ -254,5 +274,25 @@ h1 {
   100% {
     top: 0;
     opacity: 1;
+  }
+}
+.width40 {
+  width: 40%;
+}
+
+.width60 {
+  width: 60%;
+}
+
+@media all and (min-width: 651px) {
+  .fillUpFromZero {
+    height: 0vh;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation: fillUp100vh 1s forwards;
+  }
+}
+@keyframes fillUp100vh {
+  100% {
+    height: 100vh;
   }
 }

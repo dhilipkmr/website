@@ -48,7 +48,9 @@ h2, h3, .themeColor {
   margin: auto;
   padding: 10px;
 }
-
+.themeBg {
+  color: var(--themeBg);
+}
 .linkHand:hover {
   cursor: pointer;
   text-decoration: underline;
@@ -464,4 +466,52 @@ pre[data-line] {
   margin-bottom: 50px;
   margin-top: 50px;
   border-radius: 5px;
+}
+
+/* about me */
+.grey {
+  /* background: #636363; */
+}
+.skillHeading {
+  background: var(--headingTxtColor);
+}
+.skillDesc {
+  background: #235bc1;
+}
+.mv {
+  display: none !important;
+}
+@media all and (max-width: 650px) {
+  .mw100 {
+    width: 100% !important;
+  }
+  .mh {
+    display: none !important;
+  }
+  .mh100vh {
+    min-height: 50vh !important;
+  }
+  .mv {
+    display: block !important;
+  }
+  .fillUpFromZero {
+    height: 50vh;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation: fillUp50vh 1s forwards !important;
+  }
+  .fs35 {
+    font-size: 25px !important;
+  }
+  .mw90 {
+    width: 90% !important;
+  }
+}
+@keyframes fillUp50vh {
+  100% {
+    min-height: 50vh !important;
+  }
+}
+.mh40scroll {
+  max-height: 40vh;
+  overflow: scroll;
 }

@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
-import ContactMe from '../components/ContactMe';
-import Header from '../components/header';
 import Layout from '../components/Layout';
+import {ABOUTME, portfolioDetails} from '../components/constants';
+import FadeIn from '../components/FadeIn';
+import {TiThMenu} from 'react-icons/ti';
 
-class BlogPageHome extends React.Component{
+class Blogs extends React.Component{
   constructor(props) {
     super(props);
     this.themer = this.themer.bind(this);
@@ -36,33 +37,59 @@ class BlogPageHome extends React.Component{
     }
   }
 
+  updatePost() {
+
+  }
+
+  loadDetails(nodeId, postNumber, content) {
+    const {data} = this.props;
+    console.log(nodeId);
+    this.setState({
+      selectedId : nodeId,
+      post: content
+    });
+  }
   render() {
     const {data} = this.props;
+    const {selectedId = '', post} = this.state;
+    console.log(post);
     return (
-      <Layout theme={this.state.theme} themer={this.themer}>
-        <div className="mw960">
-          <div className=" margin10">
-            <Header/>
-          </div>
-          {/* <div className="mh60vh">
-            <ContactMe theme={this.state.theme}/>
-          </div> */}
-          <div className="moveInAnimate  margin20 lh2em opAnimator mt50" style={{ 'animationDelay': '0.5s'}}>
-            {data.allMarkdownRemark.edges.map(post => (
-              <Link to={post.node.frontmatter.path} key={post.node.frontmatter.path}>
-                <div key={post.node.id} className="marginB70">
-                  <header className="blogHeading blogTopicTxtColor">{post.node.frontmatter.title}</header>
-                  <div className="blogDesc">
-                    <div className="descriptionTxtColor">
-                      <span className="inbl fs16 blogDesc">{post.node.frontmatter.date}{' '}</span>
-                      <span className="inbl padL20 fs16 blogDesc">{'  ~ ' + post.node.frontmatter.timeToRead + ' min read'}</span>
+      <Layout className="mh100" theme={this.state.theme} themer={this.themer}>
+        <div>
+          <div className="mh100vh">
+            <div className="inbl mh100vh"></div>
+            <div className="inbl posRel width60 skillDesc fillUpFromZero mw100" style={{'animationDelay': '0.2s'}}>
+              {/* <TiThMenu className=" posAbs themeBg mv" style={{"top":"20px", "left": "20px"}}/> */}
+              <div className="posAbs transCenter mw90" style={{ 'maxWidth': '100%'}}>
+                {post &&
+                  <Link className="" to={post.path}>
+                    <div className="themeBg padB10 fb fs35 lh2em textcenter " style={{ textAlign: 'left', textTransform: 'uppercase'}}>{post.title}</div>
+                    <div className="themeBg padT10 padB10" style={{fontSize: '13px'}}>{post.description}</div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between'}}>
+                      <div className="themeBg padL10" style={{fontSize: '13px'}}>{post.timeToRead + ' min read'}</div>
+                      <div className="themeBg inbl padR10" style={{fontSize: '13px'}}>Read more</div>
                     </div>
-                    <div className="descriptionTxtColor padT15 ">{post.node.frontmatter.description}</div>
-                    <div className="padT15"><div className="descriptionTxtColor fs16 blogDesc">Read More</div></div>
+                  </Link>
+                }
+              </div>
+            </div>
+            <div className="inbl posRel width40 fillUpFromZero mw100" style={{'animationDelay': '0s'}}>
+              <div className="posAbs transCenter lh2em " style={{ 'width': '100%', 'margin': '10px'}}>
+                <div className="posRel mh40scroll">
+                  {
+                    data.allMarkdownRemark.edges.map((post, index) => {
+                      const { id, frontmatter} = post.node;
+                      if (index === 0 && !this.state.post) {
+                        this.setState({ post: frontmatter, selectedId: id });
+                      }
+                      return (
+                        <div className={'themeColor padB10 hand textright padR20p  ' + ((selectedId === id) ? 'fb' : '')} onClick={() => {this.loadDetails(id, index + 1, frontmatter)}}>{frontmatter.smallTitle}</div>
+                      )
+                    })
+                  }
                   </div>
                 </div>
-              </Link>
-            ))}
+            </div>
           </div>
         </div>
       </Layout>
@@ -70,11 +97,11 @@ class BlogPageHome extends React.Component{
   }
 }
 
-BlogPageHome.propTypes = {
+Blogs.propTypes = {
   data: PropTypes.object,
 };
 
-export default BlogPageHome;
+export default Blogs;
 
 export const pageQuery = graphql`
   query {
@@ -91,6 +118,7 @@ export const pageQuery = graphql`
             author
             timeToRead
             description
+            smallTitle
           }
         }
       }

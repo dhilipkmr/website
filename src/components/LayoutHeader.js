@@ -35,7 +35,7 @@ class LayoutHeader extends React.Component{
             <Link className={'inbl marginR5p ' + (currPath === '/aboutme' ? 'fb' : '')} to='/aboutme'><div className="">About Me</div></Link>
           </div>
         </div>
-        <Toggle theme={theme} themer={themer}/>
+        {/* <Toggle theme={theme} themer={themer}/> */}
         {children}
       </div>
     );

@@ -21,58 +21,55 @@ export const portfolioDetails =  {
   ]
 }
 
-export const experience  = [
-  {
-  'name'                  : 'Goibibo',
-  'role'                  : 'Senior Software Engineer',
-  'period'                : 'May 2018 - Present',
-  },
-  {
-  'name'                  : 'Oracle',
-  'role'                  : 'Applications Developer IC2',
-  'period'                : 'Dec 2017 - May 2018',
-  },
-  {
-  'name'                  : 'Oracle',
-  'role'                  : 'Associate Applications Developer IC1',
-  'period'                : 'Jul 2016 - Dec 2017'
-  },
-  {
-  'name'                  : 'Oracle',
-  'role'                  : 'Intern',
-  'period'                : 'Jan 2016 - Jun 2016'
-  }
- ];
-
- export const education  = [
+export const ABOUTME = {
+  Experiences: [
     {
-  'name'                  : 'PSG College Of Technology',
-  'branch'                : 'B.E. Computer Science',
-  'period'                : '2012-2016',
-  'project'               : 'Moving Object Detection and Alarming'
-  },
-  {
-  'name'                  : 'K.G. Matric. Hr. Sec. School',
-  'branch'                : 'Computer Science',
-  'period'                : '2006-2012',
-  'project'               : 'Library Management System'
-  }
- ];
- export const technicalSkills1 = [
-    ['Javascript', '90%'],
-    ['JQuery', '90%'],
+    'name'                  : 'Goibibo',
+    'role'                  : 'Senior Software Engineer',
+    'period'                : 'May 2018 - Present',
+    },
+    {
+    'name'                  : 'Oracle',
+    'role'                  : 'Applications Developer IC2',
+    'period'                : 'Dec 2017 - May 2018',
+    },
+    {
+    'name'                  : 'Oracle',
+    'role'                  : 'Associate Applications Developer IC1',
+    'period'                : 'Jul 2016 - Dec 2017'
+    },
+    {
+    'name'                  : 'Oracle',
+    'role'                  : 'Intern',
+    'period'                : 'Jan 2016 - Jun 2016'
+    }
+   ],
+  Education: [
+    {
+    'name'                  : 'PSG College Of Technology',
+    'branch'                : 'B.E. Computer Science',
+    'period'                : '2012-2016',
+    'project'               : 'Moving Object Detection and Alarming'
+    },
+    {
+    'name'                  : 'K.G. Matric. Hr. Sec. School',
+    'branch'                : 'Computer Science',
+    'period'                : '2006-2012',
+    'project'               : 'Library Management System'
+    }
+  ],
+  'Technical Skills': [
     ['React', '85%'],
     ['Redux', '80%'],
+    ['Javascript', '90%'],
+    ['JQuery', '90%'],
     ['Backbone', '80%'],
     ['NodeJS', '60%'],
-    ['Mocha', '60%']
-  ];
-  export const technicalSkills2 = [
     ['HTML', '85%'],
-    ['Css', '75%'],
+    ['CSS', '75%'],
     ['Bootstrap', '70%'],
     ['ExpressJS', '60%'],
-    ['Java', '65%'],
-    ['SQL', '80%'],
-    ['Progressive Web Apps', '70%']
-  ];
+    ['Progressive Web Apps', '70%'],
+    ['Gatsby', '80%']
+  ]
+};

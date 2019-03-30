@@ -5,6 +5,7 @@ date: "2019-01-23"
 title: "Ripple Effect"
 author: "Dhilip kumar"
 timeToRead: "5"
+smallTitle: "Ripple Effect"
 description: "Creating an Independent Component that produces Ripple Effect using React"
 ---
 <img src="cover_1.png"/>

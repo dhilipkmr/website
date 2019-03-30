@@ -4,6 +4,7 @@ date: "2019-03-24"
 title: "Creating a Cyclic Carousel"
 author: "Dhilip kumar"
 timeToRead: "6"
+smallTitle: "Creating a Cyclic Carousel"
 description: "Implementing a standalone Cyclic Carousel with the help of React Hooks"
 ---
 <img src="cover_5.png"/>
