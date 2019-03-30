@@ -21,7 +21,7 @@ class LayoutHeader extends React.Component{
   }
 
   render() {
-    const { children, data, className="" , theme, themer} = this.props;
+    const { children, className="" , theme, themer} = this.props;
     const currPath = globalHistory.location.pathname;
     return (
       <div className={className}>

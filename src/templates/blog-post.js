@@ -1,7 +1,6 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
-import Toggle from '../components/Toggle';
 import BlogFooter from '../components/BlogFooter';
 import EndOfBlogOptions from '../components/EndOfBlogOptions';
 
@@ -9,35 +8,30 @@ export default class Template extends React.Component {
   constructor(props) {
     super(props);
     this.themer = this.themer.bind(this);
+    this.getPrevTheme = this.getPrevTheme.bind(this);
     this.state = {
-      theme: this.themer()
+      theme: null
     }
   }
 
+  componentDidMount() {
+    const theme = this.getPrevTheme();
+    this.setState({ theme });
+  }
+
+  getPrevTheme() {
+    return window.__dkBlogTheme;
+  }
+  
   themer() {
-    /*  During initialization */
-    if (!this.state && typeof(window) !== 'undefined') {
-      const themeName = window.localStorage.getItem('dkBlogTheme');
-      if (!themeName || (themeName !== 'light' && themeName !=='dark')) {
-        window.localStorage.setItem('dkBlogTheme', 'light');
-        document.body.classList.add('light');
-        return 'light'
-      }
-      document.body.classList.add(themeName);
-      return themeName;
-    }
     /* All other calls to themer */
-    if (this.state) {
-      const oldTheme = this.state.theme;
-      const newTheme = (oldTheme === 'dark') ? 'light' : 'dark';
-      if (oldTheme && typeof(window) !== 'undefined') {
-        const {body} = document;
-        body.classList.add(newTheme);
-        body.classList.remove(oldTheme);
-        this.setState({ theme: newTheme});
-        window.localStorage.setItem('dkBlogTheme', newTheme);
-        return newTheme;
-      } 
+    const oldTheme = this.state.theme;
+    const newTheme = (oldTheme === 'dark') ? 'light' : 'dark';
+    if (typeof(window) !== 'undefined') {
+      this.setState({ theme: newTheme});
+      document.body.className = newTheme;
+      window.__dkBlogTheme = newTheme;
+      window.localStorage.setItem('dkBlogTheme', newTheme);
     }
   }
 
@@ -50,7 +44,7 @@ export default class Template extends React.Component {
     };
     const {theme} = this.state;
     return (
-      <Layout>
+      <Layout theme={theme} themer={this.themer}>
         <div className="blogText lh2em lr05">
           <div className="mw960 pad20 ">
             <div className="marginB20">

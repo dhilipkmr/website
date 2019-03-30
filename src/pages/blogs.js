@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
-import {ABOUTME, portfolioDetails} from '../components/constants';
-import FadeIn from '../components/FadeIn';
-import {TiThMenu} from 'react-icons/ti';
 
 class Blogs extends React.Component{
   constructor(props) {
@@ -37,13 +34,7 @@ class Blogs extends React.Component{
     }
   }
 
-  updatePost() {
-
-  }
-
   loadDetails(nodeId, postNumber, content) {
-    const {data} = this.props;
-    console.log(nodeId);
     this.setState({
       selectedId : nodeId,
       post: content
@@ -60,7 +51,6 @@ class Blogs extends React.Component{
   render() {
     const {data} = this.props;
     const {selectedId = '', post} = this.state;
-    console.log(post);
     return (
       <Layout className="mh100" theme={this.state.theme} themer={this.themer}>
         <div>

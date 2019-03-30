@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, graphql } from 'gatsby';
 import Avatar from '../components/Avatar';
-import Toggle from '../components/Toggle';
 import ContactMe from '../components/ContactMe';
-import Header from '../components/header';
 import Layout from '../components/Layout';
 import FadeIn from '../components/FadeIn';
 
@@ -40,7 +37,6 @@ class BlogPageHome extends React.Component{
   }
 
   render() {
-    const {data} = this.props;
     return (
       <Layout className="mh100" theme={this.state.theme} themer={this.themer}>
         <div className="mw960">
