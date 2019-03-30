@@ -574,7 +574,8 @@ pre[data-line] {
   animation: fillSide 0.7s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 .menuFont {
-  font-size: 47px;
+  font-size: 35px;
+  white-space: nowrap;
 }
 .menuHeadingContainer {
   height: 200px;
@@ -585,23 +586,45 @@ pre[data-line] {
   line-height: 2em;
 }
 .themeHover:hover {
-  color: var(--themeColor);
+  color: #ce9e42;
+  /* color: #46ffe8 */
 }
 .widthOptimize {
   width: 65%;
 }
+.menuContainer .transCenter {
+  top: 30%;
+  left: 39%;
+  text-align: left;
+  font-size: 35px;
+  word-wrap: none;
+  white-space: nowrap;
+}
+@media all and (max-width: 500px) {
+  .hideless500w {
+    display: none !important;
+  }
+  .marginR5p {
+    padding-right: 10%;
+    word-wrap: none;
+    white-space: nowrap;
+  }
+}
 @media all and (max-width: 500px) {
   .menuFont {
-    font-size: 40px !important;
+    font-size: 35px !important;
   }
   .menuContainer .transCenter {
     top: 30%;
+    left: 39%;
+    text-align: left;
+    font-size: 35px;
   }
   .widthOptimize {
     width: 65%;
   }
 }
-.closeBtn{
+.closeBtn {
   position: fixed;
   top: 15px;
   right: 0px;
