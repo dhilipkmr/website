@@ -39,20 +39,6 @@ class Skills extends React.Component{
     }
   }
 
-  loadDetails(nodeId, postNumber, content) {
-    this.setState({
-      selectedId : nodeId,
-      post: content
-    });
-  }
-
-  getNumber(num) {
-    if (parseInt(num) < 10) {
-      return '0' + num ;
-    }
-    return num;
-  }
-
   renderHalf(second) {
     const {loadWidth} = this.state;
     const toMap = second ? technicalSkills2 : technicalSkills1;
