@@ -21,7 +21,7 @@ const Avatar = () => {
           <FadeIn className="lh2em" style={{ animationDelay: '0.75s' }}>front-end developer @<a href={GI_LINKEDIN_URL} target="_blank" rel="noopener noreferrer"><span className="linkHand">goibibo</span></a></FadeIn>
         </div>
         <div className="padT10 width100 textcenter avatarInto oh">
-          <FadeIn className="lh2em" style={{ animationDelay: '1s' }}>amateur blogger | empath | mr.sings a lot | occsasional traveller</FadeIn>
+          <FadeIn className="lh2em" style={{ lineHeight: '3em', animationDelay: '1s' }}>amateur blogger | empath | mr.sings a lot | occsasional traveller</FadeIn>
         </div>
       </div>
     </div>

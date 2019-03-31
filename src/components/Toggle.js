@@ -8,7 +8,7 @@ import {FaMoon, FaSun} from 'react-icons/fa';
 const Toggle = ({theme, themer, move, className}) => {
   return(
     <div className={className}>
-      <Helmet  meta={[{ name: 'theme-color', content: (theme === 'dark' ? '#1f1f1f': '#296be4')}]}/>
+      <Helmet  meta={[{ name: 'theme-color', content: (theme === 'dark' ? '#000': '#013ba5')}]}/>
       <div >
         <div className="">
           {(theme !== 'dark') && <FaMoon className="hand ico25 " onClick={themer} src={sun}></FaMoon>}
