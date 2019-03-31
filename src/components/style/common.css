@@ -610,10 +610,13 @@ pre[data-line] {
 }
 .paddingResizeHam {
   padding: 20px;
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 @media all and (max-width: 500px) {
+  .width10Mob {
+    width: 20%;
+  }
   .headerPos {
     /* position: absolute; */
   }
