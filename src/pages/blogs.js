@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
+import FadeIn from '../components/FadeIn';
 
 class Blogs extends React.Component{
   constructor(props) {
@@ -54,7 +55,7 @@ class Blogs extends React.Component{
     return (
       <Layout className="mh100" theme={this.state.theme} themer={this.themer}>
         <div>
-          <div className="mh90vh marginT15">
+          <div className="mh90vh marginT15 blog">
             <div className="inbl mh90vh"></div>
             <div className="inbl posRel width60 skillDesc fillUpFromZero mw100" style={{'animationDelay': '0.2s'}}>
               {post && <div className=" posAbs themeBg blogcounter">{this.getNumber(post.postNum)}</div>}
@@ -71,22 +72,32 @@ class Blogs extends React.Component{
                 }
               </div>
             </div>
-            <div className="inbl posRel width40 fillUpFromZero mw100" style={{'animationDelay': '0s'}}>
+            <div className="inbl posRel width40 fillUpFromZero mw100">
               <div className="posAbs transCenter lh2em " style={{ 'width': '90%', 'margin': '10px auto'}}>
-                <div className="posRel mh40scroll">
-                  {
-                    data.allMarkdownRemark.edges.map((post, index) => {
-                      const { id, frontmatter} = post.node;
-                      if (index === 0 && !this.state.post) {
-                        this.setState({ post: frontmatter, selectedId: id });
-                      }
-                      return (
-                        <div className={'descriptionTxtColor padB10 hand textright padR20p  ' + ((selectedId === id) ? ' selPostHeader' : '')} onClick={() => {this.loadDetails(id, index + 1, frontmatter)}}>{frontmatter.smallTitle}</div>
-                      )
-                    })
-                  }
+                <div className="posRel">
+                  <div className="width100 textcenter fs35 hide650px padT10">
+                    <div className="oh">
+                      <FadeIn className="marginT10 padding10">A Series of </FadeIn>
+                    </div>
+                    <div className="padT10 oh marginB50">
+                      <FadeIn className="textcenter fs35  padding10">Accidental blogs</FadeIn>
+                    </div>
+                  </div>
+                  <div className="mh40scroll">
+                    {
+                      data.allMarkdownRemark.edges.map((post, index) => {
+                        const { id, frontmatter} = post.node;
+                        if (index === 0 && !this.state.post) {
+                          this.setState({ post: frontmatter, selectedId: id });
+                        }
+                        return (
+                          <div className={'descriptionTxtColor padB10 hand textright padR20p  ' + ((selectedId === id) ? ' selPostHeader' : '')} onClick={() => {this.loadDetails(id, index + 1, frontmatter)}}>{frontmatter.smallTitle}</div>
+                        )
+                      })
+                    }
                   </div>
                 </div>
+              </div>
             </div>
           </div>
         </div>

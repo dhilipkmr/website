@@ -510,6 +510,9 @@ pre[data-line] {
   .mw100 {
     width: 100% !important;
   }
+  .blog .hide650px {
+    display: none !important;
+  }
   .mh {
     display: none !important;
   }
@@ -663,10 +666,10 @@ pre[data-line] {
   width: 48%;
 }
 .whiteborder {
-  border: 2px solid white;
+  border-bottom: 2px solid white;
 }
 .blueborder {
-  border: 2px solid #5e95f9;
+  border-bottom: 2px solid #5e95f9;
 }
 .zeroWidthAnimation{
   width: 0;

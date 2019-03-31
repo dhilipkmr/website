@@ -262,8 +262,14 @@ h1 {
 .fs40 {
   font-size: 40px;
 }
+.marginT10 {
+  margin-top: 10px;
+}
 .fs35 { 
   font-size: 35px;
+}
+.padding10 {
+  padding: 10px;
 }
 .marginT50 {
   margin-top: 50px;

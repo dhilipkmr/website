@@ -45,9 +45,11 @@ class BlogPageHome extends React.Component{
     return (
       <Layout theme={this.state.theme} themer={this.themer}>
         <div className="pad10">
+          <div className="padT10 width100 textcenter oh">
+            <FadeIn className="fs35 padT20 inline lh2em">Journey of the </FadeIn>
+          </div>
           <div className="mB25 padT10 width100 textcenter oh">
-            <FadeIn className="fs35 padT20 inline lh2em">My Journey as </FadeIn>
-            <FadeIn className="fs35 padT20 inline " style={{ 'animationDelay': '0.5s'}}>{ 'a Front-end Engineer'}</FadeIn>
+            <FadeIn className="fs35 inline " style={{ 'animationDelay': '0.5s'}}>{ 'Front-end Engineer'}</FadeIn>
           </div>
         </div>
         {!this.state.show && <div className="mw960 ">
@@ -65,7 +67,6 @@ class BlogPageHome extends React.Component{
                     {portfolioDetails[projectType].map((project) => (
                       <div className="projectCard">
                         <div className="headingTxtColor textcenter fb padB10">{project[0]}</div>
-                        {/* <div>{project[1]}</div> */}
                         <div className=" textcenter descriptionTxtColor txtOverflow">{project[2]}</div>
                         <div className="headingTxtColor padT10 textcenter">{project[3]}</div>
                       </div> 

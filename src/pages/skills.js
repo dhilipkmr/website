@@ -60,14 +60,14 @@ class Skills extends React.Component{
       <div>
         {toMap.map((skill) => {
           return (
-            <div className="pad10 margin10" key={skill[0]}>
+            <div className="pad5 " key={skill[0]}>
               <div className="dflex flexspacebetween">
                 <div>{skill[0]}</div>
                 <div>{skill[1]}</div>
               </div>
-              <div className="marginTB10">
+              <div className="">
                 <div className="whiteborder padding10 posRel"></div>
-                <div className="blueborder padding10 posRel zeroWidthAnimation" style={{bottom: '4px', width: (!loadWidth ? '0' : skill[1])}}></div>
+                <div className="blueborder padding10 posRel zeroWidthAnimation" style={{bottom: '22px', width: (!loadWidth ? '0' : skill[1])}}></div>
               </div>
             </div>
           )
