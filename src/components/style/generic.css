@@ -223,6 +223,9 @@ h1 {
 .ico25{
   font-size: 25px;
 }
+.maxWidth75p {
+  max-width: 75%;
+}
 .dflex {
   display: flex;
 }

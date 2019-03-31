@@ -43,18 +43,26 @@ class LayoutHeader extends React.Component{
             </div>
           </div>
           }
-        <div ref="headerContainer">
+        <div className="posRel">
           <div className="loaderTransition"></div>
-          <div className="" style={{display: 'flex', alignContent: 'space-between'}}>
-            <div style={{padding: '20px'}}>
-              <TiThMenu className="hand fl marginR20 fadeInWord ico25" onClick={this.showMenu}/>
+          <div className="">
+            <div className="inbl fl paddingResizeHam">
+              <TiThMenu className="hand fl fadeInWord ico25" onClick={this.showMenu}/>
             </div>
-            <div className="layoutHeaderwrap marginR5p op0 opAnimator fadeInWord posSticky" style={{ 'animationDelay': '0s'}}>
-              <Link className={'inbl marginR5p hideless500w ' + (currPath === '/' ? 'fb' : '')} to="/"><div className="">Home</div></Link>
-              <Link className={'inbl marginR5p hideless500w ' + (currPath === '/blogs' ? 'fb' : '')} to="/blogs"><div className="">Blogs</div></Link>
-              <Link className={'inbl marginR5p hideless500w ' + (currPath === '/portfolio' ? 'fb' : '')} to='/portfolio'><div className="">Portfolio</div></Link>
-              {/* <Link className={'inbl marginR5p ' + (currPath === '/aboutme' ? 'fb' : '')} to='/aboutme'><div className="">About Me</div></Link> */}
-              <Toggle theme={theme} themer={themer}/>
+            <div className="inbl fr maxWidth75p layoutHeaderwrap marginR5p op0 opAnimator fadeInWord textright" style={{ 'animationDelay': '0.5s'}}>
+              <Link className={'inbl marginR5p hideless500w ' + (currPath === '/' ? 'fb' : '')} to="/">
+                <div className="">Home</div>
+                {/* <div className={'borderMenu ' + (currPath === '/' ? 'width100' : '')}></div> */}
+              </Link>
+              <Link className={'inbl marginR5p hideless500w ' + (currPath === '/blogs' ? 'fb' : '')} to="/blogs">
+                <div className="">Blogs</div>
+                {/* <div className={'borderMenu ' + (currPath === '/blogs' ? 'width100' : '')}></div> */}
+              </Link>
+              <Link className={'inbl marginR5p hideless500w ' + (currPath === '/portfolio' ? 'fb' : '')} to='/portfolio'>
+                <div className="">Portfolio</div>
+                {/* <div className={'borderMenu ' + (currPath === '/portfolio' ? 'width100' : '')}></div> */}
+              </Link>
+              <Toggle className="inbl " theme={theme} themer={themer}/>
             </div>
           </div>
           </div>

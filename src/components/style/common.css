@@ -429,12 +429,15 @@ pre[data-line] {
 }
 
 /* layoutheader */
+.borderMenu {
+  border-bottom: 2px solid var(--theme);
+  width: 0;
+  margin: auto;
+  transition: all 500ms;
+}
 .layoutHeaderwrap {
-  display: flex;
-  justify-content: flex-end;
   padding: 20px;
   background: var(--themeBg);
-  z-index: 1;
   transition: all 0.2s linear;
 }
 .loaderTransition {
@@ -602,7 +605,15 @@ pre[data-line] {
   word-wrap: none;
   white-space: nowrap;
 }
+.paddingResizeHam {
+  padding: 20px;
+  transform: scale(1.5);
+}
+
 @media all and (max-width: 500px) {
+  .headerPos {
+    /* position: absolute; */
+  }
   .hideless500w {
     display: none !important;
   }
