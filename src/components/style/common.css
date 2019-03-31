@@ -443,16 +443,16 @@ pre[data-line] {
 .loaderTransition {
   height: 1px;
   width: 0;
-  border: 2px solid var(--themeColor);
+  border: 1px solid var(--themeColor);
   animation: loader 0.7s forwards;
 }
 @keyframes loader{
   99% {
-    border: 2px solid var(--themeColor);
+    border: 1px solid var(--themeColor);
   }
   100%{
     width: 100%;
-    border: 2px solid var(--themeBg);
+    border: 1px solid var(--themeBg);
     /* border: 0px; */
   }
 }

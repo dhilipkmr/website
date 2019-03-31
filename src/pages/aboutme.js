@@ -21,7 +21,10 @@ class AboutMe extends React.Component{
 
   componentDidMount() {
     const theme = this.getPrevTheme();
-    this.setState({ theme, mounted: true });
+    this.setState({ theme });
+    setTimeout(() => {
+      this.setState({ mounted: true });
+    }, 700)
   }
 
   getPrevTheme() {
@@ -40,15 +43,31 @@ class AboutMe extends React.Component{
     }
   }
 
-  loadCursorBlink(ref, ttw) {
+  loadCursorBlink(ref, ttw, end) {
     let reference = ref;
     let that = this;
+    let isEnd = end;
     setTimeout(() => {
+      if (that.interval) {
+        clearInterval(that.interval);
+        if (that.lastReference && that.lastReference.innerText.substring(that.lastReference.innerText.length-1) === '|') {
+          that.lastReference.innerText = that.lastReference.innerText.substring(0, that.lastReference.innerText.length - 1);
+        }
+      }
       that.interval = setInterval(() => {
-        if (reference.innerText === '|') {
-          reference.innerText = '';
-        } else if (reference.innerText === '') {
-          reference.innerText = '|';
+        that.lastReference = reference;
+        if (isEnd) {
+          if (reference.innerText.substring(reference.innerText.length - 1) === '|') {
+            reference.innerText = reference.innerText.substring(0, reference.innerText.length - 1);
+          } else if (reference.innerText.substring(reference.innerText.length - 1) !== '|') {
+            reference.innerText = reference.innerText + '|';
+          }
+        } else {
+          if (reference.innerText === '|') {
+            reference.innerText = '';
+          } else if (reference.innerText === '') {
+            reference.innerText = '|';
+          }
         }
       }, 120);
     }, ttw * 50);
@@ -61,9 +80,10 @@ class AboutMe extends React.Component{
       let ttw = this.ttw++;
       let reference = refName;
       let that = this;
+      let currIndex = index;
       if (index === 0) {
         this.loadCursorBlink(that.refs[reference], this.ttw);
-        this.ttw = this.ttw + 10;
+        this.ttw = this.ttw + 8;
         ttw = this.ttw;
       }
       setTimeout(() => {
@@ -71,12 +91,16 @@ class AboutMe extends React.Component{
           clearInterval(that.interval);
           that.interval = null;
         }
-        if (nextLetter === ' ') {
-          return that.refs[reference].innerHTML = that.refs[reference].innerHTML + '&nbsp;';
+        if (currIndex === 0) {
+          that.refs[reference].innerText = '|';
         }
-        return that.refs[reference].innerText = that.refs[reference].innerText + nextLetter;
+        if (nextLetter === ' ') {
+          return that.refs[reference].innerHTML = that.refs[reference].innerHTML.substring(0, that.refs[reference].innerHTML.length - 1) + '&nbsp;' + '|';
+        }
+        return that.refs[reference].innerText = that.refs[reference].innerText.substring(0,that.refs[reference].innerText.length - 1) + nextLetter + '|';
       }, ttw * 50);
       if (index === sentenceLength - 1) {
+        this.loadCursorBlink(this.refs[reference], this.ttw, true);
         this.ttw = this.ttw + 15;
       }
     })

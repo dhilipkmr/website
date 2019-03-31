@@ -44,11 +44,11 @@ class BlogPageHome extends React.Component{
   render() {
     return (
       <Layout theme={this.state.theme} themer={this.themer}>
-        <div className="pad10">
-          <div className="padT10 width100 textcenter oh">
+        <div className="">
+          <div className=" width100 textcenter oh">
             <FadeIn className="fs35 padT20 inline lh2em">Journey of the </FadeIn>
           </div>
-          <div className="mB25 padT10 width100 textcenter oh">
+          <div className="mB25  width100 textcenter oh">
             <FadeIn className="fs35 inline " style={{ 'animationDelay': '0.5s'}}>{ 'Front-end Engineer'}</FadeIn>
           </div>
         </div>
