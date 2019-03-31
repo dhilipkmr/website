@@ -12,7 +12,7 @@ import './style/generic.css';
 const Layout = ({ children, data, className = '', theme, themer}) => (
   <div className={'lr05 '}>
     <Helmet
-      title="Dhilip's Blog"
+      title="Dhilip's Journey"
       meta={[
         {
           name: 'description',

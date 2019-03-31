@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `A Series of Accidental Blogs`,
-    description: `A website to host all my Blogs`,
+    title: `Dhilip's Journey`,
+    description: `Dhilip's website.A developer's Journey`,
     author: `Dhilip`,
+    keywords: ['dhilipkmr', 'dhilip dev', 'dev dhilip', 'dhilip blog', 'react blogs', 'frontend blogs']
   },
   pathPrefix: '/',
   plugins: [
@@ -19,17 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `A Series of Accidental Blog`,
-        short_name: `Dhilip's Blog`,
-        start_url: `/`,
-        display: `minimal-ui`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `The Accidental Blogger`,
-        short_name: `The Accidental Blogger`,
+        name: `Dhilip's Journey`,
+        short_name: `Dhilip's Journey`,
         start_url: `/`,
         background_color: `#1f1f1f`,
         theme_color: `#235bc1`,
