@@ -526,7 +526,7 @@ pre[data-line] {
     display: block !important;
   }
   .fillUpFromZero {
-    height: 50vh;
+    height: 49vh;
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     animation: fillUp50vh 1s forwards !important;
   }
@@ -651,7 +651,9 @@ pre[data-line] {
   bottom: 0;
   color: white;
 }
-
+.showBlogHead600 {
+  display: none;
+}
 /* skills */
 .skillCard {
   color: white;
@@ -692,5 +694,11 @@ pre[data-line] {
 @media all and (max-width: 600px){
   .skillCard {
     width: 100%;
+  }
+  .showBlogHead600 {
+    display: block !important;
+    font-size: 30px !important;
+    line-height: 1.7em !important;
+    color: var(--headingTxtColor);
   }
 }
