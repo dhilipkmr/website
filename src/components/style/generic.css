@@ -310,6 +310,10 @@ h1 {
 .width40 {
   width: 40%;
 }
+.paddingTB10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
 .width60 {
   width: 60%;

@@ -46,7 +46,7 @@ class LayoutHeader extends React.Component{
         <div className="posRel">
           <div className="loaderTransition"></div>
           <div className="">
-            <div className="inbl fl paddingResizeHam width10Mob">
+            <div className="inbl fl paddingResizeHam width10Mob op0 opAnimator" style={{ 'animationDelay': '0.5s'}}>
               <TiThMenu className="hand fl fadeInWord ico25" onClick={this.showMenu}/>
             </div>
             <div className="inbl fr maxWidth75p layoutHeaderwrap marginR5p op0 opAnimator fadeInWord textright width10Mob" style={{ 'animationDelay': '0.5s'}}>
