@@ -4,7 +4,7 @@ date: "2019-03-10"
 title: "Introduction to Hooks"
 author: "Dhilip kumar"
 timeToRead: "5"
-smallTitle: "Introduction to Hooks"
+smallTitle: "React Hooks"
 description: "Understanding the basics of React Hooks and how we can map it to React Lifecycle methods by Building a Timer"
 postNum: "4"
 ---
