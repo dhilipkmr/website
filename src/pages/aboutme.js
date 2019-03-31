@@ -17,6 +17,7 @@ class AboutMe extends React.Component{
       theme: null,
       mounted: false
     };
+    this.timeoutList = [];
   }
 
   componentDidMount() {
@@ -47,13 +48,14 @@ class AboutMe extends React.Component{
     let reference = ref;
     let that = this;
     let isEnd = end;
-    setTimeout(() => {
+    const nextTimeOut = setTimeout(() => {
       if (that.interval) {
         clearInterval(that.interval);
         if (that.lastReference && that.lastReference.innerText.substring(that.lastReference.innerText.length-1) === '|') {
           that.lastReference.innerText = that.lastReference.innerText.substring(0, that.lastReference.innerText.length - 1);
         }
       }
+
       that.interval = setInterval(() => {
         that.lastReference = reference;
         if (isEnd) {
@@ -71,6 +73,7 @@ class AboutMe extends React.Component{
         }
       }, 120);
     }, ttw * 50);
+    this.timeoutList.push(nextTimeOut);
   }
 
   loadLetter(sentence, refName) {
@@ -86,24 +89,33 @@ class AboutMe extends React.Component{
         this.ttw = this.ttw + 8;
         ttw = this.ttw;
       }
-      setTimeout(() => {
+      this.timeout = setTimeout(() => {
         if (that.interval) {
           clearInterval(that.interval);
-          that.interval = null;
         }
-        if (currIndex === 0) {
+        if (currIndex === 0 && that.refs && that.refs[reference]) {
           that.refs[reference].innerText = '|';
         }
-        if (nextLetter === ' ') {
+        if (nextLetter === ' ' && that.refs && that.refs[reference]) {
           return that.refs[reference].innerHTML = that.refs[reference].innerHTML.substring(0, that.refs[reference].innerHTML.length - 1) + '&nbsp;' + '|';
+        } else if (that.refs && that.refs[reference]) {
+          return that.refs[reference].innerText = that.refs[reference].innerText.substring(0,that.refs[reference].innerText.length - 1) + nextLetter + '|';
         }
-        return that.refs[reference].innerText = that.refs[reference].innerText.substring(0,that.refs[reference].innerText.length - 1) + nextLetter + '|';
       }, ttw * 50);
       if (index === sentenceLength - 1) {
         this.loadCursorBlink(this.refs[reference], this.ttw, true);
         this.ttw = this.ttw + 15;
       }
     })
+  }
+
+  componentWillUnmount() {
+    if (this.timeoutList) {
+      this.timeoutList.map((timeout) => {
+        clearTimeout(timeout);
+      });
+    }
+    clearInterval(this.interval);
   }
 
   loadSentence(sentence, index) {
