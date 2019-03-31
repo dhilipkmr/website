@@ -88,15 +88,15 @@ export const technicalSkills2 = [
 ];
 
 export const introduction = {
-  'description': ['Hello there!',
-                'I\'m Dhilip Kumar, as you know already :P',
-                'I am a Software Professional, working as a Front-end Developer at Goibibo.',
-                'I use Javascript, React, Redux and Node Extensively and create a Performant UI.',
-                'I also Blog about some Interesting (Technical) stuffs that I create.',
-                'I have few Open source projects and Npm Packages if you are interested :)',
-                'What other things I do you ask?',
-                'Well...',
-                'I love Playing and watching Cricket.',
-                'Big time Movie and TV shows Addict.',
-                'Well that\'s pretty much about me!']
+  'description': ['> Hello there!',
+                '> I\'m Dhilip Kumar, as you know already :P',
+                '> I am a Software Professional, working as a Front-end Developer at Goibibo.',
+                '> I use Javascript, React, Redux and Node Extensively and create a Performant UI.',
+                '> I also Blog about some Interesting (Technical) stuffs that I create.',
+                '> I have few Open source projects and Npm Packages if you are interested :)',
+                '> What other things I do you ask?',
+                '> Well...',
+                '> I love Playing and watching Cricket.',
+                '> Big time Movie and TV shows Addict.',
+                '> Well that\'s pretty much about me!']
 }

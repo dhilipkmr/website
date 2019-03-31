@@ -51,8 +51,8 @@ class AboutMe extends React.Component{
             <div className="width100 textcenter oh" style={{animationDelay: '4s', lineHeight: '1.7em'}}>
               <FadeIn className=" fs35 fadeInWord lh2em ">Introduce</FadeIn>
             </div>
-            <div>
-              {mounted && <CursorImitator className="pad10 textleft fadeInWord" content={introduction.description} letterWrapClass="pad5 lh2em" style={{ fontSize: '20px'}}/>}
+            <div class="terminal">
+              {mounted && <CursorImitator className="pad10 textleft white" content={introduction.description} letterWrapClass="pad5 lh2em" style={{ fontSize: '20px'}}/>}
             </div>
           </div>
         </div>
