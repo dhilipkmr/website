@@ -52,7 +52,7 @@ class Skills extends React.Component{
                 <div>{skill[1]}</div>
               </div>
               <div className="paddingTB10">
-                <div className="whiteborder  posRel marginTB10"></div>
+                <div className="whiteborder  posRel marginTB5"></div>
                 <div className=" posRel blueborder zeroWidthAnimation" style={{bottom: '2px',width: (!loadWidth ? '0' : skill[1])}}></div>
               </div>
             </div>

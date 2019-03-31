@@ -3,21 +3,16 @@ import PropTypes from 'prop-types';
 import Layout from '../components/Layout';
 import FadeIn from '../components/FadeIn';
 import {introduction} from '../components/constants';
+import CursorImitator from '../components/CursorImitator';
 
 class AboutMe extends React.Component{
   constructor(props) {
     super(props);
     this.themer = this.themer.bind(this);
     this.getPrevTheme = this.getPrevTheme.bind(this);
-    this.loadIntro = this.loadIntro.bind(this);
-    this.loadSentence = this.loadSentence.bind(this);
-    this.loadCursorBlink = this.loadCursorBlink.bind(this);
-    this.ttw = 0;
     this.state = {
-      theme: null,
-      mounted: false
+      theme: null
     };
-    this.timeoutList = [];
   }
 
   componentDidMount() {
@@ -44,101 +39,8 @@ class AboutMe extends React.Component{
     }
   }
 
-  loadCursorBlink(ref, ttw, end) {
-    let reference = ref;
-    let that = this;
-    let isEnd = end;
-    const nextTimeOut = setTimeout(() => {
-      if (that.interval) {
-        clearInterval(that.interval);
-        if (that.lastReference && that.lastReference.innerText.substring(that.lastReference.innerText.length-1) === '|') {
-          that.lastReference.innerText = that.lastReference.innerText.substring(0, that.lastReference.innerText.length - 1);
-        }
-      }
-
-      that.interval = setInterval(() => {
-        that.lastReference = reference;
-        if (isEnd) {
-          if (reference.innerText.substring(reference.innerText.length - 1) === '|') {
-            reference.innerText = reference.innerText.substring(0, reference.innerText.length - 1);
-          } else if (reference.innerText.substring(reference.innerText.length - 1) !== '|') {
-            reference.innerText = reference.innerText + '|';
-          }
-        } else {
-          if (reference.innerText === '|') {
-            reference.innerText = '';
-          } else if (reference.innerText === '') {
-            reference.innerText = '|';
-          }
-        }
-      }, 120);
-    }, ttw * 50);
-    this.timeoutList.push(nextTimeOut);
-  }
-
-  loadLetter(sentence, refName) {
-    let sentenceLength = sentence.length;
-    sentence.split('').map((letter, index) => {
-      let nextLetter = letter;
-      let ttw = this.ttw++;
-      let reference = refName;
-      let that = this;
-      let currIndex = index;
-      if (index === 0) {
-        this.loadCursorBlink(that.refs[reference], this.ttw);
-        this.ttw = this.ttw + 8;
-        ttw = this.ttw;
-      }
-      this.timeout = setTimeout(() => {
-        if (that.interval) {
-          clearInterval(that.interval);
-        }
-        if (currIndex === 0 && that.refs && that.refs[reference]) {
-          that.refs[reference].innerText = '|';
-        }
-        if (nextLetter === ' ' && that.refs && that.refs[reference]) {
-          return that.refs[reference].innerHTML = that.refs[reference].innerHTML.substring(0, that.refs[reference].innerHTML.length - 1) + '&nbsp;' + '|';
-        } else if (that.refs && that.refs[reference]) {
-          return that.refs[reference].innerText = that.refs[reference].innerText.substring(0,that.refs[reference].innerText.length - 1) + nextLetter + '|';
-        }
-      }, ttw * 50);
-      if (index === sentenceLength - 1) {
-        this.loadCursorBlink(this.refs[reference], this.ttw, true);
-        this.ttw = this.ttw + 15;
-      }
-    })
-  }
-
-  componentWillUnmount() {
-    if (this.timeoutList) {
-      this.timeoutList.map((timeout) => {
-        clearTimeout(timeout);
-      });
-    }
-    clearInterval(this.interval);
-  }
-
-  loadSentence(sentence, index) {
-    return(
-      <div ref={'line_' + index} className="pad10">
-        {this.state.mounted && this.loadLetter(sentence, 'line_'+ index)}
-      </div>
-    )
-  }
-
-  loadIntro() {
-    return(
-      <div className="textleft fadeInWord">
-        {
-          introduction.description.map((sentence, index) => {
-            return (<div>{this.loadSentence(sentence, index)}</div>)
-          })
-        }
-      </div>
-    )
-  }
-
   render() {
+    const {mounted} = this.state;
     return (
       <Layout className="mh100" theme={this.state.theme} themer={this.themer}>
         <div>
@@ -150,7 +52,7 @@ class AboutMe extends React.Component{
               <FadeIn className=" fs35 fadeInWord lh2em ">Introduce</FadeIn>
             </div>
             <div>
-              {this.loadIntro()}
+              {mounted && <CursorImitator className="pad10 textleft fadeInWord" content={introduction.description} letterWrapClass="pad5 lh2em" style={{ fontSize: '20px'}}/>}
             </div>
           </div>
         </div>

@@ -107,6 +107,10 @@ h1 {
 .oh {
   overflow: hidden;
 }
+.padTB10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 .mt50 {
   margin-top: 50px;
 }
@@ -214,6 +218,10 @@ h1 {
   padding-top: 10px;
 }
 .marginTB10 {
+  margin-top: 10px;
+  /* margin-bottom: 5px; */
+}
+.marginTB5 {
   margin-top: 5px;
   /* margin-bottom: 5px; */
 }
