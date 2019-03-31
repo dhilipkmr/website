@@ -110,6 +110,9 @@ h1 {
 .mt50 {
   margin-top: 50px;
 }
+.dbl {
+  display: block;
+}
 .mt45 {
   margin-top: 50px;
 }
