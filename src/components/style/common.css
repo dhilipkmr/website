@@ -194,6 +194,12 @@ a.readMoreLink, .descriptionTxtColor {
 .blogTopicTxtColor {
   color: var(--themeColor);
 }
+.txtOverflow::-webkit-scrollbar, .mh40scroll::-webkit-scrollbar {
+  width: 0 !important;
+}
+.txtOverflow, .mh40scroll {
+  scrollbar-width: none;
+}
 .blogText {
   color: var(--blogText);
 }
