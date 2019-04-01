@@ -43,10 +43,10 @@ class BlogPageHome extends React.Component{
           <div className=" margin10 textcenter">
             <div className="mB10 width100 textcenter oh">
               <FadeIn className="ico20 inline " style={{ animationDelay: '0.1s', lineHeight: '1.7em'}}>hey,</FadeIn>
-              <FadeIn className="ico20 inline " style={{ animationDelay: '0.4s', lineHeight: '1.7em'}}>{' I\'m'}</FadeIn>
+              <FadeIn className="ico20 inline " style={{ animationDelay: '0.15s', lineHeight: '1.7em'}}>{' I\'m'}</FadeIn>
             </div>
             <div className="mB25 width100 textcenter oh">
-              <FadeIn className="fs40 inbl " style={{ animationDelay: '0.6s', lineHeight: '1.7em'}}>Dhilip</FadeIn>
+              <FadeIn className="fs40 inbl " style={{ animationDelay: '0.2s', lineHeight: '1.7em'}}>Dhilip</FadeIn>
             </div>
           </div>
           <div className=" mt45">

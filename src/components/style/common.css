@@ -623,6 +623,7 @@ pre[data-line] {
 .paddingResizeHam {
   padding: 20px;
   transform: scale(1.1);
+  /* padding-left: 50px; */
 }
 
 @media all and (max-width: 500px) {
