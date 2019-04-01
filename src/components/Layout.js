@@ -16,7 +16,7 @@ const Layout = ({ children, data, className = '', theme, themer}) => (
       meta={[
         {
           name: 'description',
-          content: 'A Personal blog on React, javascript, frontend development',
+          content: 'Dhilip\'s Personal Website on his journey to become a Front-end Developer',
         },
         { name: 'keywords', content: 'gatsby, react, blog, dhilipkmr, casualblogger' },
       ]}
