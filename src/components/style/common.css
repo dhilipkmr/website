@@ -626,6 +626,23 @@ pre[data-line] {
   /* padding-left: 50px; */
 }
 
+.showBelow600 {
+  display: none;
+}
+@media all and (max-width: 600px) {
+  .showBelow600 {
+    display: inline;
+  }
+}
+.linkIcon {
+  height: 15px;
+  width: 15px;
+  /* padding: 6px; */
+  padding-left: 0px;
+  position: relative;
+  right: 15px;
+}
+
 @media all and (max-width: 500px) {
   .width10Mob {
     width: 20%;
