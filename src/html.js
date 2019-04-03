@@ -46,7 +46,7 @@ export default function HTML(props) {
               const script = document.createElement('script');
               script.src = 'https://www.googletagmanager.com/gtag/js?id=UA-137704645-1';
               script.async = true;
-              document.body.appendchild(script);
+              document.body.appendChild(script);
               window.dataLayer = window.dataLayer || [];
               function gtag(){
                 dataLayer.push(arguments);
