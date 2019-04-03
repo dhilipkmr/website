@@ -39,6 +39,24 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
       </body>
+      <script dangerouslySetInnerHTML={{
+        __html:`
+          (function() {
+            if (document.location.hostname.includes('dhilipkmr')) {
+              const script = document.createElement('script');
+              script.src = 'https://www.googletagmanager.com/gtag/js?id=UA-137704645-1';
+              script.async = true;
+              document.body.appendchild(script);
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){
+                dataLayer.push(arguments);
+              }
+              gtag('js', new Date());
+              gtag('config', 'UA-137704645-1');
+            }
+          })()
+        `
+      }}/>
     </html>
   )
 }
