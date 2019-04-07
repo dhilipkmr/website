@@ -470,19 +470,47 @@ pre[data-line] {
 }
 
 /* portfolio */
+.projectContainer::before{
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 3%;
+  right: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
 .projectContainer{
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   /* flex-direction: row-reverse; */
 }
+.projectCard:before {
+  content: '🏁';
+  width: 8px;
+  /* background: black; */
+  height: 8px;
+  position: absolute;
+  /* border-radius: 50%; */
+  top: 50%;
+  bottom: 0;
+  left: -5%;
+  right: 0;
+  transform: scale(1.4);
+}
+
 .projectCard {
+  position: relative;
+  height: 210px !important;
   width: 85% !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background: var(--themeBg);
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 290px;
   font-size: 16px;
   box-shadow: 0px 6px 6px #00318a;

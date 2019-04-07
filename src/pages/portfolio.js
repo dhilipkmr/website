@@ -62,7 +62,7 @@ class BlogPageHome extends React.Component{
             <div className="op0 opAnimator" style={{ animationDelay: '0.3s'}}>
               {Object.keys(portfolioDetails).map((projectType) => (
                 <div>
-                  <div className="white ico25 pad10 fb marginTB10">{projectType + (portfolioDetails[projectType].date ? ' (' + portfolioDetails[projectType].date + ')' : '')}</div>
+                  <div className="white ico25 pad10 fb marginTB10 lh2em">{projectType + (portfolioDetails[projectType].date ? ' (' + portfolioDetails[projectType].date + ')' : '')}</div>
                   <div className="projectContainer">
                     {portfolioDetails[projectType].details.map((project) => (
                       <div className="projectCard">
