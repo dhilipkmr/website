@@ -67,7 +67,7 @@ class Blogs extends React.Component{
               <div className="posAbs transCenter mw90" style={{ 'maxWidth': '100%'}}>
                 {post &&
                   <Link className=" " to={post.path}>
-                    <div className="op0 opAnimator white padB10 fb fs35 lh2em textcenter " style={{ textAlign: 'left', textTransform: 'uppercase', animationDelay: '0.3s'}}><FaLink className="linkIcon"/>{post.smallTitle}</div>
+                    <div className="op0 opAnimator white fb fs35 lh2em textcenter fs-s-28 pad10" style={{ textAlign: 'left', textTransform: 'uppercase', animationDelay: '0.3s'}}><FaLink className="linkIcon"/>{post.smallTitle}</div>
                     <div className=" op0 opAnimator white padT10 padB10" style={{fontSize: '13px', animationDelay: '0.3s'}}>{post.description}</div>
                     <div style={{ display: 'flex', justifyContent: 'space-between'}}>
                       <div className=" op0 opAnimator white padL10" style={{fontSize: '13px', animationDelay: '0.3s'}}>{post.timeToRead + ' min read'}</div>

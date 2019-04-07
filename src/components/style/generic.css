@@ -46,7 +46,7 @@ h1 {
   text-align: center;
 }
 .pad10 {
-  padding: 10px;
+  padding: 10px !important;
 }
 .pad20{
   padding: 20px;
@@ -349,5 +349,11 @@ h1 {
 @keyframes heightTopBtm {
   100% {
     min-height: 100vh !important;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .fs-s-28 {
+    font-size: 28px !important;
   }
 }
