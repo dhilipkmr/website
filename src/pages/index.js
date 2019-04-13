@@ -49,7 +49,7 @@ class BlogPageHome extends React.Component{
               <FadeIn className="fs40 inbl " style={{ animationDelay: '0.2s', lineHeight: '1.7em'}}>Dhilip</FadeIn>
             </div>
           </div>
-          <div className=" mt45">
+          <div className="mt35">
             <Avatar/>
             <ContactMe theme={this.state.theme}/>
           </div>
