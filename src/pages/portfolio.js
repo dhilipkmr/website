@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import {portfolioDetails} from '../components/constants';
 import FadeIn from '../components/FadeIn';
+import {FaExternalLinkAlt} from 'react-icons/fa';
 
 
 class BlogPageHome extends React.Component{
@@ -66,7 +67,10 @@ class BlogPageHome extends React.Component{
                   <div className="projectContainer">
                     {portfolioDetails[projectType].details.map((project) => (
                       <div className="projectCard">
-                        <div className="headingTxtColor textcenter fb padB10">{project[0]}</div>
+                        <div className="headingTxtColor textcenter fb padB10">
+                          <span>{project[0]}</span>
+                          {project[1] && <span className=" posAbs scaleOnHover fr">{' '}<a target="_blank" rel="noopener noreferrer" className="padLR20" href={project[1]}><FaExternalLinkAlt/></a></span>}
+                        </div>
                         <div className=" textcenter descriptionTxtColor txtOverflow">{project[2]}</div>
                         <div className="headingTxtColor padT10 textcenter">{project[3]}</div>
                       </div> 
