@@ -1,5 +1,5 @@
 ---
-path: "/imdb-extension-part-2"
+path: "/blogs/imdb-extension-part-2"
 date: "2019-02-07"
 title: "Creating a Chrome Extension Part II"
 author: "Dhilip kumar"

@@ -1,5 +1,5 @@
 ---
-path: "/creating-cyclic-carousel"
+path: "/blogs/creating-cyclic-carousel"
 date: "2019-03-24"
 title: "Creating a Cyclic Carousel"
 author: "Dhilip kumar"

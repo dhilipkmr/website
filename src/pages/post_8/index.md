@@ -1,5 +1,5 @@
 ---
-path: "/loading-shimmer"
+path: "/blogs/textcenter ico24 themeColor marginB20loading-shimmer"
 date: "2019-04-19"
 title: "The Loading Shimmer!"
 author: "Dhilip kumar"

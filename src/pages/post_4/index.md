@@ -1,5 +1,5 @@
 ---
-path: "/introduction-to-react-hooks"
+path: "/blogs/introduction-to-react-hooks"
 date: "2019-03-10"
 title: "Introduction to Hooks"
 author: "Dhilip kumar"

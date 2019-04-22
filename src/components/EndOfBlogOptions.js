@@ -7,24 +7,25 @@ const LINKEDIN_URL = 'https://www.linkedin.com/in/dhilipkmr';
 // const GI_LINKEDIN_URL = 'https://www.linkedin.com/company/goibibo/';
 
 const shareBlog = (props) => {
-  const { title, path } = props.data;
+  const { title } = props.data;
   if (navigator.share) {
     navigator.share({
         title,
-        url: typeof(window !== 'undefined') ? window.location.origin + path : ''
+        url: typeof(window !== 'undefined') ? window.location.href : ''
     })
     .then(() => console.log('Successful share'))
     .catch((error) => console.log('Error sharing', error));
   }
 }
+const URL = "https://www.dhilipkmr.dev";
 const Avatar = (props) => {
   return (
     <div className="mw960 pad10 ">
       <div className="textcenter ico24 themeColor marginB20">
         <div>
           <FaShare className="marginLR20 hand showBelow600 " onClick={() => shareBlog(props)}/>
-          <a className="white hand" rel="noopener noreferrer " href={'whatsapp://send?text=<%=https://the-accidental-blogger.netlify.com' + props.data.path + ' %>'}><IoLogoWhatsapp className=" showBelow600 marginLR20 themeColor"/></a>
-          <a target="_blank" rel="noopener noreferrer" href={'http://twitter.com/share?text=' + props.data.title + '&url=https://the-accidental-blogger.netlify.com' + props.data.path + '&hashtags=javacript'}><FaTwitter className="marginLR20 hand themeColor"/></a>
+          <a className="white hand" rel="noopener noreferrer " href={'whatsapp://send?text=' + URL + props.data.path}><IoLogoWhatsapp className=" showBelow600 marginLR20 themeColor"/></a>
+          <a target="_blank" rel="noopener noreferrer" href={'http://twitter.com/share?text=' + props.data.title + '&url=' + URL + props.data.path + '&hashtags=javacript'}><FaTwitter className="marginLR20 hand themeColor"/></a>
         </div>
       </div>
       <div className="posRel h120p textcenter">

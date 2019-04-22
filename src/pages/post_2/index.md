@@ -1,5 +1,5 @@
 ---
-path: "/imdb-extension-part-1"
+path: "/blogs/imdb-extension-part-1"
 # date: "Feb 6, 2019"
 date: "2019-02-06"
 title: "Creating a Chrome Extension Part I"

@@ -1,5 +1,5 @@
 ---
-path: "/cursor-imitator"
+path: "/blogs/cursor-imitator"
 date: "2019-04-01"
 title: "Cursor Imitator"
 author: "Dhilip kumar"

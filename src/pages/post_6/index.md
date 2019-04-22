@@ -1,7 +1,7 @@
 ---
 title: "Implementing our own Array.map()"
 description: "Understanding how Array.map() works and we implement our version of map"
-path: "/array-map"
+path: "/blogs/array-map"
 date: "2019-03-26"
 author: "Dhilip kumar"
 smallTitle: "Custom Array.map()"

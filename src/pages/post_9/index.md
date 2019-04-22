@@ -1,5 +1,5 @@
 ---
-path: "/memoization"
+path: "/blogs/memoization"
 date: "2019-04-21"
 title: "Implementing Memoization in Javascript"
 author: "Dhilip kumar"
@@ -54,24 +54,29 @@ const summation = function (a, b) {
  - The `memoize` function takes in a function `fnToMemoize` as a single Argument and returns a `function` which can be called upon.
  - `memoizedCache` is an object where we cache our new results.
  - `constructPropertyFromArgs` is used to create a unique property name based on the argument and function we pass.We will see about that in details in next Section.
+ - `manageInsertion` is used to delete the property from the cache object if the maximum size is reached.(default length : 10)
  - First we check if the property is present in the `memoizedCache`, if yes, we return result from `memoizedCache` or we actually call the function `fnToMemoize` and store the result in the `memoizedCache`.
 
 
 ``` jsx
 //  `memoize` function  decides if it has to return cached value or call the summation function
-const memoize = function (fnToMemoize) {
+const memoize = function (fnToMemoize, cacheSize) {
   if (!(typeof fnToMemoize === 'function')) {
     throw new Error('Argument passed to memoize function should be a function');
   }
-  const memoizedCache = {}; // A closure object
+  const memoizedCache = {         // A closure object
+    insertionOrder: []            // To preserve the order of Insertion, so that FIFO can be implemented
+  }; 
+  
   return function(...args) {
     const propToCheck = constructPropertyFromArgs(fnToMemoize, args);
     if (!memoizedCache[propToCheck]) {
-       memoizedCache[propToCheck] = fnToMemoize(...args);
+      memoizedCache[propToCheck] = fnToMemoize(...args);
+      manageInsertion(memoizedCache, propToCheck, cacheSize);
     } else  {
        console.log('From Cache ');
     }
-    return memoizedCache[propToCheck]
+    return memoizedCache[propToCheck];
   }
 }
 
@@ -106,12 +111,36 @@ const constructPropertyFromArgs = function (fnToMemoize, args) {
 }
 ```
 
-Finally we pass our `summation` function to our `memoize` function that returns a function which is stored in `memSummation`.
+##Why do we need to specify the cacheSize?
+Let's say if we call our `summation` function for 1000 different parameters, then our `memoizedCache` object's length would be 1000 causing higher amount of wastage in space.
+
+To avoid this by default we set the size of the object to 10 and the user can override it as per their need thus solving this issue.
+
+##How do we remove the element?
+
+Best way would be to use LRU algorithm. For simplicity I have used FIFO where I keep track of element's insertion order in `insertionOrder` property and if the length is maxed out ,  I get the first value using `shift` and delete the property with that name from the `memoizedCache` object.
+
+
+``` jsx
+// To manage space complexity
+// To maintain only specified number of elements in the cache and deleting the others using First In First Out approach
+const manageInsertion = function(memoizedCache, propToCheck, cacheSize = 10) {
+  if (memoizedCache.insertionOrder.length >= cacheSize) {
+    const oldestElementName = memoizedCache.insertionOrder.shift();
+    delete memoizedCache[oldestElementName];
+   }
+   memoizedCache.insertionOrder.push(propToCheck);
+}
+```
+
+Finally we pass our `summation` function to our `memoize` function that returns a function which is stored in `memSummation` and we specify the cache size to be 2.
+Which means size of our `memoizedCache` object will never be greater than 2.
+
 Then we call `memSummation` twice.
 
 
 ``` jsx
-const memSummation = memoize(summation);  // `memoize` is a HOC
+const memSummation = memoize(summation, 2);  // `memoize` is a HOC
 
 console.log(memSummation(10, 50));
 console.log(memSummation(10, 50));

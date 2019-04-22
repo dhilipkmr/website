@@ -1,5 +1,5 @@
 ---
-path: "/ripple-effect"
+path: "/blogs/ripple-effect"
 # date: "Jan 23, 2019"
 date: "2019-01-23"
 title: "Ripple Effect"
