@@ -56,6 +56,7 @@ const summation = function (a, b) {
  - `constructPropertyFromArgs` is used to create a unique property name based on the argument and function we pass.We will see about that in details in next Section.
  - `manageInsertion` is used to delete the property from the cache object if the maximum size is reached.(default length : 10)
  - First we check if the property is present in the `memoizedCache`, if yes, we return result from `memoizedCache` or we actually call the function `fnToMemoize` and store the result in the `memoizedCache`.
+ - While taking the value from the cache we move the property name in `insertionOrder` to the last (Indicating they are used recently).
 
 
 ``` jsx
@@ -74,7 +75,11 @@ const memoize = function (fnToMemoize, cacheSize) {
       memoizedCache[propToCheck] = fnToMemoize(...args);
       manageInsertion(memoizedCache, propToCheck, cacheSize);
     } else  {
-       console.log('From Cache ');
+      console.log('From Cache ');
+      // LRU logic implementation, moving the current element name to end of the array
+      const currIndex = memoizedCache.insertionOrder.indexOf(propToCheck);
+      memoizedCache.insertionOrder.splice(currIndex, 1);
+      memoizedCache.insertionOrder.push(propToCheck);
     }
     return memoizedCache[propToCheck];
   }
@@ -118,7 +123,9 @@ To avoid this by default we set the size of the object to 10 and the user can ov
 
 ##How do we remove the element?
 
-Best way would be to use LRU algorithm. For simplicity I have used FIFO where I keep track of element's insertion order in `insertionOrder` property and if the length is maxed out ,  I get the first value using `shift` and delete the property with that name from the `memoizedCache` object.
+Best way would be to use LRU algorithm.Here, I keep track of element's insertion order in `insertionOrder` property and if the length is maxed out ,  I get the first value using `shift` and delete the property with that name from the `memoizedCache` object. 
+
+> Note: We move the property name to the end of the array, if the value is taken from the cache object.
 
 
 ``` jsx
