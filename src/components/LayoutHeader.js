@@ -36,7 +36,7 @@ class LayoutHeader extends React.Component{
                 <Link to='/skills'><div className={'themeHover hand menuFont fb lh2em ' + (currPath === '/skills' ? 'themeColor' : '')}>Skills</div></Link>
                 <Link to='/aboutme'><div className={'themeHover hand menuFont fb lh2em ' + (currPath === '/aboutme' ? 'themeColor' : '')}>About Me</div></Link>
                 {/* <Link to='/contact'><div className={'themeHover hand menuFont fb lh2em ' + (currPath === '/contact' ? 'themeColor' : '')}>Contact</div></Link> */}
-                <a href="https://drive.google.com/open?id=10zIS2XCthJXWQtp0iN_QKKDbQ6plHN3H">
+                <a href="https://drive.google.com/uc?id=10zIS2XCthJXWQtp0iN_QKKDbQ6plHN3H&export=download">
                   <div className="themeHover hand menuFont lh2em fb "> Resume<FaDownload style={{ paddingTop: '15px'}}/></div>
                 </a>
               </div>
