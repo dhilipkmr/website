@@ -691,6 +691,12 @@ pre[data-line] {
   .menuFont {
     font-size: 35px !important;
   }
+  .crumb {
+    margin-left: 0px !important;
+  }
+  .closeBtn {
+    left: 15px !important;
+  }
   .menuContainer .transCenter {
     top: 30%;
     left: 39%;
@@ -705,12 +711,18 @@ pre[data-line] {
   position: fixed;
   top: 15px;
   right: 0px;
-  left: 15px;
+  left: 40px;
   bottom: 0;
   color: white;
+  font-weight: bold;
 }
 .showBlogHead600 {
   display: none;
+}
+.crumb {
+  height: 25px;
+  width: 25px;
+  margin-left: 25px;
 }
 /* skills */
 .skillCard {
