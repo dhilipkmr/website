@@ -101,7 +101,7 @@ class Blogs extends React.Component{
                       })
                     }
                   </div>
-                  <div className="textcenter padL100"><MdExpandMore/></div>
+                  <div className="textright"><MdExpandMore className="arrowDown"/><span className="padR20p ico12">Scroll for more</span></div>
                 </div>
               </div>
             </div>
