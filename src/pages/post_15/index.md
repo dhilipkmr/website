@@ -4,7 +4,7 @@ date: "2019-08-17"
 title: "Understanding rel='noopener'"
 author: "Dhilip kumar"
 timeToRead: "3"
-smallTitle: "Understanding noopener"
+smallTitle: "Noopener"
 description: "Understanding `noopener`"
 postNum: "15"
 ---

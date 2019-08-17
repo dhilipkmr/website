@@ -4,7 +4,7 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import FadeIn from '../components/FadeIn';
 import {FaLink} from 'react-icons/fa';
-
+import {MdExpandMore} from "react-icons/md";
 class Blogs extends React.Component{
   constructor(props) {
     super(props);
@@ -101,6 +101,7 @@ class Blogs extends React.Component{
                       })
                     }
                   </div>
+                  <div className="textcenter padL100"><MdExpandMore/></div>
                 </div>
               </div>
             </div>
