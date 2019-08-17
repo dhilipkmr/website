@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import {portfolioDetails} from '../components/constants';
 import FadeIn from '../components/FadeIn';
 import {FaExternalLinkAlt} from 'react-icons/fa';
-
+import SEO from '../components/seo';
 
 class BlogPageHome extends React.Component{
   constructor(props) {
@@ -45,6 +45,7 @@ class BlogPageHome extends React.Component{
   render() {
     return (
       <Layout theme={this.state.theme} themer={this.themer}>
+        <SEO title="Dhilip's Jounrey | dhilipkmr portfolio"/>
         <div className="">
           <div className=" width100 textcenter oh">
             <FadeIn className="fs35 padT20 inline lh2em">Journey of the </FadeIn>

@@ -76,7 +76,7 @@ class LayoutHeader extends React.Component{
 
 
 LayoutHeader.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.array,
 };
 
 export default LayoutHeader;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import favicon16 from '../assets/me16.png';
@@ -12,14 +11,6 @@ import './style/generic.css';
 const Layout = ({ children, data, className = '', theme, themer}) => (
   <div className={'lr05 '}>
     <Helmet
-      title="Dhilip's Journey"
-      meta={[
-        {
-          name: 'description',
-          content: 'Dhilip\'s Personal Website on his journey to become a Front-end Developer',
-        },
-        { name: 'keywords', content: 'gatsby, react, blog, dhilipkmr, casualblogger' },
-      ]}
       link={[
         { rel: 'icon', type: 'image/png', sizes: "16x16", href: `${favicon16}` },
         { rel: 'icon', type: 'image/png', sizes: "32x32", href: `${favicon32}` }
@@ -33,17 +24,7 @@ const Layout = ({ children, data, className = '', theme, themer}) => (
 
 
 Layout.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.array,
 };
 
 export default Layout
-
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

@@ -1,9 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Dhilip's Journey`,
-    description: `Dhilip's website.A developer's Journey`,
-    author: `Dhilip`,
-    keywords: ['dhilipkmr', 'dhilip dev', 'dev dhilip', 'dhilip blog', 'react blogs', 'frontend blogs']
+    title: `Dhilip's Journey | dhilipkmr`,
+    description: `Dhilip's website. A developer's Journey -- dhilipkmr`,
+    author: `dhilipkmr`,
+    keywords: ['dhilipkmr', 'dhilip dev', 'dev dhilip', 'dhilip blog', 'react blogs', 'frontend blogs'],
+    ogType: 'website',
+    ogUrl: 'https://www.dhilipkmr.dev',
+    lang: 'en'
   },
   pathPrefix: '/',
   plugins: [

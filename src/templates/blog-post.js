@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import BlogFooter from '../components/BlogFooter';
 import EndOfBlogOptions from '../components/EndOfBlogOptions';
-
+import SEO from '../components/seo';
 export default class Template extends React.Component {
   constructor(props) {
     super(props);
@@ -43,8 +43,10 @@ export default class Template extends React.Component {
       path: post.frontmatter.path
     };
     const {theme} = this.state;
+    console.log('description', post.frontmatter.description);
     return (
       <Layout theme={theme} themer={this.themer}>
+        <SEO title={post.frontmatter.title + ' - dhilipkmr'} description={post.frontmatter.description + ' by dhilipkmr' } ogType="blogs" ogUrl={'https://www.dhilipkmr.dev' + post.frontmatter.path}/>
         <div className="blogText lh2em lr05">
           <div className="mw960 pad20 ">
             <div className="marginB20">
@@ -76,6 +78,7 @@ export const postQuery = graphql`
         path
         title
         author
+        description
         date(formatString: "MMM DD, YYYY")
       }
     }

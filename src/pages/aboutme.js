@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import FadeIn from '../components/FadeIn';
 import {introduction} from '../components/constants';
 import CursorImitator from '../components/CursorImitator';
+import SEO from '../components/seo';
 
 class AboutMe extends React.Component{
   constructor(props) {
@@ -43,6 +44,7 @@ class AboutMe extends React.Component{
     const {mounted} = this.state;
     return (
       <Layout className="mh100" theme={this.state.theme} themer={this.themer}>
+        <SEO title="Dhilip's Jounrey | dhilipkmr aboutme"/>
         <div>
           <div className="mw960">
             <div className="width100 textcenter oh" style={{ lineHeight: '1.7em'}}>

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Layout from '../components/Layout';
 import FadeIn from '../components/FadeIn';
 import {technicalSkills1, technicalSkills2} from '../components/constants';
+import SEO from '../components/seo';
 
 class Skills extends React.Component{
   constructor(props) {
@@ -64,6 +65,7 @@ class Skills extends React.Component{
   render() {
     return (
       <Layout className="mh100" theme={this.state.theme} themer={this.themer}>
+        <SEO title="Dhilip's Jounrey | dhilipkmr skills"/>
         <div>
           <div className="mh90vh">
             <div className="width100 textcenter oh">

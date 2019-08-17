@@ -5,6 +5,8 @@ import Layout from '../components/Layout';
 import FadeIn from '../components/FadeIn';
 import {FaLink} from 'react-icons/fa';
 import {MdExpandMore} from "react-icons/md";
+import SEO from '../components/seo';
+
 class Blogs extends React.Component{
   constructor(props) {
     super(props);
@@ -55,6 +57,7 @@ class Blogs extends React.Component{
     const {selectedId = '', post} = this.state;
     return (
       <Layout className="mh100" theme={this.state.theme} themer={this.themer}>
+        <SEO title="Dhilip's Jounrey | dhilipkmr blogs"/>
         <div>
           <div className="textcenter showBlogHead600">
             <div> A Series of</div>

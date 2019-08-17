@@ -4,6 +4,7 @@ import Avatar from '../components/Avatar';
 import ContactMe from '../components/ContactMe';
 import Layout from '../components/Layout';
 import FadeIn from '../components/FadeIn';
+import SEO from '../components/seo';
 
 class BlogPageHome extends React.Component{
   constructor(props) {
@@ -37,8 +38,10 @@ class BlogPageHome extends React.Component{
   }
 
   render() {
+    const {title, description, lang, keywords, ogUrl, ogType} = this.props;
     return (
       <Layout className="mh100" theme={this.state.theme} themer={this.themer}>
+        <SEO title={title} description={description} lang={lang}keywords={keywords} ogUrl={ogUrl} ogType={ogType}/>
         <div className="mw960">
           <div className=" margin10 textcenter">
             <div className="mB10 width100 textcenter oh">
@@ -64,3 +67,17 @@ BlogPageHome.propTypes = {
 };
 
 export default BlogPageHome;
+
+export const query = graphql`
+  query SiteTitleQuery {
+    site {
+      siteMetadata {
+        title,
+        description,
+        keywords,
+        ogUrl,
+        ogType
+      }
+    }
+  }
+`
