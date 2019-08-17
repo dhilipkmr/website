@@ -8,6 +8,7 @@ timeToRead: "5"
 smallTitle: "Ripple Effect"
 description: "Creating an Independent Component that produces Ripple Effect using React"
 postNum: "1"
+ogimage: './cover_1.png'
 ---
 <img src="cover_1.png"/>
 <br/>

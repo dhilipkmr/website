@@ -7,6 +7,7 @@ timeToRead: "3"
 smallTitle: "Custom String.split()"
 description: "Implementing our own `split()` in Javascript"
 postNum: "11"
+ogimage: './cover_11.png'
 ---
 
 

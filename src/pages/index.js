@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby'
 import PropTypes from 'prop-types';
 import Avatar from '../components/Avatar';
 import ContactMe from '../components/ContactMe';
@@ -48,9 +49,9 @@ class BlogPageHome extends React.Component{
               <FadeIn className="ico20 inline " style={{ animationDelay: '0.1s', lineHeight: '1.7em'}}>hey,</FadeIn>
               <FadeIn className="ico20 inline " style={{ animationDelay: '0.15s', lineHeight: '1.7em'}}>{' I\'m'}</FadeIn>
             </div>
-            <div className="mB25 width100 textcenter oh">
+            <h2 className="mB25 width100 textcenter oh">
               <FadeIn className="fs40 inbl " style={{ animationDelay: '0.2s', lineHeight: '1.7em'}}>Dhilip</FadeIn>
-            </div>
+            </h2>
           </div>
           <div className="mt35">
             <Avatar/>

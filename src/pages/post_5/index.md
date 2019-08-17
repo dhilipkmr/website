@@ -7,6 +7,7 @@ timeToRead: "6"
 smallTitle: "Cyclic Carousel"
 description: "Implementing a standalone Cyclic Carousel with the help of React Hooks"
 postNum: "5"
+ogimage: './cover_5.png'
 ---
 <img src="cover_5.png"/>
 <br/>

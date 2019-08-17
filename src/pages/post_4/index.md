@@ -7,6 +7,7 @@ timeToRead: "5"
 smallTitle: "React Hooks"
 description: "Understanding the basics of React Hooks and how we can map it to React Lifecycle methods by Building a Timer"
 postNum: "4"
+ogimage: './cover_4.png'
 ---
 <img src="cover_4.png"/>
 <br/>

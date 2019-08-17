@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, keywords, title, ogUrl, ogType }) {
+function SEO({ description, lang, meta, keywords, title, ogUrl, ogType, image }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -21,52 +21,47 @@ function SEO({ description, lang, meta, keywords, title, ogUrl, ogType }) {
             author,
             keywords,
             ogUrl,
-            ogType
+            ogType,
+            image,
+            lang
           }
         }
       }
     `
-  )
+  );
 
   const metaDescription = description || site.siteMetadata.description
+  const metaTitle = title || site.siteMetadata.title;
+  const metaType = ogType || site.siteMetadata.ogType;
+  const metaUrl = ogUrl || site.siteMetadata.ogUrl;
+  const metaImage = image || site.siteMetadata.image;
+  const metaLang = site.siteMetadata.lang || 'en';
   return (
     <Helmet
       htmlAttributes={{
-        lang: lang || 'en',
+        lang: metaLang
       }}
-      title={title || site.siteMetadata.title}
-      // titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title = {metaTitle}
       meta={[
+        { name: `description`, content: metaDescription },
+        { property: `og:title`, content: metaTitle },
+        { property: `og:description`, content: metaDescription },
+        { property: `og:type`, content: metaType },
+        { property: `og:url`, content: metaUrl },
+        { property: 'og:image', content: metaImage },
+        { property: `twitter:title`, content: metaTitle },
+        { property: 'twitter:description',content: metaDescription },
+        { name: 'robots', content: 'index, follow'}
+      ].concat(
+        keywords.length > 0 ?
         {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title || site.siteMetadata.title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: ogType || site.siteMetadata.ogType,
-        },
-        {
-          property: `og:url`,
-          content: ogUrl || site.siteMetadata.ogUrl,
+          name: `keywords`,
+          content: keywords.join(`, `),
         }
-      ]
-        .concat(
-          keywords.length > 0
-            ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
-            : []
+        : []
         )
-        .concat(meta)}
+        .concat(meta)
+      }
     />
   )
 }

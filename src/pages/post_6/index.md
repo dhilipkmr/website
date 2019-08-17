@@ -7,6 +7,7 @@ author: "Dhilip kumar"
 smallTitle: "Custom Array.map()"
 timeToRead: "2"
 postNum: "6"
+ogimage: './cover_6.png'
 ---
 <img src="./cover_6.png">
 <br/>

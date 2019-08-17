@@ -43,17 +43,18 @@ export default class Template extends React.Component {
       path: post.frontmatter.path
     };
     const {theme} = this.state;
-    console.log('description', post.frontmatter.description);
+    const {title, description, path, ogimage, date} = post.frontmatter;
+    const ogimagePath = ogimage ? ogimage.childImageSharp.fixed.src : '';
     return (
       <Layout theme={theme} themer={this.themer}>
-        <SEO title={post.frontmatter.title + ' - dhilipkmr'} description={post.frontmatter.description + ' by dhilipkmr' } ogType="blogs" ogUrl={'https://www.dhilipkmr.dev' + post.frontmatter.path}/>
+        <SEO title={title + ' - dhilipkmr'} description={description + ' by dhilipkmr' } ogType="blogs" ogUrl={'https://www.dhilipkmr.dev' + path} image={ogimagePath}/>
         <div className="blogText lh2em lr05">
           <div className="mw960 pad20 ">
             <div className="marginB20">
-              <h1 className="opAnimator">{post.frontmatter.title}</h1>
+              <h1 className="opAnimator">{title}</h1>
             </div>
             <div  className="marginB20">
-              <i className="ico13 descriptionTxtColor">Published on {post.frontmatter.date}</i>
+              <i className="ico13 descriptionTxtColor">Published on {date}</i>
             </div>
             <div className="descriptionTxtColor">
               <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -61,9 +62,6 @@ export default class Template extends React.Component {
           </div>
           <EndOfBlogOptions data={blogEndData}/>
           <BlogFooter posts={otherPosts}/>
-          {/* <div className="marginB20">
-            <Link to="/" className="backHomeHeader marginB20 themeColor"><span className="backIcon">{'<'}</span>Dhilip's Blogs</Link>
-          </div> */}
         </div>
       </Layout>
     )
@@ -80,6 +78,13 @@ export const postQuery = graphql`
         author
         description
         date(formatString: "MMM DD, YYYY")
+        ogimage {
+          childImageSharp {
+            fixed {
+              src
+            }
+          }
+        }
       }
     }
     allMarkdownRemark(limit:3, filter: {frontmatter:{ path: { ne: $path } }}){

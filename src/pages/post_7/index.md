@@ -7,6 +7,7 @@ timeToRead: "5"
 smallTitle: "Cursor Imitator"
 description: "Implementing a standalone Cursor Imitator Component in React"
 postNum: "7"
+ogimage: './cover_7.png'
 ---
 <img src="./cover_7.png"/>
 <br/>

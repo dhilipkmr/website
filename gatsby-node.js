@@ -24,6 +24,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
     const posts = res.data.allMarkdownRemark.edges;
     posts.forEach(({ node }) => {
+      console.log(node);
       createPage({
         path: node.frontmatter.path,
         component: postTemplate

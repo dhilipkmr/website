@@ -7,6 +7,7 @@ timeToRead: "2"
 smallTitle: "Scroll Indicator"
 description: "Implementing Scroll Indicator in Vanilla Js and CSS"
 postNum: "10"
+ogimage: './cover_10.png'
 ---
 <img src="./cover_10.png"/>
 <br/>

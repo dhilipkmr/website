@@ -7,6 +7,7 @@ timeToRead: "3"
 smallTitle: "Imdb Extension 2"
 description: "Creating an IMDB details Call out on Hover over movie names and loading the content into it"
 postNum: "3"
+ogimage: './cover_3.png'
 ---
 <img src="cover_3.png"/>
 <br/>

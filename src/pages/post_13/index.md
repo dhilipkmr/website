@@ -7,6 +7,7 @@ timeToRead: "6"
 smallTitle: "Sliding Window Scroll"
 description: "Implementing Infinte Scroll in React"
 postNum: "13"
+ogimage: './cover_13.png'
 ---
 
 <img src="./cover_13.png"/>

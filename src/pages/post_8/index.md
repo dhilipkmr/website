@@ -7,6 +7,7 @@ timeToRead: "4"
 smallTitle: " Loading Shimmer"
 description: "Implementing a Loading Shimmer in HTML and CSS"
 postNum: "8"
+ogimage: './cover_8.png'
 ---
 
 When I heard the word **Loading Shimmer** I thought that is some new Cool stuff got introduced in Web Development. But it Turns out it is something that we have already noticed in our day to day web browsing.

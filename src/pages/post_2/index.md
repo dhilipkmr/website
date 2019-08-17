@@ -8,6 +8,7 @@ timeToRead: "2"
 smallTitle: "Imdb Extension 1"
 description: "An Introduction to Creating Google Chrome Extension and getting started with communicating between content and background js"
 postNum: "2"
+ogimage: './cover_2.png'
 ---
 <img src="cover_2.png"/>
 <br/>

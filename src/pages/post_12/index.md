@@ -7,6 +7,7 @@ timeToRead: "3"
 smallTitle: "Max Paths Destination"
 description: "A data structure in javascript to find a Maximum Path to reach last Index in a 2D Matrix"
 postNum: "12"
+ogimage: './cover_12.png'
 ---
 
 <img src="./cover_12.png"/>

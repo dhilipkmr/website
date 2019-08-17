@@ -7,6 +7,7 @@ timeToRead: "3"
 smallTitle: "Noopener"
 description: "Understanding `noopener`"
 postNum: "15"
+ogimage: './cover_15.png'
 ---
 
 

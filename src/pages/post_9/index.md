@@ -7,6 +7,7 @@ timeToRead: "4"
 smallTitle: "Js Memoization"
 description: "To learn how to implement Memoization with simple Example"
 postNum: "9"
+ogimage: './cover_9.png'
 ---
 
 <img src="./cover_9.png"/>
