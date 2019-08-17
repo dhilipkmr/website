@@ -13,7 +13,7 @@ CONTACT_DETAILS.push(['https://dhilipkmr.surge.sh',         <FaGlobe/>,       'W
 const ContactMe = ({theme}) => {
   return(
     <div className="width100 textcenter padT10 oh ">
-      <FadeIn style={{ animationDelay: '0.45s'}}>
+      <FadeIn style={{ animationDelay: '0.25s'}}>
         {CONTACT_DETAILS.map((contactItem) => {
           const url = contactItem[0];
           const ICON = contactItem[1];

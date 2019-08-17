@@ -7,11 +7,11 @@ timeToRead: "3"
 smallTitle: "Noopener"
 description: "Understanding `noopener`"
 postNum: "15"
-ogimage: './cover_15.png'
+featuredImage: './cover_15.png'
 ---
 
 
-<img src="./cover_14.png"/>
+<img src="./cover_15.png"/>
 <br/>
 
 **TLDR:**

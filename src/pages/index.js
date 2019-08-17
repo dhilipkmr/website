@@ -6,6 +6,7 @@ import ContactMe from '../components/ContactMe';
 import Layout from '../components/Layout';
 import FadeIn from '../components/FadeIn';
 import SEO from '../components/seo';
+import GoogleMe from '../components/GoogleMe';
 
 class BlogPageHome extends React.Component{
   constructor(props) {
@@ -46,16 +47,17 @@ class BlogPageHome extends React.Component{
         <div className="mw960">
           <div className=" margin10 textcenter">
             <div className="mB10 width100 textcenter oh">
-              <FadeIn className="ico20 inline " style={{ animationDelay: '0.1s', lineHeight: '1.7em'}}>hey,</FadeIn>
-              <FadeIn className="ico20 inline " style={{ animationDelay: '0.15s', lineHeight: '1.7em'}}>{' I\'m'}</FadeIn>
+              <FadeIn className="ico20 inline " style={{ animationDelay: '0.01s', lineHeight: '1.7em'}}>hey,</FadeIn>
+              <FadeIn className="ico20 inline " style={{ animationDelay: '0.02s', lineHeight: '1.7em'}}>{' I\'m'}</FadeIn>
             </div>
             <h2 className="mB25 width100 textcenter oh">
-              <FadeIn className="fs40 inbl " style={{ animationDelay: '0.2s', lineHeight: '1.7em'}}>Dhilip</FadeIn>
+              <FadeIn className="fs40 inbl " style={{ animationDelay: '0.05s', lineHeight: '1.7em'}}>Dhilip</FadeIn>
             </h2>
           </div>
           <div className="mt35">
             <Avatar/>
             <ContactMe theme={this.state.theme}/>
+            <GoogleMe/>
           </div>
         </div>
       </Layout>

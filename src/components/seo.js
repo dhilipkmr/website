@@ -36,6 +36,7 @@ function SEO({ description, lang, meta, keywords, title, ogUrl, ogType, image })
   const metaUrl = ogUrl || site.siteMetadata.ogUrl;
   const metaImage = image || site.siteMetadata.image;
   const metaLang = site.siteMetadata.lang || 'en';
+  console.log('image', image, metaImage);
   return (
     <Helmet
       htmlAttributes={{
@@ -51,7 +52,8 @@ function SEO({ description, lang, meta, keywords, title, ogUrl, ogType, image })
         { property: 'og:image', content: metaImage },
         { property: `twitter:title`, content: metaTitle },
         { property: 'twitter:description',content: metaDescription },
-        { name: 'robots', content: 'index, follow'}
+        { name: 'robots', content: 'index, follow'},
+        { rel: 'canonical', href: 'https://www.dhilipkmr.dev/'}
       ].concat(
         keywords.length > 0 ?
         {

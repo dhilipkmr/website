@@ -7,6 +7,7 @@ timeToRead: "1"
 smallTitle: "Optional Chaining"
 description: "Understanding Optional Chaining in javascript"
 postNum: "14"
+ogimage: ''
 ---
 ![](https://thepracticaldev.s3.amazonaws.com/i/23q1qkg3utg8f2l36rhf.jpg)
 

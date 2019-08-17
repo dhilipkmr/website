@@ -13,6 +13,13 @@ exports.createPages = ({ actions, graphql }) => {
               title
               date
               author
+              ogimage {
+                childImageSharp {
+                  fixed {
+                    src
+                  }
+                }
+              }
             }
           }
         }
