@@ -44,8 +44,7 @@ export default class Template extends React.Component {
     };
     const {theme} = this.state;
     const {title, description, path, ogimage, date} = post.frontmatter;
-    const ogimagePath = (ogimage && ogimage.childImageSharp && ogimage.childImageSharp.src) ? ogimage.childImageSharp.fixed.src : '';
-    console.log('ogimagePath', ogimage);
+    const ogimagePath = (ogimage && ogimage.childImageSharp && ogimage.childImageSharp.fixed) ? ogimage.childImageSharp.fixed.src : '';
     return (
       <Layout theme={theme} themer={this.themer}>
         <SEO title={title + ' - dhilipkmr'} description={description + ' by dhilipkmr' } ogType="blogs" ogUrl={'https://www.dhilipkmr.dev' + path} image={ogimagePath}/>
@@ -80,7 +79,11 @@ export const postQuery = graphql`
         description
         date(formatString: "MMM DD, YYYY")
         ogimage {
-          
+          childImageSharp {
+            fixed {
+              src
+            }
+          }
         }
       }
     }
