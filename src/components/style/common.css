@@ -779,3 +779,7 @@ body.dark .gatsby-highlight {
     color: var(--headingTxtColor);
   }
 }
+
+.scaleOnHover.google:hover {
+  color: var(--themeColor)
+}

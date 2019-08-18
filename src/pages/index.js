@@ -50,9 +50,9 @@ class BlogPageHome extends React.Component{
               <FadeIn className="ico20 inline " style={{ animationDelay: '0.01s', lineHeight: '1.7em'}}>hey,</FadeIn>
               <FadeIn className="ico20 inline " style={{ animationDelay: '0.02s', lineHeight: '1.7em'}}>{' I\'m'}</FadeIn>
             </div>
-            <h2 className="mB25 width100 textcenter oh">
-              <FadeIn className="fs40 inbl " style={{ animationDelay: '0.05s', lineHeight: '1.7em'}}>Dhilip</FadeIn>
-            </h2>
+            <div className="mB25 width100 textcenter oh">
+              <FadeIn className="fs40 inbl " style={{ animationDelay: '0.05s', lineHeight: '1.7em'}}><h1 className="fs40 myname">Dhilip</h1></FadeIn>
+            </div>
           </div>
           <div className="mt35">
             <Avatar/>

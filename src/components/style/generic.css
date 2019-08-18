@@ -371,6 +371,17 @@ h1 {
   padding: 5px 5px 0 0;
   transform: scale(2);
 }
-.atagHighlight:hover {
-  text-decoration: underline;
+
+.atagHighlight:hover{
+  text-decoration: underline !important;
 }
+
+.atagHighlight h1 {
+  display: inline-block;
+  font-size: 17px;
+}
+
+h1.myname {
+  margin: 0px !important;
+}
+
