@@ -11,7 +11,7 @@ export const portfolioDetails =  {
   'Goibibo': {
     date: '2018 May - Present',
     details:[
-      ['FLIGHTS LISTING PAGE'], '', 'Implemented Flights Search Results page from scratch which had Infinite Flights Loader, Sticky scrollable Filters and loading Indicators.', 'Apr - Jun, 2019'],
+      ['FLIGHTS LISTING PAGE', '', 'Implemented Flights Search Results page from scratch which had Infinite Flights Loader, Sticky scrollable Filters and loading Indicators.', 'Apr - Jun, 2019'],
       ['LANDING PAGE REVAMP', '', 'Worked on implementing the new UI changes done to Desktop Web Goibibo landing/flights Page. It includes effective changes to Multi-city implementation, introduced deferred image loading for carousels for better loading speed, Parallax effect and fading in effect on the background image and on-page anchor scroll', 'Jan - Feb, 2019'],
       ['FARE TRENDS',         '', 'Developed an Independent React based SVG Line-graph component which plots Fares on different dates for a given data set', 'Sep - Oct, 2018'],
       ['PWA MIGRATION',       '', 'Migrated Goibibo Flights Mobile Website to PWA from Booking till Traveller Details page', 'Jul - Aug, 2018'],
