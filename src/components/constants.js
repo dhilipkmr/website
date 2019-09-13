@@ -2,6 +2,7 @@ export const portfolioDetails =  {
   'Open Source': {
     date: '',
     details:[
+      ['YOUTUBE EXTENSION', 'https://chrome.google.com/webstore/detail/hecflpbbibegbikpciipfnkliakdikjm/publish-accepted?authuser=1', "Don\'t like youtube\'s suggestion? Choose which song should play next on the go.", 'Aug - Sep, 2019'],
       ['IMDB EXTENSION', 'https://chrome.google.com/webstore/detail/imdb-ratings/aodmmndimojddogmhmpaemocbibnimkl?authuser=1', 'Just hover over the movie name you will be popped up with all those Information. You are not limited to any websites in particular.Alternatively, you can highlight a movie name and right-click to search it on IMDb.', 'Jan - Feb, 2019'],
       ['EXPENSE MANAGER',       'https://exspensesmgr.herokuapp.com/login', 'Created an Expense Manager Mobile First Web application which involved End to End Full stack development using MongoDB, Express, React and Node(MERN) technologies. It provides the users with unique login to store their Expenses and the ability to monitor their daily expenses, spending rates and to Graphically visualise them', 'Dec-Jan, 2019'],
       ['REACT RIPPLE',          'https://www.npmjs.com/package/ripple-react', 'Built an independent component in React which helps creating a Material Ripple / waterdrop effect on clicking a button or a card and published it on NPM', 'Jan 2019'],
