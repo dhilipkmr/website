@@ -247,7 +247,7 @@ And we were able to see considerable improvement in terms of performance.
 | 1 | JS Vendor Size | 144KB | 16KB | ~85% Reduction |
 | 2 | JS Main Bundle Size | 60.4KB | 19.5KB | ~67% Reduction |
 | 3 | CSS Size | 50.1KB | 11KB | ~78% Reduction |
-| 3 | LightHouse Score | 64 | 94 | ^30 Points |
+| 4 | LightHouse Score | 64 | 94 | ^30 Points |
 
 Well!!!
 ![](https://media.giphy.com/media/ghTosDxIm1ab3DkCBV/giphy-downsized.gif)

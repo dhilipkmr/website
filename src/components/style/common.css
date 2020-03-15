@@ -46,7 +46,11 @@ h1 {
 }
 
 tr td  {
-  border: 1px solid var(--headingTxtColor);
+  border-bottom: 1px solid var(--headingTxtColor);
+}
+
+table th {
+  border-bottom: 2px solid var(--headingTxtColor);
 }
 
 h2, h3, .themeColor {
