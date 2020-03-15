@@ -45,6 +45,10 @@ h1 {
   color: var(--headingTxtColor);
 }
 
+tr td  {
+  border: 1px solid var(--headingTxtColor);
+}
+
 h2, h3, .themeColor {
   color: var(--themeColor) !important;
 }
