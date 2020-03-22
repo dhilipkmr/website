@@ -9,6 +9,8 @@ description: "creating JSON.superStringify()"
 postNum: "19"
 ---
 
+<img src="./cover_19.png"/>
+<br/>
 
 Hello Devs,
 
