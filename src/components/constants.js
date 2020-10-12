@@ -35,9 +35,14 @@ export const portfolioDetails =  {
 export const ABOUTME = {
   Experiences: [
     {
+    'name'                  : 'Microsoft',
+    'role'                  : 'Software Engineer II',
+    'period'                : 'October 2020 - Present',
+    },
+    {
     'name'                  : 'Goibibo',
     'role'                  : 'Senior Software Engineer',
-    'period'                : 'May 2018 - Present',
+    'period'                : 'May 2018 - October 2020',
     },
     {
     'name'                  : 'Oracle',
@@ -92,7 +97,7 @@ export const technicalSkills2 = [
 export const introduction = {
   'description': ['> Hello there!',
                 '> I\'m Dhilip Kumar, as you know already 😅',
-                '> I am a Software Professional, working as a Front-end Developer at Goibibo.',
+                '> I am a Software Professional, working at Microsoft.',
                 '> I use Javascript, React, Redux and Node to create a Performant UI.',
                 '> I also Blog about some Interesting (Technical) stuffs that I create at DEV community',
                 '> I have few Open source projects and Npm Packages if you are interested :)',
