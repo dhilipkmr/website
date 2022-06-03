@@ -9,8 +9,16 @@ export const portfolioDetails =  {
       ['RESUME BUILDER',        'https://github.com/dhilipkmr/aboutDhilip', 'An Open Source Project which helps people with building a New Resume for them just with the update in JSON', 'Mar-Apr, 2018']
     ]
   },
+  'Microsoft': {
+    date: '2020 Oct - Present',
+    details: [
+      ['TEAMS 2.0', '', 'Implemented the core business logic for Teams 2.0\'s Activity Feed by collaborating with different stakeholders', 'March 2021 - present'],
+      ['FOLLLOW KEYWORDS', '', 'aborated with services team, designers and product managers while implementing the follow keywords feature in Teams which is one of the main customer ask', 'Oct 2021 - March 2022'],
+      ['MENTORSHIP', '' , 'Mentored Junior developers by being supportive and by being the one place stop for guiding them with the directions to solve the problem', 'Jan 2021 - Present']
+    ]
+  },
   'Goibibo': {
-    date: '2018 May - Present',
+    date: '2018 May - 2020 Oct',
     details:[
       ['FLIGHTS LISTING PAGE', '', 'Implemented Flights Search Results page from scratch which had Infinite Flights Loader, Sticky scrollable Filters and loading Indicators.', 'Apr - Jun, 2019'],
       ['LANDING PAGE REVAMP', '', 'Worked on implementing the new UI changes done to Desktop Web Goibibo landing/flights Page. It includes effective changes to Multi-city implementation, introduced deferred image loading for carousels for better loading speed, Parallax effect and fading in effect on the background image and on-page anchor scroll', 'Jan - Feb, 2019'],
