@@ -18,7 +18,7 @@ const Avatar = () => {
           <FadeIn className="lh2em" style={{ animationDelay: '0.6s' }}>a blog by <span><a href={LINKEDIN_URL} target="_blank" className="themeColor linkHand" rel="noopener noreferrer">dhilip</a></span></FadeIn>
         </div> */}
         <div className="padT10 width100 textcenter avatarInto oh">
-          <FadeIn className="lh2em" style={{ animationDelay: '0.15s' }}>Software Engineer @<a href="https://www.microsoft.com/" target="_blank" rel="noopener noreferrer"><span className="linkHand">Microsoft</span></a></FadeIn>
+          <FadeIn className="lh2em" style={{ animationDelay: '0.15s' }}>Senior Software Engineer @<a href="https://www.microsoft.com/" target="_blank" rel="noopener noreferrer"><span className="linkHand">Microsoft</span></a></FadeIn>
         </div>
         <div className="padT10 width100 textcenter avatarInto oh">
           <FadeIn className="lh2em" style={{ lineHeight: '3em', animationDelay: '0.20s' }}>amateur blogger | empath | mr.sings a lot | occasional traveller</FadeIn>
