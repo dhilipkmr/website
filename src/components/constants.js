@@ -44,7 +44,7 @@ export const ABOUTME = {
   Experiences: [
     {
     'name'                  : 'Microsoft',
-    'role'                  : 'Software Engineer II',
+    'role'                  : 'Senior Software Engineer',
     'period'                : 'October 2020 - Present',
     },
     {
