@@ -43,9 +43,14 @@ export const portfolioDetails =  {
 export const ABOUTME = {
   Experiences: [
     {
+    'name'                  : 'Atlassian',
+    'role'                  : 'Senior Software Engineer',
+    'period'                : 'March 2024 - Present',
+    },
+    {
     'name'                  : 'Microsoft',
     'role'                  : 'Senior Software Engineer',
-    'period'                : 'October 2020 - Present',
+    'period'                : 'October 2020 - March 2024',
     },
     {
     'name'                  : 'Goibibo',
@@ -105,7 +110,7 @@ export const technicalSkills2 = [
 export const introduction = {
   'description': ['> Hello there!',
                 '> I\'m Dhilip Kumar, as you know already 😅',
-                '> I am a Software Professional, working at Microsoft.',
+                '> I am a Software Professional, working at Atlassian.',
                 '> I use Javascript, React, Redux and Node to create a Performant UI.',
                 '> I also Blog about some Interesting (Technical) stuffs that I create at DEV community',
                 '> I have few Open source projects and Npm Packages if you are interested :)',
